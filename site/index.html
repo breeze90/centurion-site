@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Центурион-групп — реструктуризация долга и банкротство без потери имущества</title>
-  <meta name="description" content="Снижаем платёж по кредиту через суд без банкротства. Также ведём банкротство, взыскание долгов и защиту от субсидиарной ответственности — для физических и юридических лиц. Москва и область, удалённо по всей России.">
+  <meta name="description" content="Снижаем платёж по кредиту через суд без банкротства. Реструктуризация, банкротство, взыскание долгов и защита от субсидиарной ответственности. Москва и Московская область.">
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjZmZmIi8+PHBhdGggZmlsbD0iIzExMSIgZD0iTTIwLjYzLDE1LjEyaC0yLjI5bC0xLjc2LDEuNzZoNC4wNWMtLjM5LDEuMzktMS42NiwyLjQxLTMuMTcsMi40MS0xLjgyLDAtMy4yOS0xLjQ3LTMuMjktMy4yOXMxLjQ3LTMuMjksMy4yOS0zLjI5Yy45MSwwLDEuNzMuMzcsMi4zMy45NmwxLjQ5LTEuNDljLS45OC0uOTgtMi4zMi0xLjU4LTMuODEtMS41OC0yLjk4LDAtNS4zOSwyLjQxLTUuMzksNS4zOXMyLjQxLDUuMzksNS4zOSw1LjM5LDUuMzktMi40MSw1LjM5LTUuMzljMC0uMy0uMDMtLjU5LS4wNy0uODhoLTIuMTVaIi8+PHBhdGggZmlsbD0iIzExMSIgZD0iTTE3LjQ2LDIzLjU5Yy00LjE3LDAtNy41NC0zLjM4LTcuNTQtNy41NHMzLjM4LTcuNTQsNy41NC03LjU0YzIuMDcsMCwzLjk0LjgzLDUuMywyLjE4bDEuNzYtMS43NmMtMS44MS0xLjgtNC4zLTIuOTItNy4wNi0yLjkyLTUuNTIsMC05Ljk5LDQuNDctOS45OSw5Ljk5czQuNDcsOS45OSw5Ljk5LDkuOTljMi43NywwLDUuMjctMS4xMiw3LjA4LTIuOTRsLTEuNzEtMS43MWMtMS4zNywxLjM5LTMuMjcsMi4yNC01LjM3LDIuMjRaIi8+PC9zdmc+" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://31f130418eb552015102c26492c44c93.mtmba.ru">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Manrope:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -23,9 +24,9 @@
       </a>
       <nav class="nav" aria-label="Основное меню">
         <a href="#services">Услуги</a>
-        <a href="#contacts">Контакты</a>
-        <a href="stati/">Статьи</a>
+        <a href="stati/">Клиенту</a>
         <a href="#about">О компании</a>
+        <a href="#contacts">Контакты</a>
       </nav>
       <a class="header-phone" href="tel:+74951250550">+7 (495) 125-05-50</a>
       <a class="btn btn-brass" href="#lead-form">Консультация</a>
@@ -38,7 +39,8 @@
       <h1>Снижаем платёж по кредиту через суд — без банкротства</h1>
       <p class="lead">Реструктуризация долга, банкротство, взыскание задолженности и защита
         от субсидиарной ответственности — для физических и юридических лиц.
-        Москва и область, удалённо — по всей России.</p>
+        Работаем в Москве и Московской области. Клиентов из других регионов принимаем
+        при готовности приехать в Москву.</p>
       <div class="hero-actions">
         <a class="btn btn-brass" href="#lead-form">Получить консультацию</a>
         <a class="btn btn-outline" href="#services">Все услуги</a>
@@ -53,8 +55,8 @@
           <div class="fact-cap">офис у м. Кузнецкий Мост</div>
         </div>
         <div class="fact">
-          <div class="fact-num">Вся РФ</div>
-          <div class="fact-cap">ведём дела удалённо</div>
+          <div class="fact-num">Более 1 000</div>
+          <div class="fact-cap">выигранных дел</div>
         </div>
       </div>
     </div>
@@ -211,12 +213,17 @@
       <div class="matomba-form" aria-label="Форма заявки">
         <iframe
           class="matomba-frame"
-          src="https://31f130418eb552015102c26492c44c93.mtmba.ru"
+          data-src="https://31f130418eb552015102c26492c44c93.mtmba.ru"
           title="Оставить заявку на консультацию"
-          loading="lazy"
         ></iframe>
       </div>
     </div>
+    <script>
+      requestAnimationFrame(() => {
+        const formFrame = document.querySelector('.matomba-frame');
+        formFrame.src = formFrame.dataset.src;
+      });
+    </script>
   </section>
 
   <!-- О компании -->
@@ -228,7 +235,8 @@
         <div>
           <p class="lead">Юридическая компания, специализирующаяся на долговых спорах:
             от снижения платежа через суд до полного банкротства. Ведём дела физических
-            и юридических лиц в Москве, Московской области и удалённо по всей России.</p>
+            и юридических лиц в Москве и Московской области. Клиентов из других регионов
+            принимаем при готовности приехать в Москву.</p>
           <p class="lead">ООО «Центурион-групп» зарегистрировано в 2015 году,
             офис расположен у метро Кузнецкий Мост / Лубянка.</p>
         </div>
