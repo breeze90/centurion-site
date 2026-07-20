@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Центурион — сравнение цветов (черновик)</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Manrope:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Manrope", system-ui, sans-serif;
+    background: #f4f4f2;
+    color: #222;
+    padding: 40px 20px 100px;
+  }
+  h1 {
+    font-family: "Lora", serif;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  .sub {
+    text-align: center;
+    color: #666;
+    margin-bottom: 48px;
+    font-size: 0.95rem;
+  }
+  .variant {
+    max-width: 720px;
+    margin: 0 auto 56px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
+  .variant-label {
+    background: #111;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: "Lora", serif;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .variant-label span.desc { font-size: 0.8rem; color: #aaa; font-family: "Manrope", sans-serif; }
+
+  /* Блок 1: шапка */
+  .mock-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+  }
+  .mock-logo {
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .mock-nav { display: flex; gap: 20px; font-size: 0.88rem; font-weight: 600; }
+  .mock-cta-small {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  /* Блок 2: hero с кнопкой */
+  .mock-hero { padding: 40px 24px; }
+  .mock-hero h2 {
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    max-width: 20ch;
+  }
+  .mock-hero p { margin: 0 0 20px; font-size: 0.92rem; max-width: 40ch; }
+  .mock-cta-big {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+
+  /* Блок 3: карточка услуги */
+  .mock-cards {
+    display: flex;
+    gap: 14px;
+    padding: 24px;
+    flex-wrap: wrap;
+  }
+  .mock-card {
+    flex: 1;
+    min-width: 160px;
+    border-radius: 8px;
+    padding: 18px;
+  }
+  .mock-card .eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .mock-card h3 {
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    margin: 0 0 6px;
+  }
+  .mock-card p { font-size: 0.82rem; margin: 0; opacity: 0.75; }
+
+  @media (max-width: 480px) {
+    .mock-nav { display: none; }
+    .mock-cards { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Центурион — варианты цвета</h1>
+<p class="sub">4 палитры на реальной вёрстке (шапка / герой с кнопкой / карточки услуг). Черновик для выбора, не финальная страница.</p>
+
+<!-- ВАРИАНТ 1: Чёрно-белый без акцента -->
+<div class="variant">
+  <div class="variant-label">Вариант 1 <span class="desc">чёрно-белый, без акцента</span></div>
+
+  <div class="mock-header" style="background:#111; color:#fff;">
+    <div class="mock-logo">Центурион-групп</div>
+    <div class="mock-nav" style="color:#bbb;">
+      <span>Услуги</span><span>О компании</span><span>Контакты</span>
+    </div>
+    <a class="mock-cta-small" href="#" style="background:#fff; color:#111;">Консультация</a>
+  </div>
+
+  <div class="mock-hero" style="background:#fff;">
+    <h2 style="color:#111;">Освобождаем от долгов законно</h2>
+    <p style="color:#555;">Реструктуризация, банкротство, субсидиарная ответственность и взыскание долгов.</p>
+    <a class="mock-cta-big" href="#" style="background:#111; color:#fff;">Получить консультацию</a>
+  </div>
+
+  <div class="mock-cards" style="background:#f7f7f6;">
+    <div class="mock-card" style="background:#fff; border:1px solid #ddd;">
+      <span class="eyebrow" style="color:#666;">Физлицам</span>
+      <h3 style="color:#111;">Реструктуризация</h3>
+      <p>Снижение платежа через суд без банкротства.</p>
+    </div>
+    <div class="mock-card" style="background:#fff; border:1px solid #ddd;">
+      <span class="eyebrow" style="color:#666;">Физлицам</span>
+      <h3 style="color:#111;">Банкротство</h3>
+      <p>Списание долгов через арбитражный суд.</p>
+    </div>
+    <div class="mock-card" style="background:#111; border:1px solid #111;">
+      <span class="eyebrow" style="color:#ccc;">Бизнесу</span>
+      <h3 style="color:#fff;">Субсидиарная ответственность</h3>
+      <p style="color:#ccc;">Защита руководителей и собственников.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ВАРИАНТ 2: чёрно-белый + тёмно-зелёный -->
+<div class="variant">
+  <div class="variant-label">Вариант 2 <span class="desc">чёрно-белый + тёмно-зелёный акцент</span></div>
+
+  <div class="mock-header" style="background:#111; color:#fff;">
+    <div class="mock-logo">Центурион-групп</div>
+    <div class="mock-nav" style="color:#bbb;">
+      <span>Услуги</span><span>О компании</span><span>Контакты</span>
+    </div>
+    <a class="mock-cta-small" href="#" style="background:#2f5a45; color:#fff;">Консультация</a>
+  </div>
+
+  <div class="mock-hero" style="background:#fff;">
+    <h2 style="color:#111;">Освобождаем от долгов законно</h2>
+    <p style="color:#555;">Реструктуризация, банкротство, субсидиарная ответственность и взыскание долгов.</p>
+    <a class="mock-cta-big" href="#" style="background:#2f5a45; color:#fff;">Получить консультацию</a>
+  </div>
+
+  <div class="mock-cards" style="background:#f7f7f6;">
+    <div class="mock-card" style="background:#fff; border:1px solid #ddd;">
+      <span class="eyebrow" style="color:#2f5a45;">Физлицам</span>
+      <h3 style="color:#111;">Реструктуризация</h3>
+      <p>Снижение платежа через суд без банкротства.</p>
+    </div>
+    <div class="mock-card" style="background:#fff; border:1px solid #ddd;">
+      <span class="eyebrow" style="color:#2f5a45;">Физлицам</span>
+      <h3 style="color:#111;">Банкротство</h3>
+      <p>Списание долгов через арбитражный суд.</p>
+    </div>
+    <div class="mock-card" style="background:#2f5a45; border:1px solid #2f5a45;">
+      <span class="eyebrow" style="color:#cfe0d6;">Бизнесу</span>
+      <h3 style="color:#fff;">Субсидиарная ответственность</h3>
+      <p style="color:#cfe0d6;">Защита руководителей и собственников.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ВАРИАНТ 3: чёрно-белый + бронза/латунь -->
+<div class="variant">
+  <div class="variant-label">Вариант 3 <span class="desc">чёрно-белый + бронза/латунь</span></div>
+
+  <div class="mock-header" style="background:#111; color:#fff;">
+    <div class="mock-logo">Центурион-групп</div>
+    <div class="mock-nav" style="color:#bbb;">
+      <span>Услуги</span><span>О компании</span><span>Контакты</span>
+    </div>
+    <a class="mock-cta-small" href="#" style="background:#b8892f; color:#fff;">Консультация</a>
+  </div>
+
+  <div class="mock-hero" style="background:#fff;">
+    <h2 style="color:#111;">Освобождаем от долгов законно</h2>
+    <p style="color:#555;">Реструктуризация, банкротство, субсидиарная ответственность и взыскание долгов.</p>
+    <a class="mock-cta-big" href="#" style="background:#b8892f; color:#fff;">Получить консультацию</a>
+  </div>
+
+  <div class="mock-cards" style="background:#f7f7f6;">
+    <div class="mock-card" style="background:#fff; border:1px solid #ddd;">
+      <span class="eyebrow" style="color:#b8892f;">Физлицам</span>
+      <h3 style="color:#111;">Реструктуризация</h3>
+      <p>Снижение платежа через суд без банкротства.</p>
+    </div>
+    <div class="mock-card" style="background:#fff; border:1px solid #ddd;">
+      <span class="eyebrow" style="color:#b8892f;">Физлицам</span>
+      <h3 style="color:#111;">Банкротство</h3>
+      <p>Списание долгов через арбитражный суд.</p>
+    </div>
+    <div class="mock-card" style="background:#b8892f; border:1px solid #b8892f;">
+      <span class="eyebrow" style="color:#f2e4c8;">Бизнесу</span>
+      <h3 style="color:#fff;">Субсидиарная ответственность</h3>
+      <p style="color:#f2e4c8;">Защита руководителей и собственников.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ВАРИАНТ 4: чёрно-белый + графитово-синий -->
+<div class="variant">
+  <div class="variant-label">Вариант 4 <span class="desc">чёрно-белый + приглушённый графитово-синий</span></div>
+
+  <div class="mock-header" style="background:#111; color:#fff;">
+    <div class="mock-logo">Центурион-групп</div>
+    <div class="mock-nav" style="color:#bbb;">
+      <span>Услуги</span><span>О компании</span><span>Контакты</span>
+    </div>
+    <a class="mock-cta-small" href="#" style="background:#33465e; color:#fff;">Консультация</a>
+  </div>
+
+  <div class="mock-hero" style="background:#fff;">
+    <h2 style="color:#111;">Освобождаем от долгов законно</h2>
+    <p style="color:#555;">Реструктуризация, банкротство, субсидиарная ответственность и взыскание долгов.</p>
+    <a class="mock-cta-big" href="#" style="background:#33465e; color:#fff;">Получить консультацию</a>
+  </div>
+
+  <div class="mock-cards" style="background:#f7f7f6;">
+    <div class="mock-card" style="background:#fff; border:1px solid #ddd;">
+      <span class="eyebrow" style="color:#33465e;">Физлицам</span>
+      <h3 style="color:#111;">Реструктуризация</h3>
+      <p>Снижение платежа через суд без банкротства.</p>
+    </div>
+    <div class="mock-card" style="background:#fff; border:1px solid #ddd;">
+      <span class="eyebrow" style="color:#33465e;">Физлицам</span>
+      <h3 style="color:#111;">Банкротство</h3>
+      <p>Списание долгов через арбитражный суд.</p>
+    </div>
+    <div class="mock-card" style="background:#33465e; border:1px solid #33465e;">
+      <span class="eyebrow" style="color:#c7d0da;">Бизнесу</span>
+      <h3 style="color:#fff;">Субсидиарная ответственность</h3>
+      <p style="color:#c7d0da;">Защита руководителей и собственников.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
