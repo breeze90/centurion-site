@@ -2,3 +2,7 @@
 !/site/
 !/site/**
 !.gitignore
+!/.github/
+!/.github/workflows/
+!/.github/workflows/pages.yml
+.DS_Store
