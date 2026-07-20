@@ -384,6 +384,18 @@ a:focus-visible {
 .contact-item h3 { font-family: var(--font-body); font-weight: 700; font-size: 0.98rem; }
 .contact-item p { color: var(--muted); margin: 0; }
 .contact-item a { font-weight: 700; text-decoration: none; }
+.map-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 10px;
+}
+.map-links a {
+  color: var(--brass-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
 .contact-big {
   font-size: 1.35rem;
   color: var(--text);
