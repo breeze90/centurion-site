@@ -114,7 +114,8 @@ a:focus-visible {
 }
 .logo-mark {
   height: 34px;
-  width: auto;
+  width: 34px;
+  object-fit: contain;
   flex: none;
 }
 .nav {
