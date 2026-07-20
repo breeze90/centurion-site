@@ -237,6 +237,14 @@ a:focus-visible {
 .matomba-form {
   margin-top: 32px;
   max-width: 1150px;
+  background: var(--ink-soft);
+}
+.matomba-frame {
+  display: block;
+  width: 100%;
+  height: 560px;
+  border: 0;
+  background: var(--ink-soft);
 }
 
 /* ===== Сравнение реструктуризации и банкротства ===== */
@@ -336,6 +344,7 @@ a:focus-visible {
   .section { padding: 52px 0; }
   .hero { padding: 60px 0 52px; }
   .hero-facts { gap: 24px; }
+  .matomba-frame { height: 520px; }
   .header-inner {
     flex-wrap: wrap;
     gap: 10px 16px;
