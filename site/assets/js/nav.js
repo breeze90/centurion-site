@@ -4,13 +4,11 @@
   if (!toggle || !panel) return;
 
   var nav = document.querySelector('.nav');
-  var phone = document.querySelector('.header-phone');
   var cta = document.querySelector('.header .btn-brass');
 
   [].forEach.call(nav.children, function (a) {
     panel.appendChild(a.cloneNode(true));
   });
-  if (phone) panel.appendChild(phone.cloneNode(true));
   if (cta) panel.appendChild(cta.cloneNode(true));
 
   toggle.addEventListener('click', function () {
