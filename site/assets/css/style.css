@@ -130,6 +130,7 @@ a:focus-visible {
   font-weight: 600;
 }
 .nav a:hover { color: var(--on-ink); }
+.nav a[aria-current="page"] { color: #fff; font-weight: 700; }
 .header-phone {
   color: var(--on-ink);
   text-decoration: none;
