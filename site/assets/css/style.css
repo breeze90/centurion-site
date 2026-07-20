@@ -549,7 +549,12 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
     padding: 12px 0;
   }
   .logo { font-size: 1.1rem; }
-  .header-phone { margin-left: auto; font-size: 0.95rem; }
+  .header-phone {
+    position: relative;
+    right: 12px;
+    margin-left: auto;
+    font-size: 0.95rem;
+  }
   .header-inner > .btn { display: none; }
 }
 
