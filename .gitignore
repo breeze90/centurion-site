@@ -1,2 +1,4 @@
-.DS_Store
-материалы/
+*
+!/site/
+!/site/**
+!.gitignore
