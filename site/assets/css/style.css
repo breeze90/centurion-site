@@ -234,13 +234,9 @@ a:focus-visible {
 .lead-form { background: var(--ink); color: var(--on-ink); }
 .lead-form h2 { color: #fff; }
 .lead-form .lead { color: var(--on-ink-muted); }
-.form-placeholder {
+.matomba-form {
   margin-top: 32px;
-  border: 1px dashed rgba(255, 255, 255, 0.25);
-  border-radius: var(--radius);
-  padding: 48px 24px;
-  text-align: center;
-  color: var(--on-ink-muted);
+  max-width: 1150px;
 }
 
 /* ===== Сравнение реструктуризации и банкротства ===== */
