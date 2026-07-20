@@ -447,6 +447,26 @@ a:focus-visible {
 }
 .footer a { color: var(--on-ink-muted); }
 
+/* ===== Каталог услуг ===== */
+.uslugi-list { margin: 0; }
+.uslugi-row-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+.uslugi-row:last-child .uslugi-row-inner { border-bottom: none; }
+.uslugi-row:nth-child(even) { background: var(--ink); color: var(--on-ink); }
+.uslugi-row:nth-child(even) .uslugi-row-inner { border-bottom-color: rgba(255, 255, 255, 0.12); }
+.uslugi-row h3 { margin: 0 0 4px; }
+.uslugi-row:nth-child(even) h3 { color: #fff; }
+.uslugi-desc { margin: 0; color: var(--muted); max-width: 44ch; }
+.uslugi-row:nth-child(even) .uslugi-desc { color: var(--on-ink-muted); }
+.uslugi-row .btn { flex: none; }
+
 /* ===== Мобильная версия ===== */
 @media (max-width: 760px) {
   .nav { display: none; }
