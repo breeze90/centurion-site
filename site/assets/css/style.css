@@ -1,16 +1,16 @@
 /* ===== Токены ===== */
 :root {
-  --ink: #121212;        /* тёмный фон, заголовки — чёрный, не синий */
-  --ink-soft: #1c1c1c;   /* фон встроенной формы */
-  --paper: #f7f7f6;      /* фон страницы */
+  --ink: #121416;
+  --ink-soft: #1b2633;
+  --paper: #f2f2f0;
   --card: #ffffff;
-  --text: #1c1c1c;       /* основной текст */
-  --muted: #5c5c5c;      /* вторичный текст */
-  --line: #e2e2e0;       /* рамки, разделители */
-  --brass: #b8892f;      /* акцент — золото/латунь */
-  --brass-dark: #9a7226;
-  --on-ink: #f2f2f0;     /* текст на тёмном */
-  --on-ink-muted: #a8a8a6;
+  --text: #202224;
+  --muted: #62676b;
+  --line: #d8dad8;
+  --brass: #b98729;
+  --brass-dark: #8f661d;
+  --on-ink: #f4f4f2;
+  --on-ink-muted: #b9bec1;
 
   --font-display: "Lora", Georgia, serif;
   --font-body: "Manrope", system-ui, -apple-system, sans-serif;
@@ -202,7 +202,7 @@ a:focus-visible {
 
 /* ===== Первый экран ===== */
 .hero {
-  background: var(--ink);
+  background: linear-gradient(118deg, #101112 0%, #2b2e30 60%, #151719 100%);
   color: var(--on-ink);
   padding: 72px 0;
 }
@@ -262,6 +262,22 @@ a:focus-visible {
 .fact-cap { color: var(--on-ink-muted); font-size: 0.9rem; }
 
 /* ===== Услуги ===== */
+#services {
+  background: #18293a;
+  color: var(--on-ink);
+}
+#services h2 {
+  color: #fff;
+}
+#services .lead {
+  color: #c0c8cf;
+}
+#services .service {
+  background: #f5f6f5;
+  border-color: #d8dcde;
+  box-shadow: none;
+  color: var(--text);
+}
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
@@ -401,6 +417,9 @@ a:focus-visible {
 }
 
 /* ===== Сравнение реструктуризации и банкротства ===== */
+#compare {
+  background: #e9eae8;
+}
 .compare-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
