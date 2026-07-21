@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Варианты цвета — Центурион-групп</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Manrope:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260721-nav12">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260721-nav11">
   <style>
     body { background: #d9d9d7; }
     .variant-wrap { margin-bottom: 48px; }
@@ -17,106 +17,115 @@
     }
     .variant-label h2 { margin-bottom: 4px; font-size: 1.3rem; }
     .variant-label p { margin: 0; color: #444; max-width: 70ch; }
-
-    /* Вариант 1: Цвета Lighthouse с темным блоком услуг */
-    .variant-lh-1 {
-      --ink: #252936;
-      --ink-soft: #171a22;
-      --brass: #d1b171;
-      --brass-dark: #b88b43;
-      --paper: #fbfaf7;
+    .variant-1 {
+        --ink: #1c1c1c;
+        --ink-soft: #262626;
+        --brass: #b8892f;
+        --brass-dark: #9a7226;
+        --paper: #eeece8;
+        --card: #ffffff;
+        --text: #232323;
+        --muted: #63625d;
+        --line: #dcd9d3;
+        --on-ink: #f2f2f0;
+        --on-ink-muted: #a8a8a6;
+      }
+    /* A. Строгий графит: насыщенность создаёт фактура тёмных тонов, не золото. */
+    .variant-2 {
+      --ink: #121416;
+      --ink-soft: #24272a;
+      --brass: #bc8b2b;
+      --brass-dark: #966817;
+      --paper: #eeeeec;
       --card: #ffffff;
-      --text: #252936;
-      --muted: #626878;
-      --line: rgba(37, 41, 54, 0.14);
-      --on-ink: #fbfaf7;
-      --on-ink-muted: #626878;
+      --text: #202224;
+      --muted: #65696b;
+      --line: #d5d6d4;
+      --on-ink: #f3f3f1;
+      --on-ink-muted: #b4b6b5;
     }
-    .variant-lh-1 .header {
-      background: #171a22;
+    .variant-2 .hero {
+      background: linear-gradient(116deg, #0c0d0e 0%, #24272a 52%, #111315 100%);
     }
-    .variant-lh-1 .hero {
-      background: linear-gradient(118deg, #171a22 0%, #252936 60%, #171a22 100%);
+    .variant-2 #compare { background: #e5e6e4; }
+    .variant-2 .service { box-shadow: 0 8px 22px rgba(18, 20, 22, 0.05); }
+
+    /* B. Графит с одним тёмно-синим смысловым блоком. */
+    .variant-3 {
+      --ink: #111416;
+      --ink-soft: #192434;
+      --brass: #c29235;
+      --brass-dark: #966b1e;
+      --paper: #f0f0ee;
+      --card: #ffffff;
+      --text: #1e2225;
+      --muted: #62686d;
+      --line: #d7dad9;
+      --on-ink: #f4f4f1;
+      --on-ink-muted: #b9c0c5;
     }
-    .variant-lh-1 #compare { background: #f4efe6; }
-    .variant-lh-1 #services {
-      background: #171a22;
-      color: #fbfaf7;
+    .variant-3 .hero {
+      background: linear-gradient(118deg, #0c0e10 0%, #1b2228 58%, #101315 100%);
     }
-    .variant-lh-1 #services h2 { color: #fff; }
-    .variant-lh-1 #services .lead { color: #efe2c7; }
-    .variant-lh-1 #services .service {
-      background: #ffffff;
-      border-color: #efe2c7;
-      box-shadow: 0 18px 48px rgba(24, 29, 37, 0.05);
-      color: #252936;
+    .variant-3 #compare {
+      background: #172638;
+      color: var(--on-ink);
     }
-    .variant-lh-1 .btn-brass {
-      background: #d1b171;
-      color: #171a22;
+    .variant-3 #compare h2 { color: #fff; }
+    .variant-3 #compare .lead,
+    .variant-3 #compare .compare-note { color: #c0c8cf; }
+    .variant-3 .compare-card.is-brand {
+      background: #0e1a27;
+      border-color: #31465b;
     }
-    .variant-lh-1 .btn-brass:hover {
-      background: #b88b43;
-      color: #ffffff;
+    .variant-3 .compare-card:not(.is-brand) {
+      background: #f8f8f7;
+      border-color: #d7dcdf;
     }
 
-    /* Вариант 2: Цвета Lighthouse с полностью светлым блоком услуг */
-    .variant-lh-2 {
-      --ink: #252936;
-      --ink-soft: #171a22;
-      --brass: #d1b171;
-      --brass-dark: #b88b43;
-      --paper: #fbfaf7;
+    /* C. Светлый матовый фон и синий блок услуг вместо чередования чёрного и белого. */
+    .variant-4 {
+      --ink: #121416;
+      --ink-soft: #1b2633;
+      --brass: #b98729;
+      --brass-dark: #8f661d;
+      --paper: #f2f2f0;
       --card: #ffffff;
-      --text: #252936;
-      --muted: #626878;
-      --line: rgba(37, 41, 54, 0.14);
-      --on-ink: #fbfaf7;
-      --on-ink-muted: #626878;
+      --text: #202224;
+      --muted: #62676b;
+      --line: #d8dad8;
+      --on-ink: #f4f4f2;
+      --on-ink-muted: #b9bec1;
     }
-    .variant-lh-2 .header {
-      background: #171a22;
+    .variant-4 .hero {
+      background: linear-gradient(118deg, #101112 0%, #2b2e30 60%, #151719 100%);
     }
-    .variant-lh-2 .hero {
-      background: linear-gradient(118deg, #171a22 0%, #252936 60%, #171a22 100%);
+    .variant-4 #compare { background: #e9eae8; }
+    .variant-4 #services {
+      background: #18293a;
+      color: var(--on-ink);
     }
-    .variant-lh-2 #compare { background: #f4efe6; }
-    .variant-lh-2 #services {
-      background: #fbfaf7;
-      color: #252936;
+    .variant-4 #services h2 { color: #fff; }
+    .variant-4 #services .lead { color: #c0c8cf; }
+    .variant-4 #services .service {
+      background: #f5f6f5;
+      border-color: #d8dcde;
+      box-shadow: none;
     }
-    .variant-lh-2 #services h2 { color: #252936; }
-    .variant-lh-2 #services .lead { color: #626878; }
-    .variant-lh-2 #services .service {
-      background: #ffffff;
-      border-color: rgba(37, 41, 54, 0.15);
-      box-shadow: 0 18px 48px rgba(24, 29, 37, 0.05);
-      color: #252936;
-    }
-    .variant-lh-2 .btn-brass {
-      background: #d1b171;
-      color: #171a22;
-    }
-    .variant-lh-2 .btn-brass:hover {
-      background: #b88b43;
-      color: #ffffff;
-    }
-</style>
+  </style>
 </head>
 <body>
   <div class="variant-label" style="padding-top:32px;">
-    <h2 style="font-size:1.6rem;">Варианты на основе палитры сайта Lighthouse</h2>
-    <p>Перенесли цветовую гамму Lighthouse (молочный фон #fbfaf7, песочный #f4efe6, глубокий чернильно-черный #171a22 и золото шампань #d1b171). Это полностью убирает грязные и мутные оттенки.</p>
+    <h2 style="font-size:1.6rem;">Выбранный вариант цвета — графит, золото и тёмно-синий блок услуг</h2>
+    <p>Светлый матовый фон, графит в качестве базы, золото/бронза для кнопок и акцентов, глубокий тёмно-синий для блока услуг.</p>
   </div>
 
-  <!-- ВАРИАНТ 1: С темным блоком услуг -->
-  <div class="variant-wrap" id="variant-lh-1">
-    <div class="variant-label">
-      <h2>Вариант 1 — Тёмный блок услуг (в стиле Lighthouse)</h2>
-      <p>Использует контрастный чернильный блок услуг (#171a22) со светлым текстом и белыми карточками. Для кнопок используется теплое золото с темным текстом на них для идеальной читаемости.</p>
-    </div>
-    <div class="variant-lh-1">
-      
+    <div class="variant-wrap" id="variant-c">
+      <div class="variant-label">
+        <h2>Вариант C — светлый матовый фон и синий блок услуг</h2>
+        <p>Самая светлая версия: матовый серый фон снимает резкость, а тёмно-синий выделяет только раздел услуг. Вместо чередования чёрных и белых полос появляется более собранная иерархия.</p>
+      </div>
+      <div class="variant-4">
       <header class="header">
         <div class="container header-inner">
           <a class="logo" href="#">
@@ -218,120 +227,8 @@
           </div>
         </div>
       </section>
+      </div>
     </div>
-  </div>
-
-  <!-- ВАРИАНТ 2: Полностью светлый -->
-  <div class="variant-wrap" id="variant-lh-2">
-    <div class="variant-label">
-      <h2>Вариант 2 — Полностью светлая основа (в стиле Lighthouse)</h2>
-      <p>Все разделы идут на легком молочном фоне, включая услуги. Блок услуг светлый с белыми карточками и мягкими тенями. Это делает дизайн максимально воздушным, целостным и благородным.</p>
-    </div>
-    <div class="variant-lh-2">
-      
-      <header class="header">
-        <div class="container header-inner">
-          <a class="logo" href="#">
-            <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-групп" width="34" height="34">
-            Центурион-групп
-          </a>
-          <nav class="nav" aria-label="Основное меню">
-            <a href="#">Услуги</a>
-            <a href="#">Клиенту</a>
-            <a href="#">О компании</a>
-            <a href="#">Контакты</a>
-          </nav>
-          <a class="header-phone" href="#">+7 (777) 777-77-77</a>
-          <a class="btn btn-brass" href="#">Консультация</a>
-        </div>
-      </header>
-
-      <section class="hero">
-        <div class="container hero-layout">
-          <div class="hero-copy">
-            <h1>Снижаем платёж по кредиту через суд — без банкротства</h1>
-            <p class="lead">Судебная реструктуризация, банкротство, взыскание задолженности и защита
-              от субсидиарной ответственности — для физических и юридических лиц.</p>
-            <div class="hero-actions">
-              <a class="btn btn-brass" href="#">Получить консультацию</a>
-              <a class="btn btn-outline" href="#">Все услуги</a>
-            </div>
-          </div>
-          <figure class="hero-media">
-            <img src="../assets/img/centurion-hero.jpg" alt="Бронзовый шлем центуриона" width="800" height="999">
-          </figure>
-          <div class="hero-facts">
-            <div class="fact"><div class="fact-num">с 2015</div><div class="fact-cap">года работаем с долговыми спорами</div></div>
-            <div class="fact"><div class="fact-num">Москва</div><div class="fact-cap">офис у м. Кузнецкий Мост</div></div>
-            <div class="fact"><div class="fact-num">Более 1 000</div><div class="fact-cap">выигранных дел</div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="compare">
-        <div class="container">
-          <span class="section-label">В чём разница</span>
-          <h2>Реструктуризация или банкротство</h2>
-          <p class="lead">Банкротство — не единственный законный способ решить проблему с долгом.
-            Часто выгоднее пересмотреть условия выплат через суд, не проходя процедуру банкротства.</p>
-          <div class="compare-grid">
-            <div class="compare-card is-brand">
-              <h3>Реструктуризация</h3>
-              <ul>
-                <li>Суд пересматривает график и размер платежей</li>
-                <li>Имущество и официальный доход сохраняются</li>
-                <li>Статус банкрота не присваивается</li>
-              </ul>
-            </div>
-            <div class="compare-card">
-              <h3>Банкротство</h3>
-              <ul>
-                <li>Долги списываются полностью по решению суда</li>
-                <li>Возможна реализация имущества (кроме единственного жилья)</li>
-                <li>После процедуры действует ряд ограничений на несколько лет</li>
-              </ul>
-            </div>
-          </div>
-          <p class="compare-note">Что подходит именно в вашей ситуации, покажет консультация — единой схемы для всех случаев нет.</p>
-        </div>
-      </section>
-
-      <section class="section" id="services">
-        <div class="container">
-          <span class="section-label">Услуги</span>
-          <h2>Решаем долговые вопросы с обеих сторон</h2>
-          <p class="lead">Помогаем должникам законно снизить или списать обязательства,
-            а кредиторам и руководителям бизнеса — защитить свои интересы.</p>
-          <div class="services-grid">
-            <article class="service">
-              <span class="service-for">Физическим и юридическим лицам</span>
-              <h3>Реструктуризация долга</h3>
-              <p>Пересмотр условий выплат через суд без банкротства: новый график платежей,
-                переговоры с банками и кредиторами, защита от коллекторов.</p>
-            </article>
-            <article class="service">
-              <span class="service-for">Физическим и юридическим лицам</span>
-              <h3>Банкротство</h3>
-              <p>Полное списание долгов через арбитражный суд: анализ ситуации, сбор документов,
-                сопровождение процедуры до освобождения от обязательств.</p>
-            </article>
-            <article class="service">
-              <span class="service-for">Руководителям и владельцам бизнеса</span>
-              <h3>Субсидиарная ответственность</h3>
-              <p>Защита руководителей и собственников от привлечения к субсидиарной
-                ответственности по долгам компании.</p>
-            </article>
-            <article class="service">
-              <span class="service-for">Бизнесу и кредиторам</span>
-              <h3>Взыскание долгов</h3>
-              <p>Возврат дебиторской задолженности: претензионная работа, суд,
-                исполнительное производство, банкротство должника.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
 
 </body>
 </html>
