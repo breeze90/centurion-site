@@ -54,113 +54,157 @@
     }
 
     /* =========================================================================
-       2. НОВЫЙ ВАРИАНТ 1 (Темная шапка + светлая основа + насыщенное золото)
+       ОБЩИЕ СТИЛИ ДЛЯ ВАРИАНТОВ СО СВЕТЛОЙ ШАПКОЙ
        ========================================================================= */
-    .variant-new-1 {
+    .variant-lh-common .header {
+      background: var(--paper);
+      color: var(--text);
+      border-bottom: 1px solid var(--line);
+    }
+    .variant-lh-common .header .logo {
+      color: var(--text);
+    }
+    .variant-lh-common .header .logo-mark {
+      filter: invert(1);
+    }
+    .variant-lh-common .header .nav a {
+      color: var(--muted);
+    }
+    .variant-lh-common .header .nav a:hover {
+      color: var(--text);
+    }
+    .variant-lh-common .header-phone {
+      color: var(--text);
+    }
+    .variant-lh-common .nav-dropdown {
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(24, 29, 37, 0.08);
+    }
+    .variant-lh-common .nav-dropdown a {
+      color: var(--muted);
+    }
+    .variant-lh-common .nav-dropdown a:hover {
+      background: rgba(37, 41, 54, 0.05);
+      color: var(--text);
+    }
+
+    /* =========================================================================
+       2. НОВЫЙ ВАРИАНТ 2.1 (Кристально белый + золотые контуры)
+       ========================================================================= */
+    .variant-new-2-1 {
       --ink: #252936;
       --ink-soft: #171a22;
-      --brass: #b88b43;         /* более насыщенное и контрастное золото */
+      --brass: #b88b43;
       --brass-dark: #966b1e;
-      --paper: #fbfaf7;         /* молочный фон */
+      --paper: #ffffff;         /* кристально белый */
       --card: #ffffff;
       --text: #252936;
       --muted: #626878;
       --line: rgba(37, 41, 54, 0.12);
-      --on-ink: #fbfaf7;
+      --on-ink: #ffffff;
       --on-ink-muted: #9ca3af;
     }
-    .variant-new-1 .header {
-      background: #171a22;
-    }
-    .variant-new-1 .hero {
+    .variant-new-2-1 .hero {
       background: linear-gradient(118deg, #171a22 0%, #252936 60%, #171a22 100%);
     }
-    .variant-new-1 #compare { background: #f4efe6; }
-    .variant-new-1 #services {
-      background: #fbfaf7;
+    .variant-new-2-1 #compare { background: #f8f9fa; }
+    .variant-new-2-1 #services {
+      background: #ffffff;
       color: #252936;
     }
-    .variant-new-1 #services h2 { color: #252936; }
-    .variant-new-1 #services .lead { color: #626878; }
-    .variant-new-1 #services .service {
+    .variant-new-2-1 #services h2 { color: #252936; }
+    .variant-new-2-1 #services .lead { color: #626878; }
+    .variant-new-2-1 #services .service {
       background: #ffffff;
       border-color: rgba(37, 41, 54, 0.12);
       box-shadow: 0 12px 32px rgba(24, 29, 37, 0.04);
       color: #252936;
     }
-    .variant-new-1 .btn-brass {
-      background: var(--brass);
-      color: #fff;
+    /* Кнопки: золотой контур без заливки */
+    .variant-new-2-1 .btn-brass {
+      background: transparent;
+      border: 2px solid var(--brass);
+      color: var(--brass);
     }
-    .variant-new-1 .btn-brass:hover { background: var(--brass-dark); }
+    .variant-new-2-1 .btn-brass:hover {
+      background: rgba(184, 139, 67, 0.06);
+      border-color: var(--brass-dark);
+      color: var(--brass-dark);
+    }
+    .variant-new-2-1 .hero .btn-brass {
+      background: var(--brass);
+      border-color: var(--brass);
+      color: #171a22;
+    }
+    .variant-new-2-1 .hero .btn-brass:hover {
+      background: var(--brass-dark);
+      border-color: var(--brass-dark);
+      color: #ffffff;
+    }
 
     /* =========================================================================
-       3. НОВЫЙ ВАРИАНТ 2 (Светлая шапка + светлая основа + насыщенное золото)
+       3. НОВЫЙ ВАРИАНТ 2.2 (Нежный молочный + графитовые кнопки)
        ========================================================================= */
-    .variant-new-2 {
+    .variant-new-2-2 {
       --ink: #252936;
       --ink-soft: #171a22;
       --brass: #b88b43;
       --brass-dark: #966b1e;
-      --paper: #fbfaf7;
+      --paper: #fbfaf7;         /* благородный молочный */
       --card: #ffffff;
       --text: #252936;
       --muted: #626878;
-      --line: rgba(37, 41, 54, 0.12);
+      --line: rgba(37, 41, 54, 0.1);
       --on-ink: #fbfaf7;
       --on-ink-muted: #9ca3af;
     }
-    .variant-new-2 .header {
-      background: #fbfaf7;
-      color: #252936;
-      border-bottom: 1px solid rgba(37, 41, 54, 0.08);
-    }
-    .variant-new-2 .header .logo {
-      color: #252936;
-    }
-    .variant-new-2 .header .logo-mark {
-      filter: invert(1); /* инвертируем белый логотип в темный */
-    }
-    .variant-new-2 .header .nav a {
-      color: #626878;
-    }
-    .variant-new-2 .header .nav a:hover {
-      color: #252936;
-    }
-    .variant-new-2 .header-phone {
-      color: #252936;
-    }
-    .variant-new-2 .hero {
+    .variant-new-2-2 .hero {
       background: linear-gradient(118deg, #171a22 0%, #252936 60%, #171a22 100%);
     }
-    .variant-new-2 #compare { background: #f4efe6; }
-    .variant-new-2 #services {
+    .variant-new-2-2 #compare { background: #fbfaf7; }
+    .variant-new-2-2 #services {
       background: #fbfaf7;
       color: #252936;
     }
-    .variant-new-2 #services h2 { color: #252936; }
-    .variant-new-2 #services .lead { color: #626878; }
-    .variant-new-2 #services .service {
+    .variant-new-2-2 #services h2 { color: #252936; }
+    .variant-new-2-2 #services .lead { color: #626878; }
+    .variant-new-2-2 #services .service {
       background: #ffffff;
-      border-color: rgba(37, 41, 54, 0.12);
+      border-color: rgba(37, 41, 54, 0.1);
       box-shadow: 0 12px 32px rgba(24, 29, 37, 0.04);
       color: #252936;
     }
-    .variant-new-2 .btn-brass {
-      background: var(--brass);
-      color: #fff;
+    /* Кнопки: контрастный глубокий графит */
+    .variant-new-2-2 .btn-brass {
+      background: #252936;
+      color: #ffffff;
+      border-color: #252936;
     }
-    .variant-new-2 .btn-brass:hover { background: var(--brass-dark); }
+    .variant-new-2-2 .btn-brass:hover {
+      background: #171a22;
+      border-color: #171a22;
+    }
+    .variant-new-2-2 .hero .btn-brass {
+      background: #ffffff;
+      color: #171a22;
+      border-color: #ffffff;
+    }
+    .variant-new-2-2 .hero .btn-brass:hover {
+      background: var(--brass);
+      color: #ffffff;
+      border-color: var(--brass);
+    }
 
     /* =========================================================================
-       4. НОВЫЙ ВАРИАНТ 3 (Темная шапка + прохладный серый фон + темный блок сравнения)
+       4. НОВЫЙ ВАРИАНТ 2.3 (Прохладная сталь + контрастное сравнение)
        ========================================================================= */
-    .variant-new-3 {
+    .variant-new-2-3 {
       --ink: #252936;
       --ink-soft: #171a22;
       --brass: #b88b43;
       --brass-dark: #966b1e;
-      --paper: #edf3f4;         /* прохладный чистый серый */
+      --paper: #edf2f7;         /* прохладный стальной серый */
       --card: #ffffff;
       --text: #252936;
       --muted: #626878;
@@ -168,60 +212,73 @@
       --on-ink: #fbfaf7;
       --on-ink-muted: #9ca3af;
     }
-    .variant-new-3 .header {
-      background: #171a22;
-    }
-    .variant-new-3 .hero {
+    .variant-new-2-3 .hero {
       background: linear-gradient(118deg, #171a22 0%, #252936 60%, #171a22 100%);
     }
-    .variant-new-3 #compare { 
-      background: #252936; 
+    .variant-new-2-3 #compare { 
+      background: #252936;      /* контрастный графит */
       color: #fbfaf7;
     }
-    .variant-new-3 #compare h2 { color: #fff; }
-    .variant-new-3 #compare .lead { color: #edf3f4; }
-    .variant-new-3 #compare .compare-card.is-brand {
+    .variant-new-2-3 #compare h2 { color: #ffffff; }
+    .variant-new-2-3 #compare .lead { color: #edf2f7; }
+    .variant-new-2-3 #compare .compare-card.is-brand {
       background: #171a22;
       border-color: rgba(255, 255, 255, 0.1);
     }
-    .variant-new-3 #compare .compare-card:not(.is-brand) {
+    .variant-new-2-3 #compare .compare-card:not(.is-brand) {
       background: #ffffff;
       border-color: rgba(37, 41, 54, 0.1);
       color: #252936;
     }
-    .variant-new-3 #compare .compare-card:not(.is-brand) li {
+    .variant-new-2-3 #compare .compare-card:not(.is-brand) li {
       color: #626878;
     }
-    .variant-new-3 #services {
-      background: #edf3f4;
+    .variant-new-2-3 #services {
+      background: #edf2f7;
       color: #252936;
     }
-    .variant-new-3 #services h2 { color: #252936; }
-    .variant-new-3 #services .lead { color: #626878; }
-    .variant-new-3 #services .service {
+    .variant-new-2-3 #services h2 { color: #252936; }
+    .variant-new-2-3 #services .lead { color: #626878; }
+    .variant-new-2-3 #services .service {
       background: #ffffff;
       border-color: rgba(37, 41, 54, 0.12);
       box-shadow: 0 12px 32px rgba(24, 29, 37, 0.04);
       color: #252936;
     }
-    .variant-new-3 .btn-brass {
-      background: var(--brass);
-      color: #fff;
+    /* Кнопки: золотой контур */
+    .variant-new-2-3 .btn-brass {
+      background: transparent;
+      border: 2px solid var(--brass);
+      color: var(--brass);
     }
-    .variant-new-3 .btn-brass:hover { background: var(--brass-dark); }
+    .variant-new-2-3 .btn-brass:hover {
+      background: rgba(184, 139, 67, 0.06);
+      border-color: var(--brass-dark);
+      color: var(--brass-dark);
+    }
+    .variant-new-2-3 .hero .btn-brass {
+      background: var(--brass);
+      border-color: var(--brass);
+      color: #171a22;
+    }
+    .variant-new-2-3 .hero .btn-brass:hover {
+      background: var(--brass-dark);
+      border-color: var(--brass-dark);
+      color: #ffffff;
+    }
 </style>
 </head>
 <body>
   <div class="variant-label" style="padding-top:32px;">
-    <h2 style="font-size:1.6rem;">Варианты цветовой схемы — на выбор</h2>
-    <p>Сверху оставлен исходный ориентир (Вариант C с исходными цветами). Ниже — три новые версии, проработанные по комментариям Вячеслава (светлые фоны без грязи, отказ от синего блока, плотное золото, эксперименты с шапкой).</p>
+    <h2 style="font-size:1.6rem;">Варианты на основе Нового Варианта 2 (светлая шапка)</h2>
+    <p>Сверху оставлен ориентир (Вариант C с исходными мутными оттенками). Ниже — три новые версии, развивающие Новый Вариант 2: со светлой шапкой, светлыми выпадающими меню и решениями против «мутности».</p>
   </div>
 
   <!-- ВАРИАНТ 1 (ОРИЕНТИР): Исходный Вариант C -->
   <div class="variant-wrap" id="variant-original">
     <div class="variant-label">
-      <h2>Ориентир — Исходный Вариант C (с прежними цветами)</h2>
-      <p>Оставили без изменений для наглядного сравнения. Здесь используется темноватый серый фон (#f2f2f0), пыльно-синий блок услуг (#18293a) и блекловатое золото (#b98729).</p>
+      <h2>Ориентир — Исходный Вариант C (с прежними цветами и темной шапкой)</h2>
+      <p>Оставили для наглядного сравнения. Серый фон (#f2f2f0), пыльно-синий блок услуг (#18293a), блеклое золото (#b98729), тёмная шапка и тёмное выпадающее меню.</p>
     </div>
     <div class="variant-original-c">
       
@@ -329,13 +386,13 @@
     </div>
   </div>
 
-  <!-- ВАРИАНТ 2: Новый Вариант 1 (Темная шапка, светлая основа, насыщенное золото) -->
-  <div class="variant-wrap" id="variant-new1">
+  <!-- ВАРИАНТ 2: Новый Вариант 2.1 (Кристально белый + золотые контуры) -->
+  <div class="variant-wrap" id="variant-new2-1">
     <div class="variant-label">
-      <h2>Новый вариант 1 — Чистая светлая основа + темная шапка (Lighthouse-стиль)</h2>
-      <p><b>Что сделано:</b> Убрали пыльно-синий блок услуг (теперь все нижние блоки светлые), заменили темный серый фон на чистый молочный (#fbfaf7), сравнение выделили песочным (#f4efe6). Золотые кнопки сделали более темными и насыщенными (#b88b43), чтобы они не блекли. Шапка осталась контрастной темной.</p>
+      <h2>Новый вариант 2.1 — Кристально белый + Золотые контуры</h2>
+      <p><b>Что сделано:</b> Убрали мутность, переведя фоны на чистый белый (#ffffff), а блок сравнения — на легкий светло-серый (#f8f9fa). Все меню и шапка — светлые. Кнопки сделаны контурными с насыщенной золотой рамкой (#b88b43), чтобы золото оставалось акцентом бренда и не выглядело коричневым.</p>
     </div>
-    <div class="variant-new-1">
+    <div class="variant-lh-common variant-new-2-1">
       
       <header class="header">
         <div class="container header-inner">
@@ -441,13 +498,13 @@
     </div>
   </div>
 
-  <!-- ВАРИАНТ 3: Новый Вариант 2 (Полностью воздушный, светлая шапка, насыщенное золото) -->
-  <div class="variant-wrap" id="variant-new2">
+  <!-- ВАРИАНТ 3: Новый Вариант 2.2 (Нежный молочный + графитовые кнопки) -->
+  <div class="variant-wrap" id="variant-new2-2">
     <div class="variant-label">
-      <h2>Новый вариант 2 — Полностью воздушный + светлая шапка</h2>
-      <p><b>Что сделано:</b> Перевели шапку в светлый тон (#fbfaf7) с темными шрифтами и инвертировали логотип. Первый экран (Hero) остался темным для благородного контраста и презентации шлема. Сайт выглядит очень легко и цельно.</p>
+      <h2>Новый вариант 2.2 — Нежный молочный + Графитовые кнопки</h2>
+      <p><b>Что сделано:</b> Фон страницы и блоков сделан благородным молочным (#fbfaf7) без чередования подложек (все блоки светлые). Кнопки сделаны контрастными темно-графитовыми (#252936) с белым текстом — это дает строгий вид и отличную читаемость, убирая золотые пятна.</p>
     </div>
-    <div class="variant-new-2">
+    <div class="variant-lh-common variant-new-2-2">
       
       <header class="header">
         <div class="container header-inner">
@@ -553,13 +610,13 @@
     </div>
   </div>
 
-  <!-- ВАРИАНТ 4: Новый Вариант 3 (Темная шапка, прохладный фон, темное сравнение) -->
-  <div class="variant-wrap" id="variant-new3">
+  <!-- ВАРИАНТ 4: Новый Вариант 2.3 (Прохладная сталь + контрастное сравнение) -->
+  <div class="variant-wrap" id="variant-new2-3">
     <div class="variant-label">
-      <h2>Новый вариант 3 — Прохладная чистая гамма + темное сравнение</h2>
-      <p><b>Что сделано:</b> В качестве основного фона взят легкий прохладный серый (#edf3f4). Блок сравнения сделали контрастным графитовым (#252936), чтобы расставить сильные смысловые акценты. Услуги и шапка — светлые/белые.</p>
+      <h2>Новый вариант 2.3 — Прохладная сталь + Тёмное сравнение</h2>
+      <p><b>Что сделано:</b> За основу взят чистый прохладный серый с голубым отливом (#edf2f7). Блок сравнения сделали контрастным графитовым (#252936) со светлым текстом. Кнопки — контурное золото.</p>
     </div>
-    <div class="variant-new-3">
+    <div class="variant-lh-common variant-new-2-3">
       
       <header class="header">
         <div class="container header-inner">
