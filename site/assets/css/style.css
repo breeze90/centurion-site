@@ -354,6 +354,7 @@ a:focus-visible {
 /* ===== Формат работы ===== */
 .engagement { background: #f8f9fa; }
 .engagement h2 { text-wrap: wrap; }
+.engagement > .container > .lead { max-width: none; }
 .engagement-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
