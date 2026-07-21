@@ -82,12 +82,41 @@
         --on-ink: #eef0f4;
         --on-ink-muted: #a7afbd;
       }
+.variant-6 {
+        --ink: #1a1a1a;
+        --ink-soft: #232323;
+        --brass: #b8892f;
+        --brass-dark: #9a7226;
+        --paper: #eeece8;
+        --card: #ffffff;
+        --text: #1c1c1c;
+        --muted: #5c5c5c;
+        --line: #dcd9d3;
+        --on-ink: #f2f2f0;
+        --on-ink-muted: #a8a8a6;
+      }
+.variant-6 .hero {
+        background: #16213a;
+      }
+.variant-7 {
+        --ink: #16213a;
+        --ink-soft: #1c2a49;
+        --brass: #b8892f;
+        --brass-dark: #9a7226;
+        --paper: #eeece8;
+        --card: #ffffff;
+        --text: #1c1c1c;
+        --muted: #5c5c5c;
+        --line: #dcd9d3;
+        --on-ink: #eef1f6;
+        --on-ink-muted: #a7b0bd;
+      }
   </style>
 </head>
 <body>
   <div class="variant-label" style="padding-top:32px;">
     <h2 style="font-size:1.6rem;">Варианты цвета — на выбор клиенту</h2>
-    <p>Пять вариантов сочетаний по комментариям Вячеслава: светлая/светло-серая основа, чёрный/тёмно-синий/золото для акцентов, без чистого чёрно-белого.</p>
+    <p>Семь вариантов сочетаний по комментариям Вячеслава. Варианты 6 и 7 — уточнённые версии 3 и 4: серый фон, чёрный текст, золото только как акцент, синий — только на блоках, не в тексте.</p>
   </div>
 
     <div class="variant-wrap">
@@ -536,6 +565,226 @@
         <p>Комбинация всех трёх пожеланий: серый фон, тёмно-синие тёмные блоки, золото только на кнопках-действиях.</p>
       </div>
       <div class="variant-5">
+      <header class="header">
+        <div class="container header-inner">
+          <a class="logo" href="#">
+            <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-групп" width="34" height="34">
+            Центурион-групп
+          </a>
+          <nav class="nav" aria-label="Основное меню">
+            <a href="#">Услуги</a>
+            <a href="#">Клиенту</a>
+            <a href="#">О компании</a>
+            <a href="#">Контакты</a>
+          </nav>
+          <a class="header-phone" href="#">+7 (777) 777-77-77</a>
+          <a class="btn btn-brass" href="#">Консультация</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <h1>Снижаем платёж по кредиту через суд — без банкротства</h1>
+            <p class="lead">Судебная реструктуризация, банкротство, взыскание задолженности и защита
+              от субсидиарной ответственности — для физических и юридических лиц.</p>
+            <div class="hero-actions">
+              <a class="btn btn-brass" href="#">Получить консультацию</a>
+              <a class="btn btn-outline" href="#">Все услуги</a>
+            </div>
+          </div>
+          <figure class="hero-media">
+            <img src="../assets/img/centurion-hero.jpg" alt="Бронзовый шлем центуриона" width="800" height="999">
+          </figure>
+          <div class="hero-facts">
+            <div class="fact"><div class="fact-num">с 2015</div><div class="fact-cap">года работаем с долговыми спорами</div></div>
+            <div class="fact"><div class="fact-num">Москва</div><div class="fact-cap">офис у м. Кузнецкий Мост</div></div>
+            <div class="fact"><div class="fact-num">Более 1 000</div><div class="fact-cap">выигранных дел</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="compare">
+        <div class="container">
+          <span class="section-label">В чём разница</span>
+          <h2>Реструктуризация или банкротство</h2>
+          <p class="lead">Банкротство — не единственный законный способ решить проблему с долгом.
+            Часто выгоднее пересмотреть условия выплат через суд, не проходя процедуру банкротства.</p>
+          <div class="compare-grid">
+            <div class="compare-card is-brand">
+              <h3>Реструктуризация</h3>
+              <ul>
+                <li>Суд пересматривает график и размер платежей</li>
+                <li>Имущество и официальный доход сохраняются</li>
+                <li>Статус банкрота не присваивается</li>
+              </ul>
+            </div>
+            <div class="compare-card">
+              <h3>Банкротство</h3>
+              <ul>
+                <li>Долги списываются полностью по решению суда</li>
+                <li>Возможна реализация имущества (кроме единственного жилья)</li>
+                <li>После процедуры действует ряд ограничений на несколько лет</li>
+              </ul>
+            </div>
+          </div>
+          <p class="compare-note">Что подходит именно в вашей ситуации, покажет консультация — единой схемы для всех случаев нет.</p>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <span class="section-label">Услуги</span>
+          <h2>Решаем долговые вопросы с обеих сторон</h2>
+          <p class="lead">Помогаем должникам законно снизить или списать обязательства,
+            а кредиторам и руководителям бизнеса — защитить свои интересы.</p>
+          <div class="services-grid">
+            <article class="service">
+              <span class="service-for">Физическим и юридическим лицам</span>
+              <h3>Реструктуризация долга</h3>
+              <p>Пересмотр условий выплат через суд без банкротства: новый график платежей,
+                переговоры с банками и кредиторами, защита от коллекторов.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Физическим и юридическим лицам</span>
+              <h3>Банкротство</h3>
+              <p>Полное списание долгов через арбитражный суд: анализ ситуации, сбор документов,
+                сопровождение процедуры до освобождения от обязательств.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Руководителям и владельцам бизнеса</span>
+              <h3>Субсидиарная ответственность</h3>
+              <p>Защита руководителей и собственников от привлечения к субсидиарной
+                ответственности по долгам компании.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Бизнесу и кредиторам</span>
+              <h3>Взыскание долгов</h3>
+              <p>Возврат дебиторской задолженности: претензионная работа, суд,
+                исполнительное производство, банкротство должника.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      </div>
+    </div>
+
+    <div class="variant-wrap">
+      <div class="variant-label">
+        <h2>Вариант 6 — Уточнённый 3-й: серый фон, чёрная рамка, синий hero</h2>
+        <p>Серый фон и чёрный текст как в 3-м. Шапка и подвал остаются чёрными, а первый экран — тёмно-синий: чёрный и синий использованы осознанно, по ролям.</p>
+      </div>
+      <div class="variant-6">
+      <header class="header">
+        <div class="container header-inner">
+          <a class="logo" href="#">
+            <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-групп" width="34" height="34">
+            Центурион-групп
+          </a>
+          <nav class="nav" aria-label="Основное меню">
+            <a href="#">Услуги</a>
+            <a href="#">Клиенту</a>
+            <a href="#">О компании</a>
+            <a href="#">Контакты</a>
+          </nav>
+          <a class="header-phone" href="#">+7 (777) 777-77-77</a>
+          <a class="btn btn-brass" href="#">Консультация</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <h1>Снижаем платёж по кредиту через суд — без банкротства</h1>
+            <p class="lead">Судебная реструктуризация, банкротство, взыскание задолженности и защита
+              от субсидиарной ответственности — для физических и юридических лиц.</p>
+            <div class="hero-actions">
+              <a class="btn btn-brass" href="#">Получить консультацию</a>
+              <a class="btn btn-outline" href="#">Все услуги</a>
+            </div>
+          </div>
+          <figure class="hero-media">
+            <img src="../assets/img/centurion-hero.jpg" alt="Бронзовый шлем центуриона" width="800" height="999">
+          </figure>
+          <div class="hero-facts">
+            <div class="fact"><div class="fact-num">с 2015</div><div class="fact-cap">года работаем с долговыми спорами</div></div>
+            <div class="fact"><div class="fact-num">Москва</div><div class="fact-cap">офис у м. Кузнецкий Мост</div></div>
+            <div class="fact"><div class="fact-num">Более 1 000</div><div class="fact-cap">выигранных дел</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="compare">
+        <div class="container">
+          <span class="section-label">В чём разница</span>
+          <h2>Реструктуризация или банкротство</h2>
+          <p class="lead">Банкротство — не единственный законный способ решить проблему с долгом.
+            Часто выгоднее пересмотреть условия выплат через суд, не проходя процедуру банкротства.</p>
+          <div class="compare-grid">
+            <div class="compare-card is-brand">
+              <h3>Реструктуризация</h3>
+              <ul>
+                <li>Суд пересматривает график и размер платежей</li>
+                <li>Имущество и официальный доход сохраняются</li>
+                <li>Статус банкрота не присваивается</li>
+              </ul>
+            </div>
+            <div class="compare-card">
+              <h3>Банкротство</h3>
+              <ul>
+                <li>Долги списываются полностью по решению суда</li>
+                <li>Возможна реализация имущества (кроме единственного жилья)</li>
+                <li>После процедуры действует ряд ограничений на несколько лет</li>
+              </ul>
+            </div>
+          </div>
+          <p class="compare-note">Что подходит именно в вашей ситуации, покажет консультация — единой схемы для всех случаев нет.</p>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <span class="section-label">Услуги</span>
+          <h2>Решаем долговые вопросы с обеих сторон</h2>
+          <p class="lead">Помогаем должникам законно снизить или списать обязательства,
+            а кредиторам и руководителям бизнеса — защитить свои интересы.</p>
+          <div class="services-grid">
+            <article class="service">
+              <span class="service-for">Физическим и юридическим лицам</span>
+              <h3>Реструктуризация долга</h3>
+              <p>Пересмотр условий выплат через суд без банкротства: новый график платежей,
+                переговоры с банками и кредиторами, защита от коллекторов.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Физическим и юридическим лицам</span>
+              <h3>Банкротство</h3>
+              <p>Полное списание долгов через арбитражный суд: анализ ситуации, сбор документов,
+                сопровождение процедуры до освобождения от обязательств.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Руководителям и владельцам бизнеса</span>
+              <h3>Субсидиарная ответственность</h3>
+              <p>Защита руководителей и собственников от привлечения к субсидиарной
+                ответственности по долгам компании.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Бизнесу и кредиторам</span>
+              <h3>Взыскание долгов</h3>
+              <p>Возврат дебиторской задолженности: претензионная работа, суд,
+                исполнительное производство, банкротство должника.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      </div>
+    </div>
+
+    <div class="variant-wrap">
+      <div class="variant-label">
+        <h2>Вариант 7 — Уточнённый 4-й: серый фон вместо белого</h2>
+        <p>Тот же тёмно-синий на шапке, hero и подвале, что и в 4-м, но фон страницы теперь серый — виднее отличие от чисто белого варианта.</p>
+      </div>
+      <div class="variant-7">
       <header class="header">
         <div class="container header-inner">
           <a class="logo" href="#">
