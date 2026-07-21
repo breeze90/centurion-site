@@ -6,7 +6,7 @@
   if (!hasRealTracking) {
     try {
       var refHost = new URL(document.referrer).hostname;
-      if (/(^|\.)yandex\./i.test(refHost)) engine = 'yandex';
+      if (/(^|\.)yandex\.|(^|\.)ya\.ru$/i.test(refHost)) engine = 'yandex';
       else if (/(^|\.)google\./i.test(refHost)) engine = 'google';
     } catch (e) {}
   }
