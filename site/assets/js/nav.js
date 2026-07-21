@@ -1,4 +1,16 @@
 (function () {
+  if (sessionStorage.getItem('entrySource') !== null) return;
+  var engine = '';
+  try {
+    var refHost = new URL(document.referrer).hostname;
+    if (/(^|\.)yandex\./i.test(refHost)) engine = 'yandex';
+    else if (/(^|\.)google\./i.test(refHost)) engine = 'google';
+  } catch (e) {}
+  sessionStorage.setItem('entrySource', engine);
+  sessionStorage.setItem('entryPage', location.hostname + location.pathname);
+})();
+
+(function () {
   var toggle = document.querySelector('.nav-toggle');
   var panel = document.getElementById('mobile-nav');
   if (!toggle || !panel) return;
