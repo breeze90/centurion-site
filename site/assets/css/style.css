@@ -623,6 +623,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   flex-direction: column;
   background: var(--ink);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: -1px;
 }
 .mobile-nav a {
   color: var(--on-ink-muted);
@@ -640,6 +641,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   box-sizing: border-box;
   margin: 0;
   border-bottom: none;
+  border-radius: 12px;
   text-align: center;
   color: #fff;
 }
