@@ -248,7 +248,9 @@
     <script>
       requestAnimationFrame(() => {
         const formFrame = document.querySelector('.matomba-frame');
-        formFrame.src = formFrame.dataset.src;
+        const formUrl = new URL(formFrame.dataset.src);
+        formUrl.searchParams.set('utm_source', 'yandex_seo_test');
+        formFrame.src = formUrl.toString();
       });
     </script>
   </section>
