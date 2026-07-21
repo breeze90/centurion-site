@@ -26,7 +26,7 @@
   <link rel="icon" href="../assets/img/favicon-light.svg?v=20260721-theme" media="(prefers-color-scheme: light)" type="image/svg+xml">
   <link rel="icon" href="../assets/img/favicon-dark.svg?v=20260721-theme" media="(prefers-color-scheme: dark)" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Manrope:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260720-nav4">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260721-nav6">
 </head>
 <body>
   <header class="header">
@@ -39,8 +39,30 @@
         Центурион-групп
       </a>
       <nav class="nav" aria-label="Основное меню">
-        <a href="../uslugi/">Услуги</a>
-        <a href="./" aria-current="page">Клиенту</a>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu">
+            Услуги
+          </button>
+          <div class="nav-dropdown" id="services-menu">
+            <a href="../uslugi/">Все услуги</a>
+            <a href="../uslugi/restrukturizaciya-fizlic/">Реструктуризация физических лиц</a>
+            <a href="../uslugi/bankrotstvo-fizlic/">Банкротство физических лиц</a>
+            <a href="../uslugi/vzyskanie-dolgov/">Взыскание задолженности</a>
+            <a href="../uslugi/restrukturizaciya-yurlic/">Реструктуризация юридических лиц</a>
+            <a href="../uslugi/bankrotstvo-yurlic/">Банкротство юридических лиц</a>
+            <a href="../uslugi/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="client-menu" aria-current="page">
+            Клиенту
+          </button>
+          <div class="nav-dropdown" id="client-menu">
+            <a href="./">Все материалы</a>
+            <a href="./statyi/">Статьи</a>
+            <a href="./keysy/">Кейсы</a>
+          </div>
+        </div>
         <a href="../o-kompanii/">О компании</a>
         <a href="../kontakty/">Контакты</a>
       </nav>
@@ -87,6 +109,6 @@
       <div><a href="#">Политика конфиденциальности</a></div>
     </div>
   </footer>
-  <script src="../assets/js/nav.js?v=20260720-nav7" defer></script>
+  <script src="../assets/js/nav.js?v=20260721-nav9" defer></script>
 </body>
 </html>
