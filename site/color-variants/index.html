@@ -19,8 +19,19 @@
     .variant-label p { margin: 0; color: #444; max-width: 70ch; }
 
     /* =========================================================================
-       ОБЩИЕ СТИЛИ ДЛЯ ВАРИАНТОВ СО СВЕТЛОЙ ШАПКОЙ
+       ОБЩИЕ СТИЛИ (Белая шапка + чистые белые фоны)
        ========================================================================= */
+    .variant-lh-common {
+      --paper: #ffffff;
+      --card: #ffffff;
+      --text: #202224;
+      --muted: #62676b;
+      --line: #e5e7eb;
+      --brass: #b88b43;
+      --brass-dark: #966b1e;
+      --on-ink: #fbfaf7;
+      --on-ink-muted: #9ca3af;
+    }
     .variant-lh-common .header {
       background: #ffffff;
       color: #202224;
@@ -53,198 +64,113 @@
       background: rgba(37, 41, 54, 0.05);
       color: #202224;
     }
-
-    /* =========================================================================
-       1. ВАРИАНТ 1 (Основной): Кристально белый + золотые контуры в шапке
-       ========================================================================= */
-    .variant-new-1 {
-      --ink: #22252c;
-      --ink-soft: #161a22;
-      --brass: #b88b43;
-      --brass-dark: #966b1e;
-      --paper: #ffffff;         /* кристально белый */
-      --card: #ffffff;
-      --text: #202224;
-      --muted: #62676b;
-      --line: #e5e7eb;
-      --on-ink: #fbfaf7;
-      --on-ink-muted: #9ca3af;
-    }
-    .variant-new-1 .hero {
-      background: var(--ink);
-    }
-    .variant-new-1 #compare { background: #f3f4f6; }
-    .variant-new-1 #services {
-      background: #ffffff;
-      color: var(--text);
-    }
-    .variant-new-1 #services h2 { color: var(--text); }
-    .variant-new-1 #services .lead { color: var(--muted); }
-    .variant-new-1 #services .service {
-      background: #ffffff;
-      border-color: var(--line);
-      box-shadow: 0 12px 32px rgba(24, 29, 37, 0.04);
-      color: var(--text);
-    }
-    /* Кнопки: золотой контур в шапке, залитая в Hero */
-    .variant-new-1 .header .btn-brass {
+    /* Header CTA button: always gold outline */
+    .variant-lh-common .header .btn-brass {
       background: transparent;
       border: 1.5px solid var(--brass);
       color: var(--brass);
     }
-    .variant-new-1 .header .btn-brass:hover {
+    .variant-lh-common .header .btn-brass:hover {
       background: var(--brass);
       color: #ffffff;
     }
-    .variant-new-1 .hero .btn-brass {
-      background: var(--brass);
-      border-color: var(--brass);
-      color: #171a22;
-    }
-    .variant-new-1 .hero .btn-brass:hover {
-      background: var(--brass-dark);
-      border-color: var(--brass-dark);
-      color: #ffffff;
-    }
-
-    /* =========================================================================
-       2. ВАРИАНТ 2 (Строгий контрастный): Светло-серый + темное сравнение + графитовые кнопки
-       ========================================================================= */
-    .variant-new-2 {
-      --ink: #22252c;
-      --ink-soft: #161a22;
-      --brass: #b88b43;
-      --brass-dark: #966b1e;
-      --paper: #f8f9fa;         /* строгий светло-серый */
-      --card: #ffffff;
-      --text: #202224;
-      --muted: #62676b;
-      --line: #e5e7eb;
-      --on-ink: #fbfaf7;
-      --on-ink-muted: #9ca3af;
-    }
-    .variant-new-2 .hero {
-      background: var(--ink);
-    }
-    .variant-new-2 #compare { 
-      background: #22252c;      /* контрастный темный графит */
-      color: #fbfaf7;
-    }
-    .variant-new-2 #compare h2 { color: #ffffff; }
-    .variant-new-2 #compare .lead { color: #edf2f7; }
-    .variant-new-2 #compare .compare-card.is-brand {
-      background: #171a22;
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-    .variant-new-2 #compare .compare-card:not(.is-brand) {
+    /* Rest of the page backgrounds: clean white & grey */
+    .variant-lh-common #compare { background: #f3f4f6; }
+    .variant-lh-common #services {
       background: #ffffff;
-      border-color: rgba(37, 41, 54, 0.1);
-      color: #202224;
-    }
-    .variant-new-2 #compare .compare-card:not(.is-brand) li {
-      color: #62676b;
-    }
-    .variant-new-2 #services {
-      background: #f8f9fa;
       color: var(--text);
     }
-    .variant-new-2 #services h2 { color: var(--text); }
-    .variant-new-2 #services .lead { color: var(--muted); }
-    .variant-new-2 #services .service {
+    .variant-lh-common #services h2 { color: var(--text); }
+    .variant-lh-common #services .lead { color: var(--muted); }
+    .variant-lh-common #services .service {
       background: #ffffff;
       border-color: var(--line);
       box-shadow: 0 12px 32px rgba(24, 29, 37, 0.04);
       color: var(--text);
     }
-    /* Кнопки: строгий графит на светлом, золото на темном */
-    .variant-new-2 .btn-brass {
+
+    /* =========================================================================
+       1. ВАРИАНТ 1 (Ориентир основного): Тёмный грифельный (#22252c) + плотное золото
+       ========================================================================= */
+    .variant-hero-1 .hero {
       background: #22252c;
-      color: #ffffff;
-      border-color: #22252c;
     }
-    .variant-new-2 .btn-brass:hover {
-      background: #171a22;
-      border-color: #171a22;
-    }
-    .variant-new-2 .hero .btn-brass {
+    .variant-hero-1 .hero .btn-brass {
       background: var(--brass);
       border-color: var(--brass);
       color: #171a22;
     }
-    .variant-new-2 .hero .btn-brass:hover {
+    .variant-hero-1 .hero .btn-brass:hover {
       background: var(--brass-dark);
       border-color: var(--brass-dark);
       color: #ffffff;
     }
 
     /* =========================================================================
-       3. ВАРИАНТ 3 (Молочный Lighthouse): Молочный + песочный + контурное золото
+       2. ВАРИАНТ 2: Черный графит (#15171a) + белая контурная кнопка
        ========================================================================= */
-    .variant-new-3 {
-      --ink: #22252c;
-      --ink-soft: #161a22;
-      --brass: #b88b43;
-      --brass-dark: #966b1e;
-      --paper: #fbfaf7;         /* молочный фон */
-      --card: #ffffff;
-      --text: #252936;
-      --muted: #626878;
-      --line: rgba(37, 41, 54, 0.1);
-      --on-ink: #fbfaf7;
-      --on-ink-muted: #9ca3af;
+    .variant-hero-2 .hero {
+      background: #15171a;
     }
-    .variant-new-3 .hero {
-      background: linear-gradient(118deg, #171a22 0%, #252936 60%, #171a22 100%);
-    }
-    .variant-new-3 #compare { background: #f4efe6; }
-    .variant-new-3 #services {
-      background: #fbfaf7;
-      color: var(--text);
-    }
-    .variant-new-3 #services h2 { color: var(--text); }
-    .variant-new-3 #services .lead { color: var(--muted); }
-    .variant-new-3 #services .service {
-      background: #ffffff;
-      border-color: var(--line);
-      box-shadow: 0 12px 32px rgba(24, 29, 37, 0.04);
-      color: var(--text);
-    }
-    /* Кнопки: везде контурное золото, кроме Hero */
-    .variant-new-3 .btn-brass {
+    .variant-hero-2 .hero .btn-brass {
       background: transparent;
-      border: 2px solid var(--brass);
-      color: var(--brass);
-    }
-    .variant-new-3 .btn-brass:hover {
-      background: rgba(184, 139, 67, 0.06);
-      border-color: var(--brass-dark);
-      color: var(--brass-dark);
-    }
-    .variant-new-3 .hero .btn-brass {
-      background: var(--brass);
-      border-color: var(--brass);
-      color: #171a22;
-    }
-    .variant-new-3 .hero .btn-brass:hover {
-      background: var(--brass-dark);
-      border-color: var(--brass-dark);
+      border: 2px solid #ffffff;
       color: #ffffff;
+    }
+    .variant-hero-2 .hero .btn-brass:hover {
+      background: #ffffff;
+      color: #15171a;
+      border-color: #ffffff;
+    }
+
+    /* =========================================================================
+       3. ВАРИАНТ 3: Глубокий синий инк (#0f1822) + золотая контурная кнопка
+       ========================================================================= */
+    .variant-hero-3 .hero {
+      background: #0f1822;
+    }
+    .variant-hero-3 .hero .btn-brass {
+      background: transparent;
+      border: 2px solid #d1b171;
+      color: #d1b171;
+    }
+    .variant-hero-3 .hero .btn-brass:hover {
+      background: #d1b171;
+      color: #0f1822;
+      border-color: #d1b171;
+    }
+
+    /* =========================================================================
+       4. ВАРИАНТ 4: Бронзовый графит (#1d1a17) + солидная белая кнопка
+       ========================================================================= */
+    .variant-hero-4 .hero {
+      background: #1d1a17;
+    }
+    .variant-hero-4 .hero .btn-brass {
+      background: #ffffff;
+      color: #1d1a17;
+      border-color: #ffffff;
+    }
+    .variant-hero-4 .hero .btn-brass:hover {
+      background: transparent;
+      color: #ffffff;
+      border-color: #ffffff;
     }
 </style>
 </head>
 <body>
   <div class="variant-label" style="padding-top:32px;">
-    <h2 style="font-size:1.6rem;">Варианты цветовой схемы с белой шапкой</h2>
-    <p>Все варианты ниже используют белую шапку и светлое меню. Первый вариант — это то, что мы сделали основным на главном сайте.</p>
+    <h2 style="font-size:1.6rem;">Варианты фона первого экрана (Hero) и стиля кнопки</h2>
+    <p>Все варианты ниже используют новый одобренный стиль с белой шапкой и чистыми белыми/серыми фонами. Мы меняем только темный фон первого экрана и стиль главной кнопки (уходим от желтой заливки во 2, 3 и 4 вариантах).</p>
   </div>
 
-  <!-- ВАРИАНТ 1 (ОСНОВНОЙ): Кристально белый + золотые детали -->
-  <div class="variant-wrap" id="variant-main">
+  <!-- ВАРИАНТ 1: Текущий основной (Грифельный #22252c + залитая золотом кнопка) -->
+  <div class="variant-wrap" id="variant-h1">
     <div class="variant-label">
-      <h2>Вариант 1 (Основной) — Кристально белый + Золотые детали</h2>
-      <p><b>Что сделано:</b> Этот вариант мы сделали основным на сайте. Базовый фон кристально белый (#ffffff), сравнение вынесено на чистый светло-серый (#f3f4f6). Кнопка в шапке контурная, а в первом экране — плотная золотая с темным контрастным текстом.</p>
+      <h2>Ориентир — Текущий основной (Грифельный #22252c + залитая золотом кнопка)</h2>
+      <p>Как сейчас сделано на сайте: фон первого экрана — темно-грифельный (#22252c), главная кнопка полностью залита плотным золотом с темным текстом.</p>
     </div>
-    <div class="variant-lh-common variant-new-1">
+    <div class="variant-lh-common variant-hero-1">
       
       <header class="header">
         <div class="container header-inner">
@@ -350,13 +276,13 @@
     </div>
   </div>
 
-  <!-- ВАРИАНТ 2: Новый Вариант 2 (Строгий контрастный) -->
-  <div class="variant-wrap" id="variant-strict">
+  <!-- ВАРИАНТ 2: Черный графит (#15171a) + белая контурная кнопка -->
+  <div class="variant-wrap" id="variant-h2">
     <div class="variant-label">
-      <h2>Вариант 2 — Строгий контрастный (Светло-серый + графит)</h2>
-      <p><b>Что сделано:</b> Базовый фон страницы заменен на чистый холодный светло-серый (#f8f9fa). Блок сравнения сделан контрастным графитовым (#22252c) со светлым текстом, а кнопки действий — строгими графитовыми. Золото оставлено только в деталях и кнопке на первом экране.</p>
+      <h2>Вариант 2 — Черный графит (#15171a) + белая контурная кнопка</h2>
+      <p><b>Что сделано:</b> Фон первого экрана сделан еще темнее и строже (нейтральный черный графит #15171a). Кнопка сделана контурной белой (без заливки). Смотрится очень аскетично и дорого.</p>
     </div>
-    <div class="variant-lh-common variant-new-2">
+    <div class="variant-lh-common variant-hero-2">
       
       <header class="header">
         <div class="container header-inner">
@@ -462,13 +388,125 @@
     </div>
   </div>
 
-  <!-- ВАРИАНТ 3: Новый Вариант 3 (Молочный Lighthouse) -->
-  <div class="variant-wrap" id="variant-milk">
+  <!-- ВАРИАНТ 3: Глубокий синий инк (#0f1822) + золотая контурная кнопка -->
+  <div class="variant-wrap" id="variant-h3">
     <div class="variant-label">
-      <h2>Вариант 3 — Нежная молочная палитра (в стиле Lighthouse)</h2>
-      <p><b>Что сделано:</b> Базовый фон — мягкий молочный (#fbfaf7), сравнение — песочно-кремовый (#f4efe6). Все кнопки, кроме главного экрана, сделаны контурными, что оставляет дизайн легким и лишенным «коричневых» пятен.</p>
+      <h2>Вариант 3 — Глубокий синий инк (#0f1822) + золотая контурная кнопка</h2>
+      <p><b>Что сделано:</b> Использован невероятно глубокий темно-синий/чернильный фон (#0f1822) — он не грязный, а очень чистый и дорогой. Кнопка сделана контурной золотой (тонкая рамка цвета шампань #d1b171 без заливки).</p>
     </div>
-    <div class="variant-lh-common variant-new-3">
+    <div class="variant-lh-common variant-hero-3">
+      
+      <header class="header">
+        <div class="container header-inner">
+          <a class="logo" href="#">
+            <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-групп" width="34" height="34">
+            Центурион-групп
+          </a>
+          <nav class="nav" aria-label="Основное меню">
+            <a href="#">Услуги</a>
+            <a href="#">Клиенту</a>
+            <a href="#">О компании</a>
+            <a href="#">Контакты</a>
+          </nav>
+          <a class="header-phone" href="#">+7 (777) 777-77-77</a>
+          <a class="btn btn-brass" href="#">Консультация</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <h1>Снижаем платёж по кредиту через суд — без банкротства</h1>
+            <p class="lead">Судебная реструктуризация, банкротство, взыскание задолженности и защита
+              от субсидиарной ответственности — для физических и юридических лиц.</p>
+            <div class="hero-actions">
+              <a class="btn btn-brass" href="#">Получить консультацию</a>
+              <a class="btn btn-outline" href="#">Все услуги</a>
+            </div>
+          </div>
+          <figure class="hero-media">
+            <img src="../assets/img/centurion-hero.jpg" alt="Бронзовый шлем центуриона" width="800" height="999">
+          </figure>
+          <div class="hero-facts">
+            <div class="fact"><div class="fact-num">с 2015</div><div class="fact-cap">года работаем с долговыми спорами</div></div>
+            <div class="fact"><div class="fact-num">Москва</div><div class="fact-cap">офис у м. Кузнецкий Мост</div></div>
+            <div class="fact"><div class="fact-num">Более 1 000</div><div class="fact-cap">выигранных дел</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="compare">
+        <div class="container">
+          <span class="section-label">В чём разница</span>
+          <h2>Реструктуризация или банкротство</h2>
+          <p class="lead">Банкротство — не единственный законный способ решить проблему с долгом.
+            Часто выгоднее пересмотреть условия выплат через суд, не проходя процедуру банкротства.</p>
+          <div class="compare-grid">
+            <div class="compare-card is-brand">
+              <h3>Реструктуризация</h3>
+              <ul>
+                <li>Суд пересматривает график и размер платежей</li>
+                <li>Имущество и официальный доход сохраняются</li>
+                <li>Статус банкрота не присваивается</li>
+              </ul>
+            </div>
+            <div class="compare-card">
+              <h3>Банкротство</h3>
+              <ul>
+                <li>Долги списываются полностью по решению суда</li>
+                <li>Возможна реализация имущества (кроме единственного жилья)</li>
+                <li>После процедуры действует ряд ограничений на несколько лет</li>
+              </ul>
+            </div>
+          </div>
+          <p class="compare-note">Что подходит именно в вашей ситуации, покажет консультация — единой схемы для всех случаев нет.</p>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <span class="section-label">Услуги</span>
+          <h2>Решаем долговые вопросы с обеих сторон</h2>
+          <p class="lead">Помогаем должникам законно снизить или списать обязательства,
+            а кредиторам и руководителям бизнеса — защитить свои интересы.</p>
+          <div class="services-grid">
+            <article class="service">
+              <span class="service-for">Физическим и юридическим лицам</span>
+              <h3>Реструктуризация долга</h3>
+              <p>Пересмотр условий выплат через суд без банкротства: новый график платежей,
+                переговоры с банками и кредиторами, защита от коллекторов.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Физическим и юридическим лицам</span>
+              <h3>Банкротство</h3>
+              <p>Полное списание долгов через арбитражный суд: анализ ситуации, сбор документов,
+                сопровождение процедуры до освобождения от обязательств.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Руководителям и владельцам бизнеса</span>
+              <h3>Субсидиарная ответственность</h3>
+              <p>Защита руководителей и собственников от привлечения к субсидиарной
+                ответственности по долгам компании.</p>
+            </article>
+            <article class="service">
+              <span class="service-for">Бизнесу и кредиторам</span>
+              <h3>Взыскание долгов</h3>
+              <p>Возврат дебиторской задолженности: претензионная работа, суд,
+                исполнительное производство, банкротство должника.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ВАРИАНТ 4: Бронзовый графит (#1d1a17) + контрастная белая кнопка -->
+  <div class="variant-wrap" id="variant-h4">
+    <div class="variant-label">
+      <h2>Вариант 4 — Бронзовый графит (#1d1a17) + контрастная белая кнопка</h2>
+      <p><b>Что сделано:</b> Взят темно-бронзовый графитовый фон (#1d1a17), который перекликается с теплыми бликами на шлеме центуриона. Главная кнопка сделана залитой белым цветом с темным текстом. Дает высочайший контраст и фокус внимания.</p>
+    </div>
+    <div class="variant-lh-common variant-hero-4">
       
       <header class="header">
         <div class="container header-inner">
