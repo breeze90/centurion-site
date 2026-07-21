@@ -355,17 +355,6 @@ a:focus-visible {
 }
 .policy-operator p { margin: 0; color: var(--muted); }
 
-/* ===== Почему мы ===== */
-.why { background: #f8f9fa; }
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  gap: 32px;
-  margin-top: 36px;
-}
-.why-item h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.02rem; }
-.why-item p { color: var(--muted); font-size: 0.95rem; margin: 0; }
-
 /* ===== Как работаем ===== */
 #process > .container > .lead { max-width: 74ch; }
 .steps {
