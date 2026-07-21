@@ -1,16 +1,16 @@
 /* ===== Токены ===== */
 :root {
-  --ink: #121212;        /* тёмный фон, заголовки — чёрный, не синий */
-  --ink-soft: #1c1c1c;   /* фон встроенной формы */
-  --paper: #f7f7f6;      /* фон страницы */
+  --ink: #22252c;        /* темный графитовый цвет */
+  --ink-soft: #161a22;   /* фон формы */
+  --paper: #ffffff;      /* чистый белый фон сайта */
   --card: #ffffff;
-  --text: #1c1c1c;       /* основной текст */
-  --muted: #5c5c5c;      /* вторичный текст */
-  --line: #e2e2e0;       /* рамки, разделители */
-  --brass: #b8892f;      /* акцент — золото/латунь */
-  --brass-dark: #9a7226;
-  --on-ink: #f2f2f0;     /* текст на тёмном */
-  --on-ink-muted: #a8a8a6;
+  --text: #202224;       /* темный графитовый текст */
+  --muted: #62676b;      /* вторичный текст */
+  --line: #e5e7eb;       /* чистый серый разделитель */
+  --brass: #b88b43;      /* насыщенное золото */
+  --brass-dark: #966b1e;
+  --on-ink: #fbfaf7;
+  --on-ink-muted: #9ca3af;
 
   --font-display: "Lora", Georgia, serif;
   --font-body: "Manrope", system-ui, -apple-system, sans-serif;
@@ -92,9 +92,9 @@ a:focus-visible {
 /* ===== Шапка ===== */
 .header {
   position: relative;
-  background: var(--ink);
-  color: var(--on-ink);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
 }
 .header-inner {
   position: relative;
@@ -109,7 +109,7 @@ a:focus-visible {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: var(--on-ink);
+  color: var(--text);
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 600;
@@ -120,6 +120,7 @@ a:focus-visible {
   width: 34px;
   object-fit: contain;
   flex: none;
+  filter: invert(1); /* инвертируем белый логотип в темный */
 }
 .nav {
   display: flex;
@@ -129,16 +130,16 @@ a:focus-visible {
 }
 .nav a,
 .nav-trigger {
-  color: var(--on-ink-muted);
+  color: var(--muted);
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 600;
 }
 .nav a:hover,
 .nav-trigger:hover,
-.nav-trigger[aria-expanded="true"] { color: var(--on-ink); }
+.nav-trigger[aria-expanded="true"] { color: var(--text); }
 .nav a[aria-current="page"],
-.nav-trigger[aria-current="page"] { color: #fff; font-weight: 700; }
+.nav-trigger[aria-current="page"] { color: var(--text); font-weight: 700; }
 .nav-item { position: relative; }
 .nav-trigger {
   display: inline-flex;
@@ -168,10 +169,10 @@ a:focus-visible {
   display: none;
   width: 270px;
   padding: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--line);
   border-radius: 6px;
-  background: #171717;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(24, 29, 37, 0.08);
 }
 .nav-item.is-open .nav-dropdown { display: grid; }
 .nav-dropdown a {
@@ -179,13 +180,26 @@ a:focus-visible {
   padding: 10px 12px;
   border-radius: 4px;
   line-height: 1.3;
+  color: var(--muted);
 }
-.nav-dropdown a:hover { background: rgba(255, 255, 255, 0.08); }
+.nav-dropdown a:hover {
+  background: rgba(37, 41, 54, 0.05);
+  color: var(--text);
+}
 .header-phone {
-  color: var(--on-ink);
+  color: var(--text);
   text-decoration: none;
   font-weight: 700;
   white-space: nowrap;
+}
+.header .btn-brass {
+  background: transparent;
+  border: 1.5px solid var(--brass);
+  color: var(--brass);
+}
+.header .btn-brass:hover {
+  background: var(--brass);
+  color: #ffffff;
 }
 @media (min-width: 761px) and (max-width: 1000px) {
   .header-inner {
@@ -205,6 +219,16 @@ a:focus-visible {
   background: var(--ink);
   color: var(--on-ink);
   padding: 72px 0;
+}
+.hero .btn-brass {
+  background: var(--brass);
+  color: #171a22;
+  border-color: var(--brass);
+}
+.hero .btn-brass:hover {
+  background: var(--brass-dark);
+  color: #ffffff;
+  border-color: var(--brass-dark);
 }
 .hero-layout {
   display: grid;
@@ -276,6 +300,7 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  box-shadow: 0 12px 32px rgba(24, 29, 37, 0.04);
 }
 .service h3 { margin: 0; }
 .service p { color: var(--muted); font-size: 0.95rem; margin: 0; }
@@ -288,7 +313,8 @@ a:focus-visible {
 }
 
 /* ===== Почему мы ===== */
-.why { background: #f2f0ea; }
+.why { background: #f8f9fa; }
+#compare { background: #f3f4f6; }
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
@@ -584,7 +610,7 @@ body.modal-open { overflow: hidden; }
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--on-ink);
+  background: var(--text);
   transition: transform 0.2s, opacity 0.2s;
 }
 body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
