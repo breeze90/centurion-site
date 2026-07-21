@@ -279,6 +279,11 @@ a:focus-visible {
 .lead-form { background: var(--ink-soft); color: var(--on-ink); }
 .lead-form h2 { color: #fff; }
 .lead-form .lead { color: var(--on-ink-muted); }
+
+/* ===== Почему нам можно доверять ===== */
+.trust { background: var(--ink); color: var(--on-ink); }
+.trust h2 { color: #fff; }
+.trust .lead { color: var(--on-ink-muted); }
 .lead-form-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(420px, 480px);
