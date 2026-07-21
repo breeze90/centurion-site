@@ -568,7 +568,6 @@ a:focus-visible {
   cursor: pointer;
 }
 .modal-close:hover { color: var(--on-ink); background: rgba(255, 255, 255, 0.08); }
-.modal .matomba-frame { height: 520px; }
 body.modal-open { overflow: hidden; }
 
 /* ===== Каталог услуг ===== */
