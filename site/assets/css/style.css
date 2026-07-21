@@ -503,6 +503,48 @@ a:focus-visible {
 }
 .footer a { color: var(--on-ink-muted); }
 
+/* ===== Попап заявки ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+.modal[aria-hidden="false"] { display: block; }
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(480px, calc(100% - 32px));
+  max-height: calc(100vh - 64px);
+  margin: 32px auto;
+  overflow: auto;
+  background: var(--ink-soft);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--on-ink-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-close:hover { color: var(--on-ink); background: rgba(255, 255, 255, 0.08); }
+.modal .matomba-frame { height: 520px; }
+body.modal-open { overflow: hidden; }
+
 /* ===== Каталог услуг ===== */
 .uslugi-list { margin: 0; }
 .uslugi-row-inner {
