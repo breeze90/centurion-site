@@ -427,6 +427,7 @@ a:focus-visible {
 
 /* ===== Что делаем ===== */
 .solutions { background: #f3f4f6; }
+.solutions > .container > .lead { max-width: none; }
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -439,11 +440,6 @@ a:focus-visible {
   border: 1px solid var(--line);
   background: var(--card);
 }
-.solution-card.is-featured {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--on-ink);
-}
 .solution-num {
   display: block;
   margin-bottom: 34px;
@@ -452,17 +448,14 @@ a:focus-visible {
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-.solution-card.is-featured .solution-num { color: var(--brass); }
 .solution-card h3 { margin-bottom: 10px; }
-.solution-card.is-featured h3 { color: #ffffff; }
 .solution-card p {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
-.solution-card.is-featured p { color: var(--on-ink-muted); }
 .solutions-note {
-  max-width: 720px;
+  max-width: none;
   margin: 22px 0 0;
   padding-left: 18px;
   border-left: 2px solid var(--brass);
