@@ -1,16 +1,16 @@
 /* ===== Токены ===== */
 :root {
-  --ink: #22252c;        /* темный графитовый цвет */
-  --ink-soft: #161a22;   /* фон формы */
+  --ink: #0f1822;        /* имперский глубокий синий инк */
+  --ink-soft: #121b26;   /* фон формы */
   --paper: #ffffff;      /* чистый белый фон сайта */
   --card: #ffffff;
   --text: #202224;       /* темный графитовый текст */
   --muted: #62676b;      /* вторичный текст */
   --line: #e5e7eb;       /* чистый серый разделитель */
-  --brass: #b88b43;      /* насыщенное золото */
-  --brass-dark: #966b1e;
-  --on-ink: #fbfaf7;
-  --on-ink-muted: #9ca3af;
+  --brass: #d1b171;      /* золото цвета шампань */
+  --brass-dark: #b88b43; /* насыщенное золото для наведения */
+  --on-ink: #ffffff;     /* белый текст на темном фоне */
+  --on-ink-muted: rgba(255, 255, 255, 0.7);
 
   --font-display: "Lora", Georgia, serif;
   --font-body: "Manrope", system-ui, -apple-system, sans-serif;
@@ -222,7 +222,7 @@ a:focus-visible {
 }
 .hero .btn-brass {
   background: var(--brass);
-  color: #171a22;
+  color: var(--ink);
   border-color: var(--brass);
 }
 .hero .btn-brass:hover {
