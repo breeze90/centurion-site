@@ -6,9 +6,9 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Варианты цвета — Центурион-групп</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Manrope:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260721-nav7">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260721-nav11">
   <style>
-    body { background: #d8d8d6; }
+    body { background: #d9d9d7; }
     .variant-wrap { margin-bottom: 48px; }
     .variant-label {
       max-width: 1120px;
@@ -30,80 +30,99 @@
         --on-ink: #f2f2f0;
         --on-ink-muted: #a8a8a6;
       }
-.variant-2 {
-        --ink: #1c1c1c;
-        --ink-soft: #262626;
-        --brass: #b8892f;
-        --brass-dark: #9a7226;
-        --paper: #eeece8;
-        --card: #ffffff;
-        --text: #232323;
-        --muted: #63625d;
-        --line: #dcd9d3;
-        --on-ink: #f2f2f0;
-        --on-ink-muted: #a8a8a6;
-      }
-.variant-2 .btn-brass {
-        background: var(--ink);
-        color: #fff;
-        border-color: var(--ink);
-      }
-.variant-2 .btn-brass:hover {
-        background: #000;
-      }
-.variant-3 {
-        --ink: #1c1c1c;
-        --ink-soft: #262626;
-        --brass: #b8892f;
-        --brass-dark: #9a7226;
-        --paper: #f4f3f0;
-        --card: #ffffff;
-        --text: #232323;
-        --muted: #63625d;
-        --line: #e6e4df;
-        --on-ink: #f2f2f0;
-        --on-ink-muted: #a8a8a6;
-      }
-.variant-3 .btn-brass {
-        background: var(--ink);
-        color: #fff;
-        border-color: var(--ink);
-      }
-.variant-3 .btn-brass:hover {
-        background: #000;
-      }
-.variant-4 {
-        --ink: #1c1c1c;
-        --ink-soft: #262626;
-        --brass: #b8892f;
-        --brass-dark: #9a7226;
-        --paper: #eeece8;
-        --card: #ffffff;
-        --text: #232323;
-        --muted: #63625d;
-        --line: #dcd9d3;
-        --on-ink: #f2f2f0;
-        --on-ink-muted: #a8a8a6;
-      }
-.variant-4 .btn-brass {
-        background: var(--ink);
-        color: #fff;
-        border: 1px solid var(--brass);
-      }
-.variant-4 .btn-brass:hover {
-        background: #000;
-      }
+    /* A. Строгий графит: насыщенность создаёт фактура тёмных тонов, не золото. */
+    .variant-2 {
+      --ink: #121416;
+      --ink-soft: #24272a;
+      --brass: #bc8b2b;
+      --brass-dark: #966817;
+      --paper: #eeeeec;
+      --card: #ffffff;
+      --text: #202224;
+      --muted: #65696b;
+      --line: #d5d6d4;
+      --on-ink: #f3f3f1;
+      --on-ink-muted: #b4b6b5;
+    }
+    .variant-2 .hero {
+      background: linear-gradient(116deg, #0c0d0e 0%, #24272a 52%, #111315 100%);
+    }
+    .variant-2 #compare { background: #e5e6e4; }
+    .variant-2 .service { box-shadow: 0 8px 22px rgba(18, 20, 22, 0.05); }
+
+    /* B. Графит с одним тёмно-синим смысловым блоком. */
+    .variant-3 {
+      --ink: #111416;
+      --ink-soft: #192434;
+      --brass: #c29235;
+      --brass-dark: #966b1e;
+      --paper: #f0f0ee;
+      --card: #ffffff;
+      --text: #1e2225;
+      --muted: #62686d;
+      --line: #d7dad9;
+      --on-ink: #f4f4f1;
+      --on-ink-muted: #b9c0c5;
+    }
+    .variant-3 .hero {
+      background: linear-gradient(118deg, #0c0e10 0%, #1b2228 58%, #101315 100%);
+    }
+    .variant-3 #compare {
+      background: #172638;
+      color: var(--on-ink);
+    }
+    .variant-3 #compare h2 { color: #fff; }
+    .variant-3 #compare .lead,
+    .variant-3 #compare .compare-note { color: #c0c8cf; }
+    .variant-3 .compare-card.is-brand {
+      background: #0e1a27;
+      border-color: #31465b;
+    }
+    .variant-3 .compare-card:not(.is-brand) {
+      background: #f8f8f7;
+      border-color: #d7dcdf;
+    }
+
+    /* C. Светлый матовый фон и синий блок услуг вместо чередования чёрного и белого. */
+    .variant-4 {
+      --ink: #121416;
+      --ink-soft: #1b2633;
+      --brass: #b98729;
+      --brass-dark: #8f661d;
+      --paper: #f2f2f0;
+      --card: #ffffff;
+      --text: #202224;
+      --muted: #62676b;
+      --line: #d8dad8;
+      --on-ink: #f4f4f2;
+      --on-ink-muted: #b9bec1;
+    }
+    .variant-4 .hero {
+      background: linear-gradient(118deg, #101112 0%, #2b2e30 60%, #151719 100%);
+    }
+    .variant-4 #compare { background: #e9eae8; }
+    .variant-4 #services {
+      background: #18293a;
+      color: var(--on-ink);
+    }
+    .variant-4 #services h2 { color: #fff; }
+    .variant-4 #services .lead { color: #c0c8cf; }
+    .variant-4 #services .service {
+      background: #f5f6f5;
+      border-color: #d8dcde;
+      box-shadow: none;
+    }
   </style>
 </head>
 <body>
   <div class="variant-label" style="padding-top:32px;">
     <h2 style="font-size:1.6rem;">Варианты цвета — на выбор клиенту</h2>
-    <p>Сверху — вариант 3 как ориентир (понравился больше остальных). Ниже — 3 новых по голосовому комментарию: чёрная кнопка вместо золотой, золото — только как мелкий акцент.</p>
+    <p>Сверху — текущий ориентир. Ниже — три направления по комментарию: светлый матовый фон, чёрно-серо-белая база, золото как акцент и, где уместно, тёмно-синий смысловой блок.</p>
   </div>
 
-    <div class="variant-wrap">
+    <div class="variant-wrap" id="current-variant">
       <div class="variant-label">
-        <h2>Вариант 3 (текущий фаворит) — без изменений</h2>
+        <h2>Текущий вариант — ориентир</h2>
         <p>Оставили как есть, для сравнения с новыми вариантами ниже.</p>
       </div>
       <div class="variant-1">
@@ -211,10 +230,10 @@
       </div>
     </div>
 
-    <div class="variant-wrap">
+    <div class="variant-wrap" id="variant-a">
       <div class="variant-label">
-        <h2>Новый — чёрная кнопка вместо золотой</h2>
-        <p>По голосовому комментарию Вячеслава: золото в большом объёме (заливка кнопки) читается как коричневый. Кнопка теперь чёрная с белым текстом, золото осталось только в мелких деталях (метка раздела).</p>
+        <h2>Вариант A — графит и золото</h2>
+        <p>Насыщенность собирается из чёрно-серого градиента первого экрана и мягкого светло-серого фона. Золото остаётся цветом действий и навигационных акцентов, без дополнительных цветов.</p>
       </div>
       <div class="variant-2">
       <header class="header">
@@ -321,10 +340,10 @@
       </div>
     </div>
 
-    <div class="variant-wrap">
+    <div class="variant-wrap" id="variant-b">
       <div class="variant-label">
-        <h2>Новый — то же самое, но фон светлее и чище</h2>
-        <p>Та же чёрная кнопка, но общий серый фон посветлее — по комментарию "очень темно, очень бело", чтобы контраст был не такой резкий.</p>
+        <h2>Вариант B — графит и тёмно-синий</h2>
+        <p>База остаётся чёрно-серо-белой, но блок сравнения становится глубоким тёмно-синим. Его смыслово легко выделить: это не декоративная полоса, а место, где объясняется ключевая разница услуг.</p>
       </div>
       <div class="variant-3">
       <header class="header">
@@ -431,10 +450,10 @@
       </div>
     </div>
 
-    <div class="variant-wrap">
+    <div class="variant-wrap" id="variant-c">
       <div class="variant-label">
-        <h2>Новый — чёрная кнопка с золотой рамкой</h2>
-        <p>Компромисс: кнопка чёрная с белым текстом, но с тонкой золотой обводкой — золото остаётся как деталь бренда, не как большая заливка.</p>
+        <h2>Вариант C — светлый матовый фон и синий блок услуг</h2>
+        <p>Самая светлая версия: матовый серый фон снимает резкость, а тёмно-синий выделяет только раздел услуг. Вместо чередования чёрных и белых полос появляется более собранная иерархия.</p>
       </div>
       <div class="variant-4">
       <header class="header">
