@@ -635,10 +635,22 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .mobile-nav a[aria-current="page"] { color: #fff; font-weight: 700; }
 .mobile-nav a.header-phone { color: var(--on-ink); font-weight: 700; }
 .mobile-nav a.btn {
-  margin: 16px 20px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
   border-bottom: none;
   text-align: center;
   color: #fff;
+}
+.mobile-nav a.btn-brass {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: #fff;
+}
+.mobile-nav a.btn-brass:hover {
+  background: var(--brass-dark);
+  border-color: var(--brass-dark);
 }
 
 /* ===== Мобильная версия ===== */
