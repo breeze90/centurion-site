@@ -304,6 +304,22 @@ a:focus-visible {
 }
 .service h3 { margin: 0; }
 .service p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.service-more {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--brass-dark);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.service-more::after {
+  content: "\2192";
+  margin-left: 8px;
+  transition: transform 160ms ease;
+}
+.service-more:hover::after { transform: translateX(4px); }
 .service-for {
   font-size: 0.78rem;
   font-weight: 700;
