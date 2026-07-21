@@ -2,6 +2,23 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      if (sessionStorage.getItem('entrySource') !== null) return;
+      var pageParams = new URLSearchParams(location.search);
+      var hasRealTracking = pageParams.has('utm_source') || pageParams.has('yclid') || pageParams.has('gclid');
+      var engine = '';
+      if (!hasRealTracking) {
+        try {
+          var refHost = new URL(document.referrer).hostname;
+          if (/(^|\.)yandex\.|(^|\.)ya\.ru$/i.test(refHost)) engine = 'yandex';
+          else if (/(^|\.)google\./i.test(refHost)) engine = 'google';
+        } catch (e) {}
+      }
+      sessionStorage.setItem('entrySource', engine);
+      sessionStorage.setItem('entryPage', location.hostname + location.pathname);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Центурион-групп — реструктуризация долга и банкротство без потери имущества</title>
@@ -331,6 +348,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/nav.js?v=20260720-nav6" defer></script>
+  <script src="assets/js/nav.js?v=20260720-nav7" defer></script>
 </body>
 </html>
