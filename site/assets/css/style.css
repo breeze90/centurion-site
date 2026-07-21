@@ -323,7 +323,8 @@ a:focus-visible {
 .why-item h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.02rem; }
 .why-item p { color: var(--muted); font-size: 0.95rem; margin: 0; }
 
-/* ===== Этапы ===== */
+/* ===== Как работаем ===== */
+#process > .container > .lead { max-width: 74ch; }
 .steps {
   counter-reset: step;
   display: grid;
@@ -349,6 +350,40 @@ a:focus-visible {
 }
 .step h3 { margin-bottom: 4px; font-family: var(--font-body); font-weight: 700; font-size: 1.02rem; }
 .step p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+
+/* ===== Формат работы ===== */
+.engagement { background: #f8f9fa; }
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+.engagement-card {
+  min-height: 250px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+.engagement-card h3 { margin-bottom: 10px; }
+.engagement-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.engagement-note {
+  margin: 22px 0 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--brass);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 640px) {
+  .engagement-grid { grid-template-columns: 1fr; }
+  .engagement-card { min-height: 0; padding: 24px; }
+}
 
 /* ===== Форма заявки ===== */
 .lead-form { background: var(--ink-soft); color: var(--on-ink); }
