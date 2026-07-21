@@ -10,8 +10,13 @@
   panel.innerHTML = '';
   [].forEach.call(nav.children, function (item) {
     if (item.classList.contains('nav-item')) {
-      var menuLink = item.querySelector('.nav-dropdown a').cloneNode(true);
-      menuLink.textContent = item.querySelector('.nav-trigger').textContent.trim();
+      var trigger = item.querySelector('.nav-trigger');
+      var menuLink = document.createElement('a');
+      menuLink.href = trigger.dataset.href;
+      menuLink.textContent = trigger.textContent.trim();
+      if (trigger.getAttribute('aria-current') === 'page') {
+        menuLink.setAttribute('aria-current', 'page');
+      }
       panel.appendChild(menuLink);
       return;
     }
@@ -44,6 +49,10 @@
   [].forEach.call(nav.querySelectorAll('.nav-trigger'), function (trigger) {
     trigger.addEventListener('click', function () {
       var item = trigger.closest('.nav-item');
+      if (item.classList.contains('is-open')) {
+        window.location.href = trigger.dataset.href;
+        return;
+      }
       var open = !item.classList.contains('is-open');
       closeDropdowns(item);
       item.classList.toggle('is-open', open);
