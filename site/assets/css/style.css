@@ -568,6 +568,14 @@ a:focus-visible {
   border: 1px solid var(--line);
   background: var(--card);
 }
+.solution-tag {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--brass-dark);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
 .solution-num {
   display: block;
   margin-bottom: 34px;
