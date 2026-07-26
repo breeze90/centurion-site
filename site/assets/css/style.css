@@ -434,6 +434,21 @@ a:focus-visible {
 .trust { background: var(--ink); color: var(--on-ink); }
 .trust h2 { color: #fff; }
 .trust .lead { color: var(--on-ink-muted); }
+.trust-proof {
+  max-width: 62ch;
+  margin: 26px 0 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--brass);
+}
+.trust-proof h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 1.25rem;
+}
+.trust-proof p {
+  margin: 0;
+  color: var(--on-ink-muted);
+}
 
 /* ===== География практики ===== */
 .practice { background: #f6f7f8; }
