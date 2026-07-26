@@ -243,7 +243,7 @@ a:focus-visible {
   padding-bottom: 34px;
 }
 .hero h1 { color: #fff; max-width: 21ch; }
-.hero .lead { color: var(--on-ink-muted); font-size: 1.1rem; }
+.hero .lead { color: var(--on-ink-muted); font-size: 1.1rem; font-weight: 300; }
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -278,7 +278,7 @@ a:focus-visible {
   mix-blend-mode: lighten;
 }
 .fact-num {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.7rem;
   color: var(--brass);
   font-variant-numeric: tabular-nums;
