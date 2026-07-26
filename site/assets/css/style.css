@@ -616,9 +616,24 @@ a:focus-visible {
 /* ===== Контакты ===== */
 .contacts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
-  gap: 32px;
-  margin-top: 36px;
+  grid-template-columns: minmax(0, 1.55fr) minmax(310px, 0.9fr);
+  column-gap: 72px;
+  row-gap: 42px;
+}
+.contacts-intro .lead { max-width: 58ch; }
+.contacts-quick {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-self: start;
+  padding-top: 52px;
+}
+.contacts-details {
+  display: grid;
+  gap: 28px;
+  max-width: 680px;
+  padding-left: 20px;
+  border-left: 2px solid var(--brass);
 }
 .contact-item h3 { font-family: var(--font-body); font-weight: 700; font-size: 0.98rem; }
 .contact-item p { color: var(--muted); margin: 0; }
@@ -638,6 +653,17 @@ a:focus-visible {
 .contact-big {
   font-size: 1.35rem;
   color: var(--text);
+}
+.contact-hours { padding-top: 4px; }
+
+@media (max-width: 800px) {
+  .contacts-grid { grid-template-columns: 1fr; gap: 30px; }
+  .contacts-quick { padding-top: 0; }
+}
+
+@media (max-width: 520px) {
+  .contacts-quick { grid-template-columns: 1fr; gap: 18px; }
+  .contacts-details { gap: 24px; padding-left: 16px; }
 }
 
 /* ===== Подвал ===== */
