@@ -657,6 +657,11 @@ a:focus-visible {
   font-size: 1.35rem;
   color: var(--text);
 }
+.contact-email {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
 .contact-hours { padding-top: 4px; }
 
 @media (max-width: 800px) {
