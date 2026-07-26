@@ -626,8 +626,8 @@ a:focus-visible {
   grid-template-columns: 1fr;
   gap: 28px;
   align-self: start;
-  padding: 52px 0 0 20px;
-  border-left: 2px solid var(--brass);
+  grid-column: 2;
+  grid-row: 2;
 }
 .contacts-details {
   display: grid;
@@ -635,6 +635,8 @@ a:focus-visible {
   max-width: 680px;
   padding-left: 20px;
   border-left: 2px solid var(--brass);
+  grid-column: 1;
+  grid-row: 2;
 }
 .contact-item h3 { font-family: var(--font-body); font-weight: 700; font-size: 0.98rem; }
 .contact-item p { color: var(--muted); margin: 0; }
@@ -659,11 +661,15 @@ a:focus-visible {
 
 @media (max-width: 800px) {
   .contacts-grid { grid-template-columns: 1fr; gap: 30px; }
-  .contacts-quick { padding-top: 0; }
+  .contacts-quick,
+  .contacts-details {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
 @media (max-width: 520px) {
-  .contacts-quick { gap: 18px; padding-left: 16px; }
+  .contacts-quick { gap: 18px; }
   .contacts-details { gap: 24px; padding-left: 16px; }
 }
 
