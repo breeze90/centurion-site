@@ -618,7 +618,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(310px, 0.9fr);
   column-gap: 72px;
-  row-gap: 42px;
+  row-gap: 32px;
 }
 .contacts-intro .lead { max-width: 58ch; }
 .contacts-quick {
@@ -631,7 +631,7 @@ a:focus-visible {
 }
 .contacts-details {
   display: grid;
-  gap: 28px;
+  gap: 22px;
   max-width: 680px;
   padding-left: 20px;
   border-left: 2px solid var(--brass);
@@ -670,7 +670,7 @@ a:focus-visible {
 
 @media (max-width: 520px) {
   .contacts-quick { gap: 18px; }
-  .contacts-details { gap: 24px; padding-left: 16px; }
+  .contacts-details { gap: 20px; padding-left: 16px; }
 }
 
 /* ===== Подвал ===== */
