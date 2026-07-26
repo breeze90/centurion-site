@@ -319,6 +319,7 @@ a:focus-visible {
 .service-more::after {
   content: "\2192";
   margin-left: 8px;
+  text-decoration: none;
   transition: transform 160ms ease;
 }
 .service-more:hover::after { transform: translateX(4px); }
