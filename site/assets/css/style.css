@@ -623,10 +623,11 @@ a:focus-visible {
 .contacts-intro .lead { max-width: 58ch; }
 .contacts-quick {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 28px;
   align-self: start;
-  padding-top: 52px;
+  padding: 52px 0 0 20px;
+  border-left: 2px solid var(--brass);
 }
 .contacts-details {
   display: grid;
@@ -662,7 +663,7 @@ a:focus-visible {
 }
 
 @media (max-width: 520px) {
-  .contacts-quick { grid-template-columns: 1fr; gap: 18px; }
+  .contacts-quick { gap: 18px; padding-left: 16px; }
   .contacts-details { gap: 24px; padding-left: 16px; }
 }
 
