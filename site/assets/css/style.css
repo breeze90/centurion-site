@@ -653,11 +653,14 @@ a:focus-visible {
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
-.contact-big {
+.contact-item a.contact-big {
   font-size: 1.35rem;
-  color: var(--text);
+  color: var(--brass-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
-.contact-email {
+.contact-item a.contact-email {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
