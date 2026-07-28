@@ -619,13 +619,14 @@ a:focus-visible {
 }
 .solution-tag {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: var(--brass);
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
   line-height: 1.35;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 .solution-num {
   display: block;
