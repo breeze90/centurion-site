@@ -357,8 +357,8 @@ a:focus-visible {
 .service-for {
   font-family: var(--font-body);
   font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: none;
   color: var(--brass);
 }
@@ -624,9 +624,9 @@ a:focus-visible {
   color: var(--brass);
   font-family: var(--font-body);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.35;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   text-transform: none;
 }
 .solution-num {
