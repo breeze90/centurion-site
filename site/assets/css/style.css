@@ -618,26 +618,15 @@ a:focus-visible {
   background: var(--card);
 }
 .solution-tag {
-  position: relative;
   display: block;
   margin-bottom: 10px;
-  padding-left: 12px;
-  color: var(--muted);
+  color: var(--brass);
   font-family: var(--font-body);
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
-  letter-spacing: 0.02em;
-  text-transform: none;
-}
-.solution-tag::before {
-  content: "";
-  position: absolute;
-  top: 0.15em;
-  bottom: 0.15em;
-  left: 0;
-  width: 2px;
-  background: var(--brass);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .solution-num {
   display: block;
