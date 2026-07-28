@@ -256,9 +256,8 @@ a:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin: 0;
-  padding-top: 26px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 30px 0 0;
+  padding: 0;
 }
 .hero-media {
   grid-column: 2;
@@ -278,13 +277,23 @@ a:focus-visible {
   mix-blend-mode: lighten;
 }
 .fact-num {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
+  font-family: var(--font-body);
+  font-size: 1.18rem;
   font-weight: 700;
-  color: var(--brass);
-  font-variant-numeric: tabular-nums;
+  color: var(--on-ink);
+  line-height: 1.25;
 }
-.fact-cap { color: var(--on-ink-muted); font-size: 0.9rem; }
+.fact {
+  min-height: 66px;
+  padding-left: 18px;
+  border-left: 2px solid var(--brass);
+}
+.fact-cap {
+  margin-top: 4px;
+  color: var(--on-ink-muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
 
 /* ===== Услуги ===== */
 .services-grid {
@@ -861,6 +870,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .hero-facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
+    margin-top: 0;
   }
   .practice-map { margin-top: 28px; padding: 12px 6px; }
   .practice-pin { width: 8px; height: 8px; border-width: 1px; }
