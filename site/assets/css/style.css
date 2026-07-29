@@ -244,7 +244,7 @@ a:focus-visible {
 }
 .hero h1 { color: #fff; max-width: 21ch; }
 .hero-subtitle {
-  margin: 0 0 8px;
+  margin: 0 0 20px;
   color: var(--on-ink-muted);
   font-family: var(--font-body);
   font-size: 1.05rem;
