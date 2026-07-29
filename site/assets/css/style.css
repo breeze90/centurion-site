@@ -230,6 +230,11 @@ a:focus-visible {
   color: #ffffff;
   border-color: var(--brass-dark);
 }
+.hero .btn-outline:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--ink);
+}
 .hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 408px);
