@@ -320,6 +320,22 @@ a:focus-visible {
     rgba(15, 24, 34, 0) 43%
   );
 }
+@media (min-width: 761px) {
+  .hero {
+    min-height: clamp(700px, 78svh, 820px);
+    display: grid;
+    align-items: center;
+  }
+  .hero > .container { width: 100%; }
+}
+@media (min-width: 1200px) {
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(2.1rem, 4.8vw, 3.8rem);
+    line-height: 1.14;
+    white-space: nowrap;
+  }
+}
 .fact-num {
   font-family: var(--font-body);
   font-size: 1.18rem;
