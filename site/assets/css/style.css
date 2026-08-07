@@ -248,7 +248,15 @@ a:focus-visible {
   padding-bottom: 34px;
 }
 .hero h1 { color: #fff; max-width: 21ch; }
-.hero-brand { white-space: nowrap; }
+.hero-subtitle {
+  margin: 0 0 20px;
+  color: var(--on-ink-muted);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+}
 .hero .lead { color: var(--on-ink-muted); font-size: 1.1rem; font-weight: 300; }
 .hero-actions {
   display: flex;
