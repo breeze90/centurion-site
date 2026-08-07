@@ -287,12 +287,12 @@ a:focus-visible {
   overflow: hidden;
   background: var(--ink);
   -webkit-mask-image:
-    linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, #000 9%, #000 91%, transparent 100%);
+    linear-gradient(to right, transparent 0%, #000 14%, #000 92%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-image:
-    linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, #000 9%, #000 91%, transparent 100%);
+    linear-gradient(to right, transparent 0%, #000 14%, #000 92%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
   mask-composite: intersect;
 }
 .hero-media img {
@@ -304,6 +304,21 @@ a:focus-visible {
   transform: scale(1.04);
   transform-origin: 72% center;
   mix-blend-mode: lighten;
+}
+.hero-media::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(15, 24, 34, 0.94) 0%,
+    rgba(15, 24, 34, 0.82) 9%,
+    rgba(15, 24, 34, 0.52) 19%,
+    rgba(15, 24, 34, 0.2) 30%,
+    rgba(15, 24, 34, 0) 43%
+  );
 }
 .fact-num {
   font-family: var(--font-body);
