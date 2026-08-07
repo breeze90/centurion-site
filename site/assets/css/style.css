@@ -254,7 +254,7 @@ a:focus-visible {
   line-height: 1.18;
 }
 .hero-subtitle {
-  margin: 0 0 40px;
+  margin: 0 0 34px;
   color: var(--on-ink-muted);
   font-family: var(--font-body);
   font-size: 1.05rem;
@@ -262,7 +262,7 @@ a:focus-visible {
   font-weight: 400;
   line-height: 1.4;
 }
-.hero .lead { color: var(--on-ink-muted); font-size: 1.1rem; font-weight: 300; }
+.hero .lead { color: rgba(255, 255, 255, 0.88); font-size: 1.1rem; font-weight: 300; }
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -327,6 +327,7 @@ a:focus-visible {
     align-items: center;
   }
   .hero > .container { width: 100%; }
+  .hero h1 { margin-bottom: 24px; }
 }
 @media (min-width: 1200px) {
   .hero h1 {
