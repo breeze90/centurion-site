@@ -247,9 +247,14 @@ a:focus-visible {
   grid-row: 1;
   padding-bottom: 34px;
 }
-.hero h1 { color: #fff; max-width: 21ch; }
+.hero h1 {
+  color: #fff;
+  max-width: 21ch;
+  font-size: clamp(2.1rem, 4.8vw, 3.5rem);
+  line-height: 1.18;
+}
 .hero-subtitle {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
   color: var(--on-ink-muted);
   font-family: var(--font-body);
   font-size: 1.05rem;
