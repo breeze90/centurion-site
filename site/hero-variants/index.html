@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тест — варианты Hero-блока | Центурион-групп</title>
+  <meta name="description" content="Сравнение трёх вариантов типографического оформления Hero-блока Центурион-групп.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap&subset=cyrillic" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f1822;
+      --paper: #ffffff;
+      --text: #202224;
+      --muted: #62676b;
+      --line: #e5e7eb;
+      --brass: #b88b43;
+      --brass-dark: #9a7226;
+      --on-ink: #ffffff;
+      --on-ink-muted: rgba(255, 255, 255, 0.7);
+      --font-display: "Lora", Georgia, serif;
+      --font-body: "Manrope", system-ui, -apple-system, sans-serif;
+      --container: 1120px;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--paper);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .page-intro {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 52px 20px 40px;
+    }
+    .page-intro__label,
+    .variant-meta__label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--brass);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+    .page-intro h1 {
+      max-width: 760px;
+      margin: 0 0 14px;
+      color: var(--text);
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .page-intro p {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .variant-meta {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 20px 22px;
+    }
+    .variant-meta__label { margin-bottom: 4px; }
+    .variant-meta p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-compare {
+      overflow: hidden;
+      padding: 72px 0 58px;
+      color: var(--on-ink);
+      background: var(--ink);
+    }
+    .hero-compare__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 408px);
+      gap: clamp(44px, 7vw, 96px);
+      max-width: var(--container);
+      min-height: 440px;
+      margin: 0 auto;
+      padding: 0 20px;
+      align-items: center;
+    }
+    .hero-compare__copy {
+      grid-column: 1;
+      min-width: 0;
+      padding-bottom: 34px;
+    }
+    .hero-compare__media {
+      grid-column: 2;
+      align-self: stretch;
+      min-height: 440px;
+      margin: 0;
+    }
+    .hero-compare__name {
+      margin: 0;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 4.8vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.14;
+      white-space: nowrap;
+    }
+    .hero-compare__subtitle {
+      margin: 14px 0 26px;
+      color: var(--brass);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    .hero-compare--strict .hero-compare__subtitle {
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .hero-compare__lead {
+      max-width: 560px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.92);
+      font-family: var(--font-body);
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .hero-compare__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .hero-compare__button {
+      display: inline-block;
+      padding: 13px 26px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+    .hero-compare__button--brass {
+      border-color: var(--brass);
+      color: var(--ink);
+      background: var(--brass);
+    }
+    .hero-compare__button--outline {
+      border-color: var(--on-ink-muted);
+      color: var(--on-ink);
+      background: transparent;
+    }
+    .hero-compare__facts {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 56px;
+    }
+    .hero-compare__fact {
+      min-width: 0;
+      padding-left: 16px;
+      border-left: 2px solid var(--brass);
+    }
+    .hero-compare__fact-title {
+      color: #fff;
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .hero-compare__fact-caption {
+      margin-top: 4px;
+      color: var(--on-ink-muted);
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+
+    /* Вариант 2: подпись как часть премиальной шрифтовой композиции. */
+    .hero-compare--premium .hero-compare__subtitle {
+      margin-top: 10px;
+      margin-bottom: 24px;
+      color: var(--brass);
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.35;
+      text-transform: none;
+    }
+    .hero-compare--premium .hero-compare__lead {
+      font-size: 1.16rem;
+      font-weight: 400;
+    }
+
+    /* Вариант 3: первое утверждение — крупнее, направления — отдельной строкой. */
+    .hero-compare--explicit .hero-compare__subtitle {
+      margin-bottom: 24px;
+    }
+    .hero-compare--explicit .hero-compare__lead {
+      max-width: 600px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .hero-compare--explicit .hero-compare__lead-main {
+      display: block;
+      margin-bottom: 7px;
+      color: #fff;
+      font-size: 1.28rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .hero-compare--explicit .hero-compare__lead-rest {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.98rem;
+    }
+    .hero-compare--explicit .hero-compare__lead-tagline {
+      display: block;
+      margin-top: 8px;
+      color: var(--brass);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .hero-compare__layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .hero-compare__copy,
+      .hero-compare__media {
+        grid-column: 1;
+      }
+      .hero-compare__media { display: none; }
+    }
+
+    @media (max-width: 760px) {
+      body { font-size: 16px; }
+      .page-intro { padding: 40px 20px 32px; }
+      .hero-compare { padding: 54px 0 46px; }
+      .hero-compare__layout { min-height: 0; }
+      .hero-compare__copy { padding-bottom: 0; }
+      .hero-compare__name {
+        font-size: clamp(2rem, 10vw, 3rem);
+        white-space: normal;
+      }
+      .hero-compare__subtitle {
+        margin-top: 12px;
+        margin-bottom: 22px;
+        font-size: 0.72rem;
+      }
+      .hero-compare__lead { font-size: 1.08rem; }
+      .hero-compare__actions { margin-top: 26px; }
+      .hero-compare__facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 16px;
+        margin-top: 42px;
+      }
+      .hero-compare__fact { padding-left: 12px; }
+      .hero-compare__fact-title { font-size: 0.95rem; }
+      .hero-compare__fact-caption { font-size: 0.72rem; }
+    }
+
+    @media (max-width: 520px) {
+      .hero-compare__facts { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="page-intro">
+      <span class="page-intro__label">Тестовая страница</span>
+      <h1>Три варианта оформления Hero-блока</h1>
+      <p>Текст, цвета и шрифты сохранены из текущей версии сайта. Между вариантами изменены только типографическая иерархия, оформление подписей и расстояния.</p>
+    </div>
+
+    <div class="variant-meta">
+      <span class="variant-meta__label">Вариант 1 — строгий юридический</span>
+      <p>Подпись становится небольшим латунным статусным маркером, а основной текст — главным объяснением деятельности компании.</p>
+    </div>
+    <section class="hero-compare hero-compare--strict" aria-labelledby="variant-strict-title">
+      <div class="hero-compare__layout">
+        <div class="hero-compare__copy">
+          <h2 class="hero-compare__name" id="variant-strict-title">Центурион-групп</h2>
+          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
+          <p class="hero-compare__lead">Защита должников и активов, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+          <div class="hero-compare__actions">
+            <a class="hero-compare__button hero-compare__button--brass" href="#variant-strict-title">Бесплатная консультация</a>
+            <a class="hero-compare__button hero-compare__button--outline" href="#variant-strict-title">Все услуги</a>
+          </div>
+        </div>
+        <figure class="hero-compare__media" aria-hidden="true"></figure>
+        <div class="hero-compare__facts">
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
+            <div class="hero-compare__fact-caption">С марта 2015 года</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Работаем по всей России</div>
+            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
+            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="variant-meta">
+      <span class="variant-meta__label">Вариант 2 — премиальный</span>
+      <p>Подпись набирается Lora и становится частью брендовой композиции, а аннотация остаётся спокойным текстом Manrope.</p>
+    </div>
+    <section class="hero-compare hero-compare--premium" aria-labelledby="variant-premium-title">
+      <div class="hero-compare__layout">
+        <div class="hero-compare__copy">
+          <h2 class="hero-compare__name" id="variant-premium-title">Центурион-групп</h2>
+          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
+          <p class="hero-compare__lead">Защита должников и активов, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+          <div class="hero-compare__actions">
+            <a class="hero-compare__button hero-compare__button--brass" href="#variant-premium-title">Бесплатная консультация</a>
+            <a class="hero-compare__button hero-compare__button--outline" href="#variant-premium-title">Все услуги</a>
+          </div>
+        </div>
+        <figure class="hero-compare__media" aria-hidden="true"></figure>
+        <div class="hero-compare__facts">
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
+            <div class="hero-compare__fact-caption">С марта 2015 года</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Работаем по всей России</div>
+            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
+            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="variant-meta">
+      <span class="variant-meta__label">Вариант 3 — максимально конкретный</span>
+      <p>Главная услуга выделяется крупнее, направления собраны в отдельную строку, а финальная фраза становится латунным акцентом.</p>
+    </div>
+    <section class="hero-compare hero-compare--explicit" aria-labelledby="variant-explicit-title">
+      <div class="hero-compare__layout">
+        <div class="hero-compare__copy">
+          <h2 class="hero-compare__name" id="variant-explicit-title">Центурион-групп</h2>
+          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
+          <p class="hero-compare__lead">
+            <span class="hero-compare__lead-main">Защита должников и активов,</span><span class="hero-compare__lead-rest"> арбитраж и банкротство, взыскание долгов. </span><span class="hero-compare__lead-tagline">Стратегические решения.</span>
+          </p>
+          <div class="hero-compare__actions">
+            <a class="hero-compare__button hero-compare__button--brass" href="#variant-explicit-title">Бесплатная консультация</a>
+            <a class="hero-compare__button hero-compare__button--outline" href="#variant-explicit-title">Все услуги</a>
+          </div>
+        </div>
+        <figure class="hero-compare__media" aria-hidden="true"></figure>
+        <div class="hero-compare__facts">
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
+            <div class="hero-compare__fact-caption">С марта 2015 года</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Работаем по всей России</div>
+            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
+            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
