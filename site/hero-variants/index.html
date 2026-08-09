@@ -122,11 +122,13 @@
       margin: 16px 0 26px;
       color: var(--brass);
       font-family: var(--font-body);
-      font-size: clamp(0.84rem, 1.45vw, 1.08rem);
+      font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.19em;
+      letter-spacing: 0.25em;
       line-height: 1.35;
       text-transform: uppercase;
+      transform: scaleX(1.1);
+      transform-origin: left center;
     }
     .hero-compare__lead {
       max-width: 560px;
@@ -214,8 +216,9 @@
       .hero-compare__subtitle {
         margin-top: 12px;
         margin-bottom: 22px;
-        font-size: 0.78rem;
-        letter-spacing: 0.14em;
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        transform: scaleX(1.06);
       }
       .hero-compare__lead { font-size: 1.08rem; }
       .hero-compare__actions { margin-top: 26px; }
