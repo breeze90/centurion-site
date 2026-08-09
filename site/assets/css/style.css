@@ -250,12 +250,12 @@ a:focus-visible {
 .hero h1 {
   color: #fff;
   max-width: 21ch;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   font-size: clamp(2.1rem, 4.8vw, 3.5rem);
   line-height: 1.18;
 }
 .hero-subtitle {
-  margin: 0 0 26px;
+  margin: 0 0 30px;
   color: var(--brass);
   font-family: var(--font-body);
   font-size: 0.72rem;
@@ -331,12 +331,12 @@ a:focus-visible {
 }
 @media (min-width: 761px) {
   .hero {
-    min-height: clamp(620px, 72svh, 720px);
+    min-height: clamp(560px, 68svh, 680px);
     display: grid;
     align-items: center;
   }
   .hero > .container { width: 100%; }
-  .hero h1 { margin-bottom: 14px; }
+  .hero h1 { margin-bottom: 18px; }
 }
 @media (min-width: 1200px) {
   .hero h1 {
