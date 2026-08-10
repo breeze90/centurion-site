@@ -465,7 +465,6 @@ a:focus-visible {
   align-items: start;
   margin-bottom: 24px;
   padding-bottom: 22px;
-  border-bottom: 1px solid var(--line);
 }
 .process-card-step {
   padding-top: 5px;
@@ -502,7 +501,6 @@ a:focus-visible {
 }
 .process-list li:first-child { padding-left: 0; }
 .process-list li:last-child { padding-right: 0; }
-.process-list li + li { border-left: 1px solid var(--line); }
 .process-list li::before {
   content: counter(process-item, decimal-leading-zero);
   display: block;
@@ -560,8 +558,6 @@ a:focus-visible {
   }
   .process-list li + li {
     padding-top: 22px;
-    border-top: 1px solid var(--line);
-    border-left: 0;
   }
   .process-list li:not(:last-child)::after {
     top: auto;
