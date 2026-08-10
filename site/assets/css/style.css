@@ -482,7 +482,6 @@ a:focus-visible {
   background: var(--paper);
   content: "";
 }
-.process-card:last-child::before { left: -46px; }
 .process-card-head {
   display: block;
   align-items: start;
@@ -609,7 +608,6 @@ a:focus-visible {
     top: 0;
     left: -38px;
   }
-  .process-card:last-child::before { left: -40px; }
   .process-card-head { margin-bottom: 20px; padding-bottom: 18px; }
   .process-list { gap: 18px; }
   .process-result { padding-top: 18px; }
