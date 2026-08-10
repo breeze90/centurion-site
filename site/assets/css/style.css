@@ -445,7 +445,7 @@ a:focus-visible {
 
 /* ===== Как работаем ===== */
 .process-grid {
-  --process-axis-offset: 5px;
+  --process-axis-offset: 6px;
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -477,8 +477,8 @@ a:focus-visible {
   z-index: 1;
   top: 0;
   left: calc(-44px + var(--process-axis-offset));
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border: 1px solid var(--brass);
   border-radius: 50%;
   background: var(--paper);
