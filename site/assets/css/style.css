@@ -454,7 +454,7 @@ a:focus-visible {
 .process-card {
   display: flex;
   flex-direction: column;
-  padding: 32px;
+  padding: 32px 0;
   border-radius: var(--radius);
   background: var(--card);
 }
@@ -571,7 +571,7 @@ a:focus-visible {
   }
 }
 @media (max-width: 760px) {
-  .process-card { padding: 24px; }
+  .process-card { padding: 24px 0; }
   .process-card-head { gap: 14px; margin-bottom: 20px; padding-bottom: 18px; }
   .process-list { gap: 18px; }
   .process-result { padding-top: 18px; }
