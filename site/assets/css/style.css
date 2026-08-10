@@ -655,9 +655,7 @@ a:focus-visible {
   color: var(--muted);
   font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
   line-height: 1.4;
-  text-transform: uppercase;
 }
 .engagement-note {
   margin: 24px 0 0;
