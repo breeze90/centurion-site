@@ -543,24 +543,70 @@ a:focus-visible {
 .engagement { background: #f8f9fa; }
 .engagement h2 { text-wrap: wrap; }
 .engagement > .container > .lead { max-width: none; }
-.engagement-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+.engagement-table-wrap {
   margin-top: 36px;
+  overflow-x: auto;
 }
-.engagement-card {
-  min-height: 250px;
-  padding: 28px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--card);
+.engagement-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
-.engagement-card h3 { margin-bottom: 10px; }
-.engagement-card p {
-  margin: 0;
+.engagement-table th,
+.engagement-table td {
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.engagement-table thead th {
+  padding-top: 0;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border-bottom: 2px solid var(--text);
+}
+.engagement-table thead th:first-child {
+  width: 20%;
+  padding-left: 0;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.engagement-table thead th + th,
+.engagement-table tbody td {
+  border-left: 1px solid var(--line);
+}
+.engagement-table tbody th {
+  width: 20%;
+  padding-left: 0;
+  color: var(--brass);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+.engagement-table tbody td {
   color: var(--muted);
   font-size: 0.95rem;
+}
+.engagement-table-kicker {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--brass);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 .engagement-note {
   margin: 22px 0 0;
@@ -571,8 +617,15 @@ a:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .engagement-grid { grid-template-columns: 1fr; }
-  .engagement-card { min-height: 0; padding: 24px; }
+  .engagement-table-wrap {
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+  .engagement-table { min-width: 720px; }
+  .engagement-table th,
+  .engagement-table td { padding: 18px 20px; }
+  .engagement-table thead th:first-child,
+  .engagement-table tbody th { width: 23%; }
 }
 
 /* ===== Форма заявки ===== */
