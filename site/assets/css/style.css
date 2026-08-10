@@ -316,7 +316,8 @@ a:focus-visible {
   transform: none;
   transform-origin: center;
   mix-blend-mode: normal;
-  opacity: 0.14;
+  filter: contrast(1.15);
+  opacity: 0.17;
 }
 .hero-media::after {
   display: none;
