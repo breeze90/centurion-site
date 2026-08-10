@@ -445,30 +445,53 @@ a:focus-visible {
 
 /* ===== Как работаем ===== */
 .process-grid {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
   margin-top: 36px;
+  padding-left: 44px;
   align-items: stretch;
 }
+.process-grid::before {
+  position: absolute;
+  top: 38px;
+  bottom: 32px;
+  left: 13px;
+  width: 2px;
+  background: var(--brass);
+  content: "";
+}
 .process-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 32px 0;
   border-radius: var(--radius);
   background: var(--card);
 }
+.process-card::before {
+  position: absolute;
+  z-index: 1;
+  top: 31px;
+  left: -37px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--brass);
+  border-radius: 50%;
+  background: var(--paper);
+  content: "";
+}
 .process-card-head {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
+  display: block;
   align-items: start;
   margin-bottom: 24px;
   padding-bottom: 22px;
   border-bottom: 1px solid var(--line);
 }
 .process-card-step {
-  padding-top: 5px;
+  display: block;
+  margin-bottom: 8px;
   color: var(--brass);
   font-size: 0.74rem;
   font-weight: 700;
@@ -571,8 +594,20 @@ a:focus-visible {
   }
 }
 @media (max-width: 760px) {
+  .process-grid {
+    padding-left: 38px;
+  }
+  .process-grid::before {
+    top: 30px;
+    bottom: 24px;
+    left: 13px;
+  }
   .process-card { padding: 24px 0; }
-  .process-card-head { gap: 14px; margin-bottom: 20px; padding-bottom: 18px; }
+  .process-card::before {
+    top: 23px;
+    left: -31px;
+  }
+  .process-card-head { margin-bottom: 20px; padding-bottom: 18px; }
   .process-list { gap: 18px; }
   .process-result { padding-top: 18px; }
 }
