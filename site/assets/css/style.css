@@ -455,7 +455,6 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   padding: 32px;
-  border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--card);
 }
