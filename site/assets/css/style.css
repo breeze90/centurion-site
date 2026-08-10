@@ -457,8 +457,8 @@ a:focus-visible {
   position: absolute;
   top: 38px;
   bottom: 32px;
-  left: 13px;
-  width: 2px;
+  left: 5.5px;
+  width: 1px;
   background: var(--brass);
   content: "";
 }
@@ -473,11 +473,11 @@ a:focus-visible {
 .process-card::before {
   position: absolute;
   z-index: 1;
-  top: 31px;
-  left: -37px;
-  width: 14px;
-  height: 14px;
-  border: 2px solid var(--brass);
+  top: 32px;
+  left: -44px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--brass);
   border-radius: 50%;
   background: var(--paper);
   content: "";
@@ -600,12 +600,12 @@ a:focus-visible {
   .process-grid::before {
     top: 30px;
     bottom: 24px;
-    left: 13px;
+    left: 5.5px;
   }
   .process-card { padding: 24px 0; }
   .process-card::before {
-    top: 23px;
-    left: -31px;
+    top: 24px;
+    left: -38px;
   }
   .process-card-head { margin-bottom: 20px; padding-bottom: 18px; }
   .process-list { gap: 18px; }
