@@ -445,6 +445,7 @@ a:focus-visible {
 
 /* ===== Как работаем ===== */
 .process-grid {
+  --process-axis-offset: 5px;
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -455,9 +456,9 @@ a:focus-visible {
 }
 .process-grid::before {
   position: absolute;
-  top: 6px;
+  top: var(--process-axis-offset);
   bottom: 32px;
-  left: 6px;
+  left: var(--process-axis-offset);
   width: 1px;
   background: var(--brass);
   content: "";
@@ -475,13 +476,14 @@ a:focus-visible {
   position: absolute;
   z-index: 1;
   top: 0;
-  left: -44px;
-  width: 12px;
-  height: 12px;
+  left: calc(-44px + var(--process-axis-offset));
+  width: 10px;
+  height: 10px;
   border: 1px solid var(--brass);
   border-radius: 50%;
   background: var(--paper);
   content: "";
+  transform: translateX(-50%);
 }
 .process-card-head {
   display: block;
@@ -600,14 +602,14 @@ a:focus-visible {
     padding-left: 38px;
   }
   .process-grid::before {
-    top: 6px;
+    top: var(--process-axis-offset);
     bottom: 24px;
-    left: 6px;
+    left: var(--process-axis-offset);
   }
   .process-card { padding: 0 0 24px; }
   .process-card::before {
     top: 0;
-    left: -38px;
+    left: calc(-38px + var(--process-axis-offset));
   }
   .process-card-head { margin-bottom: 20px; padding-bottom: 18px; }
   .process-list { gap: 18px; }
