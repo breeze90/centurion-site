@@ -457,10 +457,11 @@ a:focus-visible {
   position: absolute;
   top: 6px;
   bottom: 32px;
-  left: 5.5px;
+  left: 6px;
   width: 1px;
   background: var(--brass);
   content: "";
+  transform: translateX(-50%);
 }
 .process-card {
   position: relative;
@@ -601,7 +602,7 @@ a:focus-visible {
   .process-grid::before {
     top: 6px;
     bottom: 24px;
-    left: 5.5px;
+    left: 6px;
   }
   .process-card { padding: 0 0 24px; }
   .process-card::before {
