@@ -627,6 +627,8 @@ a:focus-visible {
   margin-top: 40px;
 }
 .engagement-card {
+  display: flex;
+  flex-direction: column;
   min-height: 0;
   padding: 26px 24px 24px;
   border: 1px solid var(--line);
@@ -649,7 +651,7 @@ a:focus-visible {
   line-height: 1.55;
 }
 .engagement-card .engagement-client {
-  margin: 20px 0 0;
+  margin: auto 0 0;
   padding-top: 14px;
   border-top: 1px solid var(--line);
   color: var(--muted);
