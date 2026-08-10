@@ -623,29 +623,17 @@ a:focus-visible {
 .engagement-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
   margin-top: 40px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 .engagement-card {
-  position: relative;
-  min-height: 218px;
-  padding: 31px 34px 34px 0;
+  min-height: 250px;
+  padding: 26px 24px 24px;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--brass);
+  border-radius: var(--radius);
+  background: var(--card);
 }
-.engagement-card + .engagement-card {
-  padding-left: 34px;
-  border-left: 1px solid var(--line);
-}
-.engagement-card::before {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: var(--brass);
-  content: "";
-}
-.engagement-card + .engagement-card::before { left: 34px; }
 .engagement-card h3 {
   max-width: none;
   margin-bottom: 10px;
@@ -672,14 +660,7 @@ a:focus-visible {
 
 @media (max-width: 640px) {
   .engagement-grid { grid-template-columns: 1fr; }
-  .engagement-card,
-  .engagement-card + .engagement-card {
-    min-height: 0;
-    padding: 26px 0;
-    border-left: 0;
-  }
-  .engagement-card + .engagement-card { border-top: 1px solid var(--line); }
-  .engagement-card + .engagement-card::before { left: 0; }
+  .engagement-card { min-height: 0; padding: 24px; }
 }
 
 /* ===== Форма заявки ===== */
