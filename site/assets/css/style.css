@@ -647,10 +647,11 @@ a:focus-visible {
 }
 .engagement-card + .engagement-card::before { left: 34px; }
 .engagement-card h3 {
-  max-width: 18ch;
+  max-width: none;
   margin-bottom: 10px;
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: 20px;
+  white-space: nowrap;
 }
 .engagement-card p {
   margin: 0;
