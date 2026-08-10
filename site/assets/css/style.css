@@ -309,14 +309,14 @@ a:focus-visible {
   mix-blend-mode: lighten;
 }
 .hero-media .hero-watermark {
-  width: min(360px, 88%);
+  width: min(380px, 92%);
   height: auto;
   object-fit: contain;
   object-position: center;
   transform: none;
   transform-origin: center;
   mix-blend-mode: normal;
-  filter: contrast(1.15);
+  filter: none;
   opacity: 0.18;
 }
 .hero-media::after {
