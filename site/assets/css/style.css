@@ -220,15 +220,21 @@ a:focus-visible {
   color: var(--on-ink);
   padding: 72px 0;
 }
-.hero .btn-brass {
-  background: var(--brass);
+.homepage .hero .btn-brass {
+  background: #c99a54;
   color: var(--ink);
-  border-color: var(--brass);
+  border-color: #c99a54;
 }
-.hero .btn-brass:hover {
+.homepage .hero .btn-brass:hover {
   background: var(--brass-dark);
   color: #ffffff;
   border-color: var(--brass-dark);
+}
+.homepage .hero-subtitle {
+  color: #c99a54;
+}
+.homepage .fact::before {
+  background: #c99a54;
 }
 .hero .btn-outline:hover {
   background: #ffffff;
@@ -678,6 +684,7 @@ a:focus-visible {
 
 /* ===== Форма заявки ===== */
 .lead-form { background: var(--ink-soft); color: var(--on-ink); }
+.homepage .lead-form .section-label { color: #c99a54; }
 .lead-form h2 { color: #fff; }
 .lead-form .lead { color: var(--on-ink-muted); }
 
