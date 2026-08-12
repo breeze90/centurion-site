@@ -419,7 +419,7 @@ a:focus-visible {
   font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: none;
   color: var(--brass);
 }
