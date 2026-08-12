@@ -104,9 +104,19 @@
     }
     .hero-compare__media {
       grid-column: 2;
+      display: grid;
+      place-items: center;
       align-self: stretch;
       min-height: 0;
       margin: 0;
+      overflow: hidden;
+      background: var(--ink);
+    }
+    .hero-compare__media img {
+      display: block;
+      width: min(360px, 92%);
+      height: auto;
+      opacity: 0.22;
     }
     .hero-compare__name {
       margin: 0;
@@ -257,7 +267,9 @@
             <a class="hero-compare__button hero-compare__button--outline" href="#variant-strict-title">Все услуги</a>
           </div>
         </div>
-        <figure class="hero-compare__media" aria-hidden="true"></figure>
+        <figure class="hero-compare__media" aria-hidden="true">
+          <img src="../assets/img/logo-brass.svg?v=20260812-test-watermark" alt="" width="360" height="360">
+        </figure>
         <div class="hero-compare__facts">
           <div class="hero-compare__fact">
             <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
