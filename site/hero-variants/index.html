@@ -118,17 +118,14 @@
       white-space: nowrap;
     }
     .hero-compare__subtitle {
-      display: inline-block;
+      display: block;
       margin: 16px 0 26px;
       color: var(--brass);
       font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      line-height: 1.35;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      transform: scaleX(1.1);
-      transform-origin: left center;
     }
     .hero-compare__lead {
       max-width: 560px;
@@ -138,6 +135,9 @@
       font-size: 1.2rem;
       font-weight: 400;
       line-height: 1.5;
+    }
+    .hero-compare__lead-highlight {
+      font-size: 1.08em;
     }
     .hero-compare__actions {
       display: flex;
@@ -216,9 +216,6 @@
       .hero-compare__subtitle {
         margin-top: 12px;
         margin-bottom: 22px;
-        font-size: 0.72rem;
-        letter-spacing: 0.16em;
-        transform: scaleX(1.06);
       }
       .hero-compare__lead { font-size: 1.08rem; }
       .hero-compare__actions { margin-top: 26px; }
@@ -254,7 +251,7 @@
         <div class="hero-compare__copy">
           <h2 class="hero-compare__name" id="variant-strict-title">Центурион-групп</h2>
           <p class="hero-compare__subtitle">Независимая юридическая компания</p>
-          <p class="hero-compare__lead">Защита должников и активов, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+          <p class="hero-compare__lead"><span class="hero-compare__lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
           <div class="hero-compare__actions">
             <a class="hero-compare__button hero-compare__button--brass" href="#variant-strict-title">Бесплатная консультация</a>
             <a class="hero-compare__button hero-compare__button--outline" href="#variant-strict-title">Все услуги</a>
