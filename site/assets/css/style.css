@@ -937,9 +937,10 @@ a:focus-visible {
   font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .solution-num {
   display: block;
@@ -968,6 +969,7 @@ a:focus-visible {
   .solutions-grid { grid-template-columns: 1fr; }
   .solution-card { padding: 24px; }
   .solution-num { margin-bottom: 26px; }
+  .solution-tag { white-space: normal; }
 }
 
 /* ===== Контакты ===== */
