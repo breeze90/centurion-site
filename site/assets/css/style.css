@@ -275,7 +275,7 @@ a:focus-visible {
   color: rgba(255, 255, 255, 0.92);
   font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 .hero-lead-highlight {
   font-size: 1.08em;
@@ -927,7 +927,7 @@ a:focus-visible {
   font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
