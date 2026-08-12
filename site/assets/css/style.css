@@ -319,7 +319,7 @@ a:focus-visible {
   transform-origin: center;
   mix-blend-mode: normal;
   filter: none;
-  opacity: 0.18;
+  opacity: 0.20;
 }
 .hero-media::after {
   display: none;
@@ -365,7 +365,7 @@ a:focus-visible {
 .fact-cap {
   margin-top: 4px;
   color: var(--on-ink-muted);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   line-height: 1.4;
 }
 
