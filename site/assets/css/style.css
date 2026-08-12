@@ -833,29 +833,6 @@ a:focus-visible {
   border-radius: var(--radius);
 }
 .practice-map img { display: block; width: 100%; height: auto; }
-.practice-pin {
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: 10px;
-  height: 10px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  background: var(--brass);
-  box-shadow: 0 0 0 1px rgba(154, 114, 38, 0.5), 0 2px 6px rgba(15, 24, 34, 0.24);
-  transform: translate(-50%, -50%);
-}
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 .lead-form-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(420px, 480px);
@@ -1221,7 +1198,6 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
     height: calc(100% - 4px);
   }
   .practice-map { margin-top: 28px; padding: 12px 6px; }
-  .practice-pin { width: 8px; height: 8px; border-width: 1px; }
   .practice-stats { gap: 14px; }
   .practice-stats dt { font-size: 1.05rem; }
   .matomba-frame { height: 460px; }
