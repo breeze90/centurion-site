@@ -725,6 +725,10 @@ a:focus-visible {
 /* ===== Почему нам доверяют ===== */
 .trust { background: var(--paper); color: var(--text); }
 .trust h2 { color: var(--text); }
+.trust-heading-line {
+  display: inline-block;
+  white-space: nowrap;
+}
 .trust-layout {
   display: grid;
   grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
