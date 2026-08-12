@@ -371,7 +371,7 @@ a:focus-visible {
 .fact-cap {
   margin-top: 4px;
   color: var(--on-ink-muted);
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   line-height: 1.4;
 }
 
