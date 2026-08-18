@@ -288,6 +288,10 @@ a:focus-visible {
   gap: 14px;
   margin-top: 30px;
 }
+.hero-actions .btn {
+  padding: 14px 28px;
+  font-size: 1.08rem;
+}
 .hero-facts {
   grid-column: 1 / -1;
   grid-row: 2;
