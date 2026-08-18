@@ -771,7 +771,7 @@ a:focus-visible {
   content: "";
 }
 .trust-card:first-child::before {
-  top: -18px;
+  top: -13px;
   border-top: 1px solid var(--brass);
 }
 .trust-card:last-child::before {
@@ -790,7 +790,7 @@ a:focus-visible {
   content: "";
 }
 .trust-card:first-child::after {
-  top: -24px;
+  top: -19px;
 }
 .trust-card:last-child::after {
   bottom: -4px;
@@ -822,10 +822,10 @@ a:focus-visible {
     padding-left: 34px;
   }
   .trust-card:first-child::before {
-    top: -14px;
+    top: -9px;
   }
   .trust-card:first-child::after {
-    top: -20px;
+    top: -15px;
   }
   .trust-card:last-child::before {
     bottom: -6px;
