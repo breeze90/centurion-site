@@ -797,6 +797,8 @@ a:focus-visible {
 }
 .trust-card h3 {
   margin: 0 0 10px;
+  font-family: var(--font-body);
+  font-weight: 700;
   color: var(--brass);
   font-size: 1.25rem;
 }
