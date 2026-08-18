@@ -518,7 +518,7 @@ a:focus-visible {
 .process-card h3 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
   line-height: 1.25;
 }
