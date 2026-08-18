@@ -658,6 +658,11 @@ a:focus-visible {
   font-size: clamp(20px, 2vw, 25px);
   white-space: normal;
 }
+.engagement-card h3 {
+  color: var(--brass);
+  font-family: var(--font-body);
+  font-weight: 700;
+}
 .engagement-standard h3::after {
   display: block;
   width: 50px;
@@ -797,8 +802,6 @@ a:focus-visible {
 }
 .trust-card h3 {
   margin: 0 0 10px;
-  font-family: var(--font-body);
-  font-weight: 700;
   color: var(--brass);
   font-size: 1.25rem;
 }
