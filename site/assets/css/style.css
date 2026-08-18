@@ -256,6 +256,8 @@ a:focus-visible {
 .hero h1 {
   color: #fff;
   max-width: 21ch;
+  /* Оптически выравниваем левый край заголовка с подписью: у Lora есть небольшой левый вынос. */
+  margin-inline-start: -0.04em;
   margin-bottom: 18px;
   font-size: clamp(2.1rem, 4.8vw, 3.5rem);
   line-height: 1.18;
