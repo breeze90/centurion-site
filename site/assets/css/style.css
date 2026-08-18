@@ -775,7 +775,7 @@ a:focus-visible {
   border-top: 1px solid var(--brass);
 }
 .trust-card:last-child::before {
-  bottom: 2px;
+  bottom: 7px;
   border-bottom: 1px solid var(--brass);
 }
 .trust-card:first-child::after,
@@ -793,7 +793,7 @@ a:focus-visible {
   top: -19px;
 }
 .trust-card:last-child::after {
-  bottom: -4px;
+  bottom: 1px;
 }
 .trust-card h3 {
   margin: 0 0 10px;
@@ -828,10 +828,10 @@ a:focus-visible {
     top: -15px;
   }
   .trust-card:last-child::before {
-    bottom: -6px;
+    bottom: -1px;
   }
   .trust-card:last-child::after {
-    bottom: -12px;
+    bottom: -7px;
   }
   .trust-card {
     padding: 16px 0 24px;
