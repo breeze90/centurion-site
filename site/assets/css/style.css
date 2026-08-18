@@ -661,6 +661,7 @@ a:focus-visible {
 .engagement-card h3 {
   color: var(--brass);
   font-family: var(--font-body);
+  font-size: 1.25rem;
   font-weight: 400;
   text-transform: uppercase;
 }
