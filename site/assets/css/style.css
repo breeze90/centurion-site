@@ -331,7 +331,7 @@ a:focus-visible {
   transform-origin: center;
   mix-blend-mode: normal;
   filter: none;
-  opacity: 0.30;
+  opacity: 0.40;
 }
 .hero-media::after {
   display: none;
