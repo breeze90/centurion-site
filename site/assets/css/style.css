@@ -797,7 +797,7 @@ a:focus-visible {
 }
 .trust-card h3 {
   margin: 0 0 10px;
-  color: var(--text);
+  color: var(--brass);
   font-size: 1.25rem;
 }
 .trust-card p {
