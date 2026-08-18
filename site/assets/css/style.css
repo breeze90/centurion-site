@@ -753,21 +753,47 @@ a:focus-visible {
   margin-top: 40px;
   padding-left: 70px;
 }
-.trust-grid::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 2px;
-  background: var(--brass);
-  content: "";
-}
 .trust-card {
+  position: relative;
   padding: 12px 0 32px;
   border-top: 1px solid var(--line);
 }
 .trust-card:first-child {
   border-top: 0;
+}
+.trust-card:first-child::before,
+.trust-card:last-child::before {
+  position: absolute;
+  left: -30px;
+  width: 50px;
+  height: 50px;
+  border-left: 1px solid var(--brass);
+  content: "";
+}
+.trust-card:first-child::before {
+  top: -18px;
+  border-top: 1px solid var(--brass);
+}
+.trust-card:last-child::before {
+  bottom: 0;
+  border-bottom: 1px solid var(--brass);
+}
+.trust-card:first-child::after,
+.trust-card:last-child::after {
+  position: absolute;
+  left: -36px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--brass);
+  border-radius: 50%;
+  background: var(--paper);
+  content: "";
+}
+.trust-card:first-child::after {
+  top: -24px;
+}
+.trust-card:last-child::after {
+  bottom: -6px;
 }
 .trust-card h3 {
   margin: 0 0 10px;
@@ -794,6 +820,18 @@ a:focus-visible {
 @media (max-width: 640px) {
   .trust-grid {
     padding-left: 34px;
+  }
+  .trust-card:first-child::before {
+    top: -14px;
+  }
+  .trust-card:first-child::after {
+    top: -20px;
+  }
+  .trust-card:last-child::before {
+    bottom: -6px;
+  }
+  .trust-card:last-child::after {
+    bottom: -12px;
   }
   .trust-card {
     padding: 16px 0 24px;
