@@ -662,6 +662,7 @@ a:focus-visible {
   color: var(--brass);
   font-family: var(--font-body);
   font-weight: 400;
+  text-transform: uppercase;
 }
 .engagement-standard h3::after {
   display: block;
