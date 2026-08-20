@@ -659,11 +659,11 @@ a:focus-visible {
   white-space: normal;
 }
 .engagement-card h3 {
-  color: var(--brass);
+  color: #000;
   font-family: var(--font-body);
   font-size: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: 700;
+  text-transform: none;
 }
 .engagement-standard h3::after {
   display: block;
@@ -804,7 +804,7 @@ a:focus-visible {
 }
 .trust-card h3 {
   margin: 0 0 10px;
-  color: var(--brass);
+  color: #000;
   font-size: 1.25rem;
 }
 .trust-card p {
