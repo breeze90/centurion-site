@@ -327,11 +327,11 @@ a:focus-visible {
   height: auto;
   object-fit: contain;
   object-position: center;
-  transform: none;
+  transform: scale(0.85);
   transform-origin: center;
   mix-blend-mode: normal;
-  filter: none;
-  opacity: 0.40;
+  filter: brightness(0.8);
+  opacity: 1;
 }
 .hero-media::after {
   display: none;
