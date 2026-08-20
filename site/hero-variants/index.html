@@ -90,10 +90,17 @@
     .hero-compare--solid-logo .hero-compare__media img {
       opacity: 1;
     }
-    body.nav-open-second .header--second .mobile-nav { display: flex; }
-    body.nav-open-second .header--second .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    body.nav-open-second .header--second .nav-toggle span:nth-child(2) { opacity: 0; }
-    body.nav-open-second .header--second .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .hero-compare--dimmed-logo .hero-compare__media img {
+      filter: brightness(0.8);
+    }
+    .hero-compare--smaller-logo .hero-compare__media img {
+      transform: scale(0.85);
+      transform-origin: center;
+    }
+    .header--variant.is-mobile-open .mobile-nav { display: flex; }
+    .header--variant.is-mobile-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .header--variant.is-mobile-open .nav-toggle span:nth-child(2) { opacity: 0; }
+    .header--variant.is-mobile-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .hero-compare__name {
       margin: 0;
       margin-inline-start: -0.04em;
@@ -288,7 +295,7 @@
     </section>
 
     <div class="menu-variant-label">Вариант 2</div>
-    <header class="header header--second">
+    <header class="header header--variant">
       <div class="container header-inner">
         <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-second">
           <span></span><span></span><span></span>
@@ -351,64 +358,191 @@
       </div>
     </section>
 
+    <div class="menu-variant-label">Вариант 3</div>
+    <header class="header header--variant">
+      <div class="container header-inner">
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-third">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="logo" href="../">
+          <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-Групп" width="34" height="34">
+          Центурион-Групп
+        </a>
+        <nav class="nav" aria-label="Основное меню">
+          <div class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-third" data-href="../uslugi/">
+              Услуги
+            </button>
+            <div class="nav-dropdown" id="services-menu-third">
+              <a href="../uslugi/restrukturizaciya-fizlic/">Реструктуризация физических лиц</a>
+              <a href="../uslugi/bankrotstvo-fizlic/">Банкротство физических лиц</a>
+              <a href="../uslugi/vzyskanie-dolgov/">Взыскание задолженности</a>
+              <a href="../uslugi/restrukturizaciya-yurlic/">Реструктуризация юридических лиц</a>
+              <a href="../uslugi/bankrotstvo-yurlic/">Банкротство юридических лиц</a>
+              <a href="../uslugi/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a>
+            </div>
+          </div>
+          <a href="../o-kompanii/">О компании</a>
+          <a href="../kontakty/">Контакты</a>
+        </nav>
+        <a class="header-phone" href="tel:+77777777777">+7 (777) 777-77-77</a>
+        <a class="btn btn-brass" href="../#lead-form">Консультация</a>
+      </div>
+      <div class="mobile-nav" id="mobile-nav-third"></div>
+    </header>
+
+    <section class="hero-compare hero-compare--solid-logo hero-compare--dimmed-logo" aria-labelledby="variant-dimmed-title">
+      <div class="hero-compare__layout">
+        <div class="hero-compare__copy">
+          <h2 class="hero-compare__name" id="variant-dimmed-title">Центурион-групп</h2>
+          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
+          <p class="hero-compare__lead"><span class="hero-compare__lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+          <div class="hero-compare__actions">
+            <a class="hero-compare__button hero-compare__button--brass" href="#variant-dimmed-title">Бесплатная консультация</a>
+            <a class="hero-compare__button hero-compare__button--outline" href="#variant-dimmed-title">Все услуги</a>
+          </div>
+        </div>
+        <figure class="hero-compare__media" aria-hidden="true">
+          <img src="../assets/img/logo-brass.svg?v=20260820-test-solid-watermark-v3" alt="" width="360" height="360">
+        </figure>
+        <div class="hero-compare__facts">
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
+            <div class="hero-compare__fact-caption">С марта 2015 года</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Работаем по всей России</div>
+            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
+            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="menu-variant-label">Вариант 4</div>
+    <header class="header header--variant">
+      <div class="container header-inner">
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-fourth">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="logo" href="../">
+          <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-Групп" width="34" height="34">
+          Центурион-Групп
+        </a>
+        <nav class="nav" aria-label="Основное меню">
+          <div class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-fourth" data-href="../uslugi/">
+              Услуги
+            </button>
+            <div class="nav-dropdown" id="services-menu-fourth">
+              <a href="../uslugi/restrukturizaciya-fizlic/">Реструктуризация физических лиц</a>
+              <a href="../uslugi/bankrotstvo-fizlic/">Банкротство физических лиц</a>
+              <a href="../uslugi/vzyskanie-dolgov/">Взыскание задолженности</a>
+              <a href="../uslugi/restrukturizaciya-yurlic/">Реструктуризация юридических лиц</a>
+              <a href="../uslugi/bankrotstvo-yurlic/">Банкротство юридических лиц</a>
+              <a href="../uslugi/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a>
+            </div>
+          </div>
+          <a href="../o-kompanii/">О компании</a>
+          <a href="../kontakty/">Контакты</a>
+        </nav>
+        <a class="header-phone" href="tel:+77777777777">+7 (777) 777-77-77</a>
+        <a class="btn btn-brass" href="../#lead-form">Консультация</a>
+      </div>
+      <div class="mobile-nav" id="mobile-nav-fourth"></div>
+    </header>
+
+    <section class="hero-compare hero-compare--solid-logo hero-compare--smaller-logo" aria-labelledby="variant-smaller-title">
+      <div class="hero-compare__layout">
+        <div class="hero-compare__copy">
+          <h2 class="hero-compare__name" id="variant-smaller-title">Центурион-групп</h2>
+          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
+          <p class="hero-compare__lead"><span class="hero-compare__lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+          <div class="hero-compare__actions">
+            <a class="hero-compare__button hero-compare__button--brass" href="#variant-smaller-title">Бесплатная консультация</a>
+            <a class="hero-compare__button hero-compare__button--outline" href="#variant-smaller-title">Все услуги</a>
+          </div>
+        </div>
+        <figure class="hero-compare__media" aria-hidden="true">
+          <img src="../assets/img/logo-brass.svg?v=20260820-test-solid-watermark-v4" alt="" width="360" height="360">
+        </figure>
+        <div class="hero-compare__facts">
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
+            <div class="hero-compare__fact-caption">С марта 2015 года</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Работаем по всей России</div>
+            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
+          </div>
+          <div class="hero-compare__fact">
+            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
+            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <script src="../assets/js/nav.js" defer></script>
   <script>
     (function () {
-      var header = document.querySelector('.header--second');
-      if (!header) return;
+      [].forEach.call(document.querySelectorAll('.header--variant'), function (header) {
+        var toggle = header.querySelector('.nav-toggle');
+        var panel = header.querySelector('.mobile-nav');
+        var nav = header.querySelector('.nav');
+        var cta = header.querySelector('.btn-brass');
+        if (!toggle || !panel || !nav) return;
 
-      var toggle = header.querySelector('.nav-toggle');
-      var panel = header.querySelector('.mobile-nav');
-      var nav = header.querySelector('.nav');
-      var cta = header.querySelector('.btn-brass');
-      if (!toggle || !panel || !nav) return;
-
-      [].forEach.call(nav.children, function (item) {
-        if (item.classList.contains('nav-item')) {
-          var trigger = item.querySelector('.nav-trigger');
-          var menuLink = document.createElement('a');
-          menuLink.href = trigger.dataset.href;
-          menuLink.textContent = trigger.textContent.trim();
-          panel.appendChild(menuLink);
-          return;
-        }
-        if (item.tagName === 'A') panel.appendChild(item.cloneNode(true));
-      });
-      if (cta) panel.appendChild(cta.cloneNode(true));
-
-      toggle.addEventListener('click', function () {
-        var open = document.body.classList.toggle('nav-open-second');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-
-      panel.addEventListener('click', function (event) {
-        if (event.target.tagName === 'A') {
-          document.body.classList.remove('nav-open-second');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      function closeDropdowns(except) {
-        [].forEach.call(nav.querySelectorAll('.nav-item'), function (item) {
-          if (item === except) return;
-          item.classList.remove('is-open');
-          item.querySelector('.nav-trigger').setAttribute('aria-expanded', 'false');
+        [].forEach.call(nav.children, function (item) {
+          if (item.classList.contains('nav-item')) {
+            var trigger = item.querySelector('.nav-trigger');
+            var menuLink = document.createElement('a');
+            menuLink.href = trigger.dataset.href;
+            menuLink.textContent = trigger.textContent.trim();
+            panel.appendChild(menuLink);
+            return;
+          }
+          if (item.tagName === 'A') panel.appendChild(item.cloneNode(true));
         });
-      }
+        if (cta) panel.appendChild(cta.cloneNode(true));
 
-      [].forEach.call(nav.querySelectorAll('.nav-trigger'), function (trigger) {
-        trigger.addEventListener('click', function () {
-          var item = trigger.closest('.nav-item');
-          var open = !item.classList.contains('is-open');
-          closeDropdowns(item);
-          item.classList.toggle('is-open', open);
-          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.addEventListener('click', function () {
+          var open = header.classList.toggle('is-mobile-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
-      });
 
-      document.addEventListener('click', function (event) {
-        if (!nav.contains(event.target)) closeDropdowns();
+        panel.addEventListener('click', function (event) {
+          if (event.target.tagName === 'A') {
+            header.classList.remove('is-mobile-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        function closeDropdowns(except) {
+          [].forEach.call(nav.querySelectorAll('.nav-item'), function (item) {
+            if (item === except) return;
+            item.classList.remove('is-open');
+            item.querySelector('.nav-trigger').setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        [].forEach.call(nav.querySelectorAll('.nav-trigger'), function (trigger) {
+          trigger.addEventListener('click', function () {
+            var item = trigger.closest('.nav-item');
+            var open = !item.classList.contains('is-open');
+            closeDropdowns(item);
+            item.classList.toggle('is-open', open);
+            trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+        });
+
+        document.addEventListener('click', function (event) {
+          if (!nav.contains(event.target)) closeDropdowns();
+        });
       });
     })();
   </script>
