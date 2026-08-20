@@ -34,39 +34,39 @@
   <style>
     /* Изолированные изменения только для второй тестовой страницы. */
     body.page-blue-menu .header {
-      background: var(--ink);
-      color: var(--on-ink);
-      border-bottom-color: rgba(255, 255, 255, 0.14);
+      background: #f3f4f6;
+      color: var(--text);
+      border-bottom-color: var(--line);
     }
     body.page-blue-menu .logo {
-      color: var(--on-ink);
+      color: var(--text);
     }
     body.page-blue-menu .logo-mark {
-      filter: none;
+      filter: invert(1);
     }
     body.page-blue-menu .nav a,
     body.page-blue-menu .nav-trigger,
     body.page-blue-menu .header-phone {
-      color: var(--on-ink-muted);
+      color: var(--muted);
     }
     body.page-blue-menu .nav a:hover,
     body.page-blue-menu .nav-trigger:hover,
     body.page-blue-menu .nav-trigger[aria-expanded="true"],
     body.page-blue-menu .nav a[aria-current="page"],
     body.page-blue-menu .nav-trigger[aria-current="page"] {
-      color: var(--on-ink);
+      color: var(--text);
     }
     body.page-blue-menu .nav-dropdown {
-      background: var(--ink);
-      border-color: rgba(255, 255, 255, 0.14);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      background: #fff;
+      border-color: var(--line);
+      box-shadow: 0 10px 24px rgba(24, 29, 37, 0.08);
     }
     body.page-blue-menu .nav-dropdown a {
-      color: var(--on-ink-muted);
+      color: var(--muted);
     }
     body.page-blue-menu .nav-dropdown a:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--on-ink);
+      background: rgba(37, 41, 54, 0.05);
+      color: var(--text);
     }
     body.page-blue-menu .header .btn-brass {
       background: transparent;
@@ -78,7 +78,7 @@
       color: #fff;
     }
     body.page-blue-menu .nav-toggle span {
-      background: var(--on-ink);
+      background: var(--text);
     }
 
     body.page-blue-menu .hero {
@@ -105,6 +105,8 @@
     }
     body.page-blue-menu .hero-media .hero-watermark {
       opacity: 1;
+      transform: scale(0.85);
+      transform-origin: center;
     }
     body.page-blue-menu .fact-num {
       color: var(--ink);
@@ -115,7 +117,16 @@
 
     @media (max-width: 760px) {
       body.page-blue-menu .mobile-nav {
-        background: var(--ink);
+        background: #f3f4f6;
+        border-top-color: var(--line);
+      }
+      body.page-blue-menu .mobile-nav a:not(.btn) {
+        color: var(--muted);
+        border-bottom-color: var(--line);
+      }
+      body.page-blue-menu .mobile-nav a[aria-current="page"],
+      body.page-blue-menu .mobile-nav a.header-phone {
+        color: var(--text);
       }
     }
   </style>
