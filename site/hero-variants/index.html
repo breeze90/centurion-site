@@ -3,239 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Тест — вариант Hero-блока | Центурион-групп</title>
-  <meta name="description" content="Тестовый вариант типографического оформления Hero-блока Центурион-групп.">
+  <title>Тест — размер подписи Hero-блока | Центурион-групп</title>
+  <meta name="description" content="Тестовые варианты размера подписи Hero-блока Центурион-групп.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260820-test-header">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260824-test-hero-subtitle-scale">
   <style>
-    :root {
-      --ink: #0f1822;
-      --paper: #ffffff;
-      --text: #202224;
-      --muted: #62676b;
-      --line: #e5e7eb;
-      --brass: #c99a54;
-      --brass-dark: #9a7226;
-      --on-ink: #ffffff;
-      --on-ink-muted: rgba(255, 255, 255, 0.7);
-      --font-display: "Lora", Georgia, serif;
-      --font-body: "Manrope", system-ui, -apple-system, sans-serif;
-      --container: 1120px;
-      --radius: 6px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--text);
-      background: var(--paper);
-      font-family: var(--font-body);
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .menu-variant-label {
+    .test-variant-label {
       max-width: var(--container);
       margin: 0 auto;
-      padding: 14px 20px 10px;
+      padding: 18px 20px 12px;
       color: var(--muted);
-      font-size: 1.56rem;
+      font-size: 1rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       line-height: 1.3;
       text-transform: uppercase;
     }
-
-    .hero-compare {
-      overflow: hidden;
-      padding: 72px 0 58px;
-      color: var(--on-ink);
-      background: var(--ink);
+    .test-hero .hero-subtitle {
+      font-size: var(--test-subtitle-size);
     }
-    .hero-compare__layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(340px, 408px);
-      column-gap: clamp(44px, 7vw, 96px);
-      row-gap: 0;
-      max-width: var(--container);
-      min-height: 0;
-      margin: 0 auto;
-      padding: 0 20px;
-      align-items: center;
-    }
-    .hero-compare__copy {
-      grid-column: 1;
-      min-width: 0;
-      padding-bottom: 34px;
-    }
-    .hero-compare__media {
-      grid-column: 2;
-      display: grid;
-      place-items: center;
-      align-self: stretch;
-      min-height: 0;
-      margin: 0;
-      overflow: hidden;
-      background: var(--ink);
-    }
-    .hero-compare__media img {
-      display: block;
-      width: min(360px, 92%);
-      height: auto;
-      opacity: 1;
-    }
-    .hero-compare--solid-logo .hero-compare__media img {
-      opacity: 1;
-    }
-    .hero-compare--dimmed-logo .hero-compare__media img {
-      filter: brightness(0.8);
-    }
-    .hero-compare--smaller-logo .hero-compare__media img {
-      transform: scale(0.85);
-      transform-origin: center;
-    }
-    .hero-compare--white-logo .hero-compare__media img {
-      filter: brightness(0) invert(1);
-    }
-    .header--variant.is-mobile-open .mobile-nav { display: flex; }
-    .header--variant.is-mobile-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .header--variant.is-mobile-open .nav-toggle span:nth-child(2) { opacity: 0; }
-    .header--variant.is-mobile-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .hero-compare__name {
-      margin: 0;
-      margin-inline-start: -0.04em;
-      color: #fff;
-      font-family: var(--font-display);
-      font-size: clamp(2.1rem, 4.8vw, 3.8rem);
-      font-weight: 600;
-      line-height: 1.14;
-      white-space: nowrap;
-    }
-    .hero-compare__subtitle {
-      display: block;
-      margin: 16px 0 26px;
-      color: var(--brass);
-      font-family: var(--font-body);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .hero-compare__lead {
-      max-width: 560px;
-      margin: 0;
-      color: rgba(255, 255, 255, 0.92);
-      font-family: var(--font-body);
-      font-size: 1.2rem;
-      font-weight: 300;
-      line-height: 1.5;
-    }
-    .hero-compare__lead-highlight {
-      font-size: inherit;
-      font-weight: inherit;
-    }
-    .hero-compare__actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 30px;
-    }
-    .hero-compare__button {
-      display: inline-block;
-      padding: 14px 28px;
-      border: 1px solid transparent;
-      border-radius: var(--radius);
-      font-family: var(--font-body);
-      font-size: 1.08rem;
-      font-weight: 700;
-      line-height: 1.6;
-      text-decoration: none;
-    }
-    .hero-compare__button--brass {
-      border-color: var(--brass);
-      color: var(--ink);
-      background: var(--brass);
-    }
-    .hero-compare__button--outline {
-      border-color: var(--on-ink-muted);
-      color: var(--on-ink);
-      background: transparent;
-    }
-    .hero-compare__facts {
-      display: grid;
-      grid-column: 1 / -1;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-    .hero-compare__fact {
-      min-width: 0;
-      padding-left: 16px;
-      border-left: 2px solid var(--brass);
-    }
-    .hero-compare__fact-title {
-      color: #fff;
-      font-size: 1.08rem;
-      font-weight: 700;
-      line-height: 1.25;
-    }
-    .hero-compare__fact-caption {
-      margin-top: 4px;
-      color: var(--on-ink-muted);
-      font-size: 0.78rem;
-      line-height: 1.4;
-    }
-
-    @media (max-width: 900px) {
-      .hero-compare__layout {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-      .hero-compare__copy,
-      .hero-compare__media {
-        grid-column: 1;
-      }
-      .hero-compare__media { display: none; }
-    }
+    .test-hero--2x { --test-subtitle-size: 1.56rem; }
+    .test-hero--3x { --test-subtitle-size: 2.34rem; }
+    .test-header.is-mobile-open .mobile-nav { display: flex; }
+    .test-header.is-mobile-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .test-header.is-mobile-open .nav-toggle span:nth-child(2) { opacity: 0; }
+    .test-header.is-mobile-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     @media (max-width: 760px) {
-      body { font-size: 16px; }
-      .hero-compare { padding: 54px 0 46px; }
-      .hero-compare__layout { min-height: 0; }
-      .hero-compare__copy { padding-bottom: 0; }
-      .hero-compare__name {
-        font-size: clamp(2rem, 10vw, 3rem);
-        white-space: normal;
-      }
-      .hero-compare__subtitle {
-        margin-top: 12px;
-        margin-bottom: 22px;
-      }
-      .hero-compare__lead { font-size: 1.08rem; }
-      .hero-compare__actions { margin-top: 26px; }
-      .hero-compare__facts {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px 16px;
-        margin-top: 42px;
-      }
-      .hero-compare__fact { padding-left: 12px; }
-      .hero-compare__fact-title { font-size: 0.95rem; }
-      .hero-compare__fact-caption { font-size: 0.72rem; }
-    }
-
-    @media (max-width: 520px) {
-      .hero-compare__facts { grid-template-columns: 1fr; }
+      .test-variant-label { padding-top: 14px; }
     }
   </style>
 </head>
-<body>
-  <div class="menu-variant-label">Вариант 1: заливка лого 40% яркость, граница 100% яркость</div>
-  <header class="header">
+<body class="homepage test-page">
+
+  <div class="test-variant-label">Вариант 1</div>
+  <header class="header test-header">
     <div class="container header-inner">
-      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav">
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-one">
         <span></span><span></span><span></span>
       </button>
       <a class="logo" href="../">
@@ -244,10 +50,10 @@
       </a>
       <nav class="nav" aria-label="Основное меню">
         <div class="nav-item">
-          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu" data-href="../uslugi/">
+          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-one" data-href="../uslugi/">
             Услуги
           </button>
-          <div class="nav-dropdown" id="services-menu">
+          <div class="nav-dropdown" id="services-menu-one">
             <a href="../uslugi/restrukturizaciya-fizlic/">Реструктуризация физических лиц</a>
             <a href="../uslugi/bankrotstvo-fizlic/">Банкротство физических лиц</a>
             <a href="../uslugi/vzyskanie-dolgov/">Взыскание задолженности</a>
@@ -262,45 +68,47 @@
       <a class="header-phone" href="tel:+77777777777">+7 (777) 777-77-77</a>
       <a class="btn btn-brass" href="../#lead-form">Консультация</a>
     </div>
-    <div class="mobile-nav" id="mobile-nav"></div>
+    <div class="mobile-nav" id="mobile-nav-one"></div>
   </header>
 
   <main>
-    <section class="hero-compare hero-compare--strict" aria-labelledby="variant-strict-title">
-      <div class="hero-compare__layout">
-        <div class="hero-compare__copy">
-          <h2 class="hero-compare__name" id="variant-strict-title">Центурион-групп</h2>
-          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
-          <p class="hero-compare__lead"><span class="hero-compare__lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
-          <div class="hero-compare__actions">
-            <a class="hero-compare__button hero-compare__button--brass" href="#variant-strict-title">Бесплатная консультация</a>
-            <a class="hero-compare__button hero-compare__button--outline" href="#variant-strict-title">Все услуги</a>
+    <section class="hero test-hero test-hero--2x">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <h1>Центурион-групп</h1>
+          <p class="hero-subtitle">Независимая юридическая компания</p>
+          <p class="lead"><span class="hero-lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+          <div class="hero-actions">
+            <a class="btn btn-brass" href="../#lead-form">Бесплатная консультация</a>
+            <a class="btn btn-outline" href="../uslugi/">Все услуги</a>
           </div>
         </div>
-        <figure class="hero-compare__media" aria-hidden="true">
-          <img src="../assets/img/logo-brass-outline.svg?v=20260820-test-watermark-fill-border-1p5" alt="" width="360" height="360">
+
+        <figure class="hero-media" aria-hidden="true">
+          <img class="hero-watermark" src="../assets/img/logo-brass.svg?v=20260812-dark-section-gold" alt="" width="380" height="380">
         </figure>
-        <div class="hero-compare__facts">
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
-            <div class="hero-compare__fact-caption">С марта 2015 года</div>
+
+        <div class="hero-facts">
+          <div class="fact">
+            <div class="fact-num">11 лет непрерывной практики</div>
+            <div class="fact-cap">С марта 2015 года</div>
           </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Работаем по всей России</div>
-            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
+          <div class="fact">
+            <div class="fact-num">Работаем по всей России</div>
+            <div class="fact-cap">Офис в Москве – успешные дела в 37 регионах</div>
           </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
-            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
+          <div class="fact">
+            <div class="fact-num">Опыт с обеих сторон спора</div>
+            <div class="fact-cap">Большая база возможных доводов и рисков сторон</div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="menu-variant-label">Вариант 2: заливка 100% яркость</div>
-    <header class="header header--variant">
+    <div class="test-variant-label">Вариант 2</div>
+    <header class="header test-header">
       <div class="container header-inner">
-        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-second">
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-two">
           <span></span><span></span><span></span>
         </button>
         <a class="logo" href="../">
@@ -309,10 +117,10 @@
         </a>
         <nav class="nav" aria-label="Основное меню">
           <div class="nav-item">
-            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-second" data-href="../uslugi/">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-two" data-href="../uslugi/">
               Услуги
             </button>
-            <div class="nav-dropdown" id="services-menu-second">
+            <div class="nav-dropdown" id="services-menu-two">
               <a href="../uslugi/restrukturizaciya-fizlic/">Реструктуризация физических лиц</a>
               <a href="../uslugi/bankrotstvo-fizlic/">Банкротство физических лиц</a>
               <a href="../uslugi/vzyskanie-dolgov/">Взыскание задолженности</a>
@@ -327,237 +135,46 @@
         <a class="header-phone" href="tel:+77777777777">+7 (777) 777-77-77</a>
         <a class="btn btn-brass" href="../#lead-form">Консультация</a>
       </div>
-      <div class="mobile-nav" id="mobile-nav-second"></div>
+      <div class="mobile-nav" id="mobile-nav-two"></div>
     </header>
 
-    <section class="hero-compare hero-compare--solid-logo" aria-labelledby="variant-solid-title">
-      <div class="hero-compare__layout">
-        <div class="hero-compare__copy">
-          <h2 class="hero-compare__name" id="variant-solid-title">Центурион-групп</h2>
-          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
-          <p class="hero-compare__lead"><span class="hero-compare__lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
-          <div class="hero-compare__actions">
-            <a class="hero-compare__button hero-compare__button--brass" href="#variant-solid-title">Бесплатная консультация</a>
-            <a class="hero-compare__button hero-compare__button--outline" href="#variant-solid-title">Все услуги</a>
+    <section class="hero test-hero test-hero--3x">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <h1>Центурион-групп</h1>
+          <p class="hero-subtitle">Независимая юридическая компания</p>
+          <p class="lead"><span class="hero-lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+          <div class="hero-actions">
+            <a class="btn btn-brass" href="../#lead-form">Бесплатная консультация</a>
+            <a class="btn btn-outline" href="../uslugi/">Все услуги</a>
           </div>
         </div>
-        <figure class="hero-compare__media" aria-hidden="true">
-          <img src="../assets/img/logo-brass.svg?v=20260820-test-solid-watermark" alt="" width="360" height="360">
+
+        <figure class="hero-media" aria-hidden="true">
+          <img class="hero-watermark" src="../assets/img/logo-brass.svg?v=20260812-dark-section-gold" alt="" width="380" height="380">
         </figure>
-        <div class="hero-compare__facts">
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
-            <div class="hero-compare__fact-caption">С марта 2015 года</div>
+
+        <div class="hero-facts">
+          <div class="fact">
+            <div class="fact-num">11 лет непрерывной практики</div>
+            <div class="fact-cap">С марта 2015 года</div>
           </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Работаем по всей России</div>
-            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
+          <div class="fact">
+            <div class="fact-num">Работаем по всей России</div>
+            <div class="fact-cap">Офис в Москве – успешные дела в 37 регионах</div>
           </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
-            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
+          <div class="fact">
+            <div class="fact-num">Опыт с обеих сторон спора</div>
+            <div class="fact-cap">Большая база возможных доводов и рисков сторон</div>
           </div>
         </div>
       </div>
     </section>
-
-    <div class="menu-variant-label">Вариант 3: заливка 80% яркость</div>
-    <header class="header header--variant">
-      <div class="container header-inner">
-        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-third">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="logo" href="../">
-          <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-Групп" width="34" height="34">
-          Центурион-Групп
-        </a>
-        <nav class="nav" aria-label="Основное меню">
-          <div class="nav-item">
-            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-third" data-href="../uslugi/">
-              Услуги
-            </button>
-            <div class="nav-dropdown" id="services-menu-third">
-              <a href="../uslugi/restrukturizaciya-fizlic/">Реструктуризация физических лиц</a>
-              <a href="../uslugi/bankrotstvo-fizlic/">Банкротство физических лиц</a>
-              <a href="../uslugi/vzyskanie-dolgov/">Взыскание задолженности</a>
-              <a href="../uslugi/restrukturizaciya-yurlic/">Реструктуризация юридических лиц</a>
-              <a href="../uslugi/bankrotstvo-yurlic/">Банкротство юридических лиц</a>
-              <a href="../uslugi/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a>
-            </div>
-          </div>
-          <a href="../o-kompanii/">О компании</a>
-          <a href="../kontakty/">Контакты</a>
-        </nav>
-        <a class="header-phone" href="tel:+77777777777">+7 (777) 777-77-77</a>
-        <a class="btn btn-brass" href="../#lead-form">Консультация</a>
-      </div>
-      <div class="mobile-nav" id="mobile-nav-third"></div>
-    </header>
-
-    <section class="hero-compare hero-compare--solid-logo hero-compare--dimmed-logo" aria-labelledby="variant-dimmed-title">
-      <div class="hero-compare__layout">
-        <div class="hero-compare__copy">
-          <h2 class="hero-compare__name" id="variant-dimmed-title">Центурион-групп</h2>
-          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
-          <p class="hero-compare__lead"><span class="hero-compare__lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
-          <div class="hero-compare__actions">
-            <a class="hero-compare__button hero-compare__button--brass" href="#variant-dimmed-title">Бесплатная консультация</a>
-            <a class="hero-compare__button hero-compare__button--outline" href="#variant-dimmed-title">Все услуги</a>
-          </div>
-        </div>
-        <figure class="hero-compare__media" aria-hidden="true">
-          <img src="../assets/img/logo-brass.svg?v=20260820-test-solid-watermark-v3" alt="" width="360" height="360">
-        </figure>
-        <div class="hero-compare__facts">
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
-            <div class="hero-compare__fact-caption">С марта 2015 года</div>
-          </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Работаем по всей России</div>
-            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
-          </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
-            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="menu-variant-label">Вариант 4: заливка 100% яркость, как в варианте 2, но размер уменьшен на 15%</div>
-    <header class="header header--variant">
-      <div class="container header-inner">
-        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-fourth">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="logo" href="../">
-          <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-Групп" width="34" height="34">
-          Центурион-Групп
-        </a>
-        <nav class="nav" aria-label="Основное меню">
-          <div class="nav-item">
-            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-fourth" data-href="../uslugi/">
-              Услуги
-            </button>
-            <div class="nav-dropdown" id="services-menu-fourth">
-              <a href="../uslugi/restrukturizaciya-fizlic/">Реструктуризация физических лиц</a>
-              <a href="../uslugi/bankrotstvo-fizlic/">Банкротство физических лиц</a>
-              <a href="../uslugi/vzyskanie-dolgov/">Взыскание задолженности</a>
-              <a href="../uslugi/restrukturizaciya-yurlic/">Реструктуризация юридических лиц</a>
-              <a href="../uslugi/bankrotstvo-yurlic/">Банкротство юридических лиц</a>
-              <a href="../uslugi/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a>
-            </div>
-          </div>
-          <a href="../o-kompanii/">О компании</a>
-          <a href="../kontakty/">Контакты</a>
-        </nav>
-        <a class="header-phone" href="tel:+77777777777">+7 (777) 777-77-77</a>
-        <a class="btn btn-brass" href="../#lead-form">Консультация</a>
-      </div>
-      <div class="mobile-nav" id="mobile-nav-fourth"></div>
-    </header>
-
-    <section class="hero-compare hero-compare--solid-logo hero-compare--smaller-logo" aria-labelledby="variant-smaller-title">
-      <div class="hero-compare__layout">
-        <div class="hero-compare__copy">
-          <h2 class="hero-compare__name" id="variant-smaller-title">Центурион-групп</h2>
-          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
-          <p class="hero-compare__lead"><span class="hero-compare__lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
-          <div class="hero-compare__actions">
-            <a class="hero-compare__button hero-compare__button--brass" href="#variant-smaller-title">Бесплатная консультация</a>
-            <a class="hero-compare__button hero-compare__button--outline" href="#variant-smaller-title">Все услуги</a>
-          </div>
-        </div>
-        <figure class="hero-compare__media" aria-hidden="true">
-          <img src="../assets/img/logo-brass.svg?v=20260820-test-solid-watermark-v4" alt="" width="360" height="360">
-        </figure>
-        <div class="hero-compare__facts">
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
-            <div class="hero-compare__fact-caption">С марта 2015 года</div>
-          </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Работаем по всей России</div>
-            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
-          </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
-            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="menu-variant-label">Вариант 5: заливка 100% яркость, цвет белый, размер уменьшен на 15%</div>
-    <header class="header header--variant">
-      <div class="container header-inner">
-        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-fifth">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="logo" href="../">
-          <img class="logo-mark" src="../assets/img/logo-white.svg" alt="Центурион-Групп" width="34" height="34">
-          Центурион-Групп
-        </a>
-        <nav class="nav" aria-label="Основное меню">
-          <div class="nav-item">
-            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-fifth" data-href="../uslugi/">
-              Услуги
-            </button>
-            <div class="nav-dropdown" id="services-menu-fifth">
-              <a href="../uslugi/restrukturizaciya-fizlic/">Реструктуризация физических лиц</a>
-              <a href="../uslugi/bankrotstvo-fizlic/">Банкротство физических лиц</a>
-              <a href="../uslugi/vzyskanie-dolgov/">Взыскание задолженности</a>
-              <a href="../uslugi/restrukturizaciya-yurlic/">Реструктуризация юридических лиц</a>
-              <a href="../uslugi/bankrotstvo-yurlic/">Банкротство юридических лиц</a>
-              <a href="../uslugi/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a>
-            </div>
-          </div>
-          <a href="../o-kompanii/">О компании</a>
-          <a href="../kontakty/">Контакты</a>
-        </nav>
-        <a class="header-phone" href="tel:+77777777777">+7 (777) 777-77-77</a>
-        <a class="btn btn-brass" href="../#lead-form">Консультация</a>
-      </div>
-      <div class="mobile-nav" id="mobile-nav-fifth"></div>
-    </header>
-
-    <section class="hero-compare hero-compare--strict hero-compare--smaller-logo hero-compare--white-logo" aria-labelledby="variant-fifth-title">
-      <div class="hero-compare__layout">
-        <div class="hero-compare__copy">
-          <h2 class="hero-compare__name" id="variant-fifth-title">Центурион-групп</h2>
-          <p class="hero-compare__subtitle">Независимая юридическая компания</p>
-          <p class="hero-compare__lead"><span class="hero-compare__lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
-          <div class="hero-compare__actions">
-            <a class="hero-compare__button hero-compare__button--brass" href="#variant-fifth-title">Бесплатная консультация</a>
-            <a class="hero-compare__button hero-compare__button--outline" href="#variant-fifth-title">Все услуги</a>
-          </div>
-        </div>
-        <figure class="hero-compare__media" aria-hidden="true">
-          <img src="../assets/img/logo-brass.svg?v=20260820-test-watermark-v5-white-scaled" alt="" width="360" height="360">
-        </figure>
-        <div class="hero-compare__facts">
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">11 лет непрерывной практики</div>
-            <div class="hero-compare__fact-caption">С марта 2015 года</div>
-          </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Работаем по всей России</div>
-            <div class="hero-compare__fact-caption">Офис в Москве – успешные дела в 37 регионах</div>
-          </div>
-          <div class="hero-compare__fact">
-            <div class="hero-compare__fact-title">Опыт с обеих сторон спора</div>
-            <div class="hero-compare__fact-caption">Большая база возможных доводов и рисков сторон</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
-  <script src="../assets/js/nav.js" defer></script>
+
   <script>
     (function () {
-      [].forEach.call(document.querySelectorAll('.header--variant'), function (header) {
+      document.querySelectorAll('.test-header').forEach(function (header) {
         var toggle = header.querySelector('.nav-toggle');
         var panel = header.querySelector('.mobile-nav');
         var nav = header.querySelector('.nav');
@@ -600,6 +217,10 @@
         [].forEach.call(nav.querySelectorAll('.nav-trigger'), function (trigger) {
           trigger.addEventListener('click', function () {
             var item = trigger.closest('.nav-item');
+            if (item.classList.contains('is-open')) {
+              window.location.href = trigger.dataset.href;
+              return;
+            }
             var open = !item.classList.contains('is-open');
             closeDropdowns(item);
             item.classList.toggle('is-open', open);
@@ -609,6 +230,10 @@
 
         document.addEventListener('click', function (event) {
           if (!nav.contains(event.target)) closeDropdowns();
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') closeDropdowns();
         });
       });
     })();
