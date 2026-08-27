@@ -266,7 +266,7 @@ a:focus-visible {
   margin: 0 0 30px;
   color: var(--brass);
   font-family: var(--font-body);
-  font-size: 0.78rem;
+  font-size: 26px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -275,7 +275,7 @@ a:focus-visible {
 .hero .lead {
   max-width: 560px;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 1.296rem;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
 }
