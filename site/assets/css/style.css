@@ -1454,6 +1454,53 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   font-size: 0.74rem;
   line-height: 1.45;
 }
+.restructuring-audience { background: var(--restructuring-paper); }
+.restructuring-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+}
+.restructuring-table-block .section-label { display: inline-block; margin-bottom: 18px; }
+.restructuring-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.restructuring-table tr { border-top: 1px solid var(--restructuring-line); }
+.restructuring-table tr:last-child { border-bottom: 1px solid var(--restructuring-line); }
+.restructuring-table th,
+.restructuring-table td {
+  padding: 16px 4px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+.restructuring-table th {
+  width: 30%;
+  padding-right: 20px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.restructuring-table td { color: var(--muted); }
+.restructuring-table-plain td {
+  padding-left: 22px;
+  position: relative;
+  color: var(--ink);
+}
+.restructuring-table-plain td::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 24px;
+  width: 8px;
+  height: 2px;
+  background: var(--brass);
+}
+@media (max-width: 760px) {
+  .restructuring-audience-grid { grid-template-columns: minmax(0, 1fr); }
+}
 .restructuring-problems { background: var(--restructuring-paper); }
 .restructuring-section-intro {
   display: grid;
