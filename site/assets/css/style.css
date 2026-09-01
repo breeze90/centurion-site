@@ -1291,3 +1291,353 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* ===== Страница реструктуризации ===== */
+.restructuring-page {
+  --restructuring-paper: #fbf8f2;
+  --restructuring-line: #d9d5cc;
+  background: var(--paper);
+}
+.restructuring-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 108px) 0 86px;
+  background: var(--ink);
+  color: var(--on-ink);
+}
+.restructuring-hero::before {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  content: "";
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.55) 55%, transparent 100%);
+}
+.restructuring-hero .container,
+.restructuring-section-intro,
+.restructuring-problem-list,
+.restructuring-work-grid,
+.restructuring-boundaries-box,
+.restructuring-final-cta {
+  position: relative;
+  z-index: 1;
+}
+.restructuring-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 470px);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: center;
+}
+.restructuring-hero-copy { min-width: 0; }
+.restructuring-kicker {
+  display: inline-block;
+  margin: 0 0 22px;
+  padding-left: 14px;
+  border-left: 2px solid var(--brass);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.restructuring-hero h1 {
+  max-width: 14ch;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: clamp(2.35rem, 5vw, 4.35rem);
+  line-height: 1.09;
+}
+.restructuring-hero-lead {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  line-height: 1.6;
+}
+.restructuring-hero .hero-actions { margin-top: 34px; }
+.restructuring-hero-note {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  max-width: 520px;
+  margin-top: 54px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.restructuring-hero-note > span {
+  color: #c99a54;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.restructuring-hero-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.restructuring-survey-card {
+  padding: clamp(26px, 4vw, 38px);
+  border: 1px solid rgba(15, 24, 34, 0.1);
+  border-radius: 3px;
+  background: var(--paper);
+  color: var(--text);
+  box-shadow: 18px 18px 0 rgba(184, 139, 67, 0.2);
+}
+.restructuring-survey-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+  color: var(--brass-dark);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.restructuring-survey-meta span:last-child {
+  color: var(--muted);
+  text-align: right;
+}
+.restructuring-survey-card h2 {
+  max-width: 13ch;
+  margin-bottom: 28px;
+  color: var(--ink);
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+.restructuring-ratios {
+  display: grid;
+  gap: 17px;
+}
+.restructuring-ratio > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+  color: var(--text);
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+.restructuring-ratio strong {
+  flex: none;
+  color: var(--ink);
+  font-size: 0.84rem;
+}
+.restructuring-ratio-track {
+  display: block;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e3e1db;
+}
+.restructuring-ratio-track > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--brass);
+}
+.restructuring-survey-note {
+  margin: 25px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--restructuring-line);
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+.restructuring-problems { background: var(--restructuring-paper); }
+.restructuring-section-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.75fr);
+  gap: clamp(32px, 8vw, 120px);
+  align-items: end;
+}
+.restructuring-section-intro h2 {
+  max-width: 18ch;
+  margin-bottom: 0;
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.12;
+}
+.restructuring-section-intro .lead {
+  margin: 0;
+  max-width: 42ch;
+}
+.restructuring-problem-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(36px, 6vw, 90px);
+  margin-top: 62px;
+  border-top: 1px solid var(--restructuring-line);
+}
+.restructuring-problem-list article {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 18px;
+  padding: 26px 0 30px;
+  border-bottom: 1px solid var(--restructuring-line);
+}
+.restructuring-problem-index {
+  color: var(--brass-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.restructuring-problem-list h3 {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 1.3rem;
+}
+.restructuring-problem-list p {
+  max-width: 43ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+.restructuring-work { background: var(--paper); }
+.restructuring-work-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(290px, 0.68fr);
+  gap: clamp(36px, 8vw, 120px);
+  align-items: start;
+  margin-top: 62px;
+}
+.restructuring-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--restructuring-line);
+}
+.restructuring-steps li {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--restructuring-line);
+}
+.restructuring-steps li > span {
+  color: var(--brass-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.restructuring-steps h3 {
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: 1.28rem;
+}
+.restructuring-steps p {
+  max-width: 56ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+.restructuring-scope {
+  padding: 30px;
+  border-radius: 3px;
+  background: var(--ink);
+  color: var(--on-ink);
+}
+.restructuring-scope-title {
+  margin-bottom: 22px;
+  color: #c99a54;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.restructuring-scope ul {
+  display: grid;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.restructuring-scope li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.restructuring-scope li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c99a54;
+  content: "";
+}
+.restructuring-boundaries { background: var(--restructuring-paper); }
+.restructuring-boundaries-box {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: clamp(32px, 8vw, 120px);
+  padding: clamp(28px, 5vw, 52px);
+  border-left: 3px solid var(--brass);
+  background: var(--paper);
+}
+.restructuring-boundaries-box h2 {
+  max-width: 17ch;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+  line-height: 1.15;
+}
+.restructuring-boundaries-copy p {
+  max-width: 58ch;
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+.restructuring-boundaries-copy p:last-child { margin-bottom: 0; }
+.restructuring-final-cta {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 72px;
+  padding-top: 28px;
+  border-top: 1px solid var(--restructuring-line);
+}
+.restructuring-final-cta h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+}
+.restructuring-final-cta .section-label { margin-bottom: 8px; }
+
+@media (max-width: 900px) {
+  .restructuring-hero-grid,
+  .restructuring-section-intro,
+  .restructuring-work-grid,
+  .restructuring-boundaries-box {
+    grid-template-columns: 1fr;
+  }
+  .restructuring-survey-card { max-width: 620px; }
+  .restructuring-section-intro .lead { max-width: 60ch; }
+}
+
+@media (max-width: 760px) {
+  .restructuring-hero { padding: 54px 0 66px; }
+  .restructuring-hero h1 { max-width: 15ch; font-size: clamp(2.2rem, 11vw, 3.5rem); }
+  .restructuring-hero-note { margin-top: 40px; }
+  .restructuring-survey-card { box-shadow: 10px 10px 0 rgba(184, 139, 67, 0.2); }
+  .restructuring-problem-list { grid-template-columns: 1fr; margin-top: 42px; }
+  .restructuring-work-grid { margin-top: 42px; }
+  .restructuring-scope { padding: 26px 22px; }
+  .restructuring-final-cta {
+    align-items: start;
+    flex-direction: column;
+    margin-top: 52px;
+  }
+}
