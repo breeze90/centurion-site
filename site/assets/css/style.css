@@ -1330,6 +1330,10 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   gap: clamp(42px, 7vw, 96px);
   align-items: center;
 }
+.restructuring-hero-grid-solo {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 920px;
+}
 .restructuring-hero-copy { min-width: 0; }
 .restructuring-kicker {
   display: inline-block;
@@ -1349,6 +1353,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   font-size: clamp(2.35rem, 5vw, 4.35rem);
   line-height: 1.09;
 }
+.restructuring-hero-grid-solo h1 { max-width: 18ch; }
 .restructuring-hero-lead {
   max-width: 620px;
   margin: 0;
