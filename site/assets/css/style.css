@@ -1110,6 +1110,12 @@ a:focus-visible {
   gap: 12px 32px;
   justify-content: space-between;
 }
+.footer-contacts {
+  line-height: 1.6;
+}
+.footer-contacts a {
+  white-space: nowrap;
+}
 .footer a { color: var(--on-ink-muted); }
 
 /* ===== Попап заявки ===== */
