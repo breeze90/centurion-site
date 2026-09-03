@@ -552,7 +552,7 @@ a:focus-visible {
 }
 .process-list li .process-lead {
   color: #000;
-  font-weight: 400;
+  font-weight: 700;
 }
 .process-list li:first-child { padding-left: 0; }
 .process-list li:last-child { padding-right: 0; }
