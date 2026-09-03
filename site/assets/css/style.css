@@ -107,20 +107,20 @@ a:focus-visible {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   color: var(--text);
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: clamp(1.35rem, 1.8vw, 1.6rem);
+  font-weight: 700;
   white-space: nowrap;
 }
 .logo-mark {
-  height: 34px;
-  width: 34px;
+  height: 46px;
+  width: 46px;
   object-fit: contain;
   flex: none;
-  filter: invert(1); /* инвертируем белый логотип в темный */
+  filter: none;
 }
 .homepage .logo {
   gap: 12px;
@@ -710,8 +710,7 @@ a:focus-visible {
 .engagement-standard {
   margin-top: 16px;
   padding: 30px 28px 28px;
-  border: 1px solid var(--line);
-  border-top: 1px solid var(--line);
+  border: 1px solid var(--brass);
   border-radius: var(--radius);
   background: var(--card);
 }
@@ -1287,7 +1286,14 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
     gap: 10px 16px;
     padding: 12px 0;
   }
-  .logo { font-size: 1.1rem; }
+  .logo {
+    gap: 9px;
+    font-size: 1.2rem;
+  }
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
   .homepage .logo {
     gap: 9px;
     font-size: 1.2rem;
