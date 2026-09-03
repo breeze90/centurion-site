@@ -122,6 +122,16 @@ a:focus-visible {
   flex: none;
   filter: invert(1); /* инвертируем белый логотип в темный */
 }
+.homepage .logo {
+  gap: 12px;
+  font-size: clamp(1.35rem, 1.8vw, 1.6rem);
+  font-weight: 700;
+}
+.homepage .logo-mark {
+  width: 46px;
+  height: 46px;
+  filter: none;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -1278,6 +1288,14 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
     padding: 12px 0;
   }
   .logo { font-size: 1.1rem; }
+  .homepage .logo {
+    gap: 9px;
+    font-size: 1.2rem;
+  }
+  .homepage .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
   .header-phone {
     position: relative;
     right: 12px;
