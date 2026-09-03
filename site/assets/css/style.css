@@ -550,7 +550,10 @@ a:focus-visible {
   font-size: 0.95rem;
   line-height: 1.55;
 }
-.process-list li strong { color: #000; }
+.process-list li .process-lead {
+  color: #000;
+  font-weight: 400;
+}
 .process-list li:first-child { padding-left: 0; }
 .process-list li:last-child { padding-right: 0; }
 .process-list li + li { border-left: 1px solid var(--line); }
