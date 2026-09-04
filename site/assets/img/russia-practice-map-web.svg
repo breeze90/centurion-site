@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="3600" height="2100" viewBox="0 0 3600 2100" role="img" aria-labelledby="title desc"><title id="title">География практики</title><desc id="desc">Карта России с серыми границами регионов, золотыми точками городов и отдельным квадратным фрагментом Москвы и Московской области.</desc><defs><filter id="marker-shadow" x="-100%" y="-100%" width="300%" height="400%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceAlpha" stdDeviation="2.4" result="blur"/><feOffset in="blur" dx="0" dy="3" result="offsetBlur"/><feFlood flood-color="#0f1822" flood-opacity="0.42" result="shadowColor"/><feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/><feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><style>
     .region-default{fill:#e9edef;stroke:#bcc6cc;stroke-width:1.5;stroke-linejoin:round}
     .region-selected{fill:#e9edef;stroke:#bcc6cc;stroke-width:1.5;stroke-linejoin:round}
-    .city-dot{fill:#9a7226;stroke:#fff;stroke-width:3.2;filter:url(#marker-shadow)}
+    .city-dot{fill:#9a7226;stroke:#fff;stroke-width:3.2;shape-rendering:geometricPrecision}
     .city-dot-major{stroke-width:5}
     .city-label{font:500 44px Arial,sans-serif;fill:#22262a;paint-order:stroke;stroke:#ffffff;stroke-width:12px;stroke-linejoin:round}
     .city-label-small{font-size:32px;stroke-width:9px}
