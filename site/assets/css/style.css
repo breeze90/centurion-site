@@ -641,11 +641,11 @@ a:focus-visible {
   }
   .process-card-head { margin-bottom: 20px; padding-bottom: 18px; }
   .process-card h3 { font-size: 1.25rem; }
-  .process-list { gap: 0; }
+  .process-list { gap: 20px; }
   .process-list li + li { padding-top: 20px; }
   .process-list li:not(:last-child)::after {
     content: "\2193";
-    bottom: -8px;
+    bottom: -28px;
     right: 50%;
     transform: translateX(50%);
   }
