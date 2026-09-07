@@ -37,10 +37,21 @@
     /* На основной странице меняем только мобильную компоновку блока преимуществ. */
     @media (max-width: 760px) {
       .homepage-main .hero-facts {
+        position: relative;
         grid-template-columns: 1fr;
         gap: 0;
         margin-top: 0;
         padding: 0 22px;
+      }
+
+      .homepage-main .hero-facts::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        background: var(--brass);
+        content: "";
       }
 
       .homepage-main .hero-facts .fact,
