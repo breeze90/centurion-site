@@ -1168,7 +1168,7 @@ a:focus-visible {
   gap: 12px 32px;
   justify-content: space-between;
 }
-.footer a { color: var(--on-ink-muted); }
+.footer a { color: var(--brass); }
 
 /* ===== Попап заявки ===== */
 .modal {
