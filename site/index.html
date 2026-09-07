@@ -33,8 +33,47 @@
   <link rel="preconnect" href="https://31f130418eb552015102c26492c44c93.mtmba.ru">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css?v=20260907-mobile-hero-facts-region-v2">
+  <style>
+    /* На основной странице меняем только мобильную компоновку блока преимуществ. */
+    @media (max-width: 760px) {
+      .homepage-main .hero-facts {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 22px;
+        padding: 0 22px;
+      }
+
+      .homepage-main .hero-facts .fact,
+      .homepage-main .hero-facts .fact:first-child,
+      .homepage-main .hero-facts .fact:last-child {
+        min-height: 0;
+        padding: 17px 0 18px;
+        border-top: 0;
+        border-bottom: 0;
+      }
+
+      .homepage-main .hero-facts .fact + .fact {
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .homepage-main .hero-facts .fact::before {
+        display: none;
+      }
+
+      .homepage-main .hero-facts .fact-num {
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .homepage-main .hero-facts .fact-cap {
+        margin-top: 5px;
+        font-size: 0.82rem;
+        line-height: 1.45;
+      }
+    }
+  </style>
 </head>
-<body class="homepage">
+<body class="homepage homepage-main">
 
   <!-- Шапка -->
   <header class="header">
