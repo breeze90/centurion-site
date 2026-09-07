@@ -786,7 +786,7 @@ a:focus-visible {
 }
 .trust-decor {
   position: absolute;
-  right: -30px;
+  right: 40px;
   width: 50px;
   height: 50px;
   border-right: 1px solid var(--brass);
@@ -821,7 +821,7 @@ a:focus-visible {
   border-top: 0;
 }
 .trust-card:first-child::before,
-.trust-card:last-child::before {
+.trust-card:last-of-type::before {
   position: absolute;
   left: -30px;
   width: 50px;
@@ -833,12 +833,12 @@ a:focus-visible {
   top: -13px;
   border-top: 1px solid var(--brass);
 }
-.trust-card:last-child::before {
+.trust-card:last-of-type::before {
   bottom: 7px;
   border-bottom: 1px solid var(--brass);
 }
 .trust-card:first-child::after,
-.trust-card:last-child::after {
+.trust-card:last-of-type::after {
   position: absolute;
   left: -36px;
   width: 12px;
@@ -851,7 +851,7 @@ a:focus-visible {
 .trust-card:first-child::after {
   top: -19px;
 }
-.trust-card:last-child::after {
+.trust-card:last-of-type::after {
   bottom: 1px;
 }
 .trust-card h3 {
@@ -884,6 +884,7 @@ a:focus-visible {
     padding-left: 34px;
     padding-right: 34px;
   }
+  .trust-decor { right: 4px; }
   .trust-decor-top { top: -9px; }
   .trust-decor-bottom { bottom: -1px; }
   .trust-card:first-child::before {
@@ -892,10 +893,10 @@ a:focus-visible {
   .trust-card:first-child::after {
     top: -15px;
   }
-  .trust-card:last-child::before {
+  .trust-card:last-of-type::before {
     bottom: -1px;
   }
-  .trust-card:last-child::after {
+  .trust-card:last-of-type::after {
     bottom: -7px;
   }
   .trust-card {
