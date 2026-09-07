@@ -1285,34 +1285,81 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .practice-stats { gap: 14px; }
   .practice-stats dt { font-size: 1.05rem; }
   .matomba-frame { height: 460px; }
+  .header .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
   .header-inner {
-    flex-wrap: wrap;
-    gap: 10px 16px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 8px;
+    flex-wrap: nowrap;
     padding: 12px 0;
   }
+  .nav-toggle {
+    width: 32px;
+    height: 32px;
+  }
   .logo {
-    gap: 9px;
-    font-size: 1.15rem;
+    min-width: 0;
+    gap: 6px;
+    overflow: hidden;
+    font-size: clamp(0.8rem, 3.6vw, 0.95rem);
   }
   .logo-mark {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
   }
   .homepage .logo {
-    gap: 9px;
-    font-size: 1.15rem;
+    gap: 6px;
+    font-size: clamp(0.8rem, 3.6vw, 0.95rem);
   }
   .homepage .logo-mark {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
   }
   .header-phone {
-    position: relative;
-    right: 12px;
-    margin-left: auto;
-    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    padding: 6px 8px;
+    border: 1px solid var(--brass);
+    border-radius: var(--radius);
+    color: var(--brass);
+    font-size: clamp(0.72rem, 3.3vw, 0.8rem);
+    line-height: 1.2;
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
+  }
+  .header-phone:active,
+  .header-phone:focus-visible {
+    background: rgba(154, 114, 38, 0.12);
+    border-color: var(--brass-dark);
+    color: var(--brass-dark);
   }
   .header-inner > .btn { display: none; }
+}
+
+@media (max-width: 360px) {
+  .header-inner { gap: 4px; }
+  .nav-toggle {
+    width: 28px;
+    height: 32px;
+  }
+  .logo {
+    gap: 4px;
+    font-size: 0.72rem;
+  }
+  .logo-mark {
+    width: 26px;
+    height: 26px;
+  }
+  .homepage .logo { gap: 4px; font-size: 0.72rem; }
+  .homepage .logo-mark { width: 26px; height: 26px; }
+  .header-phone {
+    padding: 5px 6px;
+    font-size: 0.65rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
