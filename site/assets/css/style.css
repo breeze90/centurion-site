@@ -643,6 +643,7 @@ a:focus-visible {
   .process-card h3 { font-size: 1.25rem; }
   .process-list { gap: 20px; }
   .process-list li + li { padding-top: 20px; }
+  .process-list li + li:last-child { padding-top: 20px; }
   .process-list li:not(:last-child)::after {
     content: "\2193";
     bottom: -28px;
