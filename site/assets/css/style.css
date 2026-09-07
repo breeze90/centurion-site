@@ -1258,7 +1258,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   body.nav-open .mobile-nav { display: flex; }
   .section { padding: 52px 0; }
   .hero { padding: 60px 0 52px; }
-  .hero-layout { grid-template-columns: 1fr; gap: 30px; }
+  .hero-layout { grid-template-columns: 1fr; gap: 18px; }
   .hero h1 {
     max-width: none;
     white-space: nowrap;
