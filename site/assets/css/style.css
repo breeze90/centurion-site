@@ -1259,6 +1259,18 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .section { padding: 52px 0; }
   .hero { padding: 60px 0 52px; }
   .hero-layout { grid-template-columns: 1fr; gap: 30px; }
+  .hero h1 {
+    max-width: none;
+    white-space: nowrap;
+    font-size: clamp(2.2rem, 9.5vw, 3rem);
+    line-height: 1.1;
+  }
+  .hero-subtitle {
+    margin-bottom: 24px;
+    font-size: clamp(0.68rem, 3.4vw, 0.9rem);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
   .hero-copy,
   .hero-facts,
   .hero-media {
@@ -1274,9 +1286,28 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
     transform: none;
   }
   .hero-facts {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
     margin-top: 0;
+  }
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .hero-actions .btn {
+    display: block;
+    width: 100%;
+    padding: 13px 18px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .fact {
+    padding-left: 10px;
+  }
+  .fact-num {
+    font-size: clamp(0.65rem, 2.7vw, 0.8rem);
+    line-height: 1.2;
   }
   .fact::before {
     height: calc(100% - 4px);
