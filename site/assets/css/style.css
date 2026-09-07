@@ -1298,6 +1298,12 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 
 /* ===== Мобильная версия ===== */
 @media (max-width: 760px) {
+  .footer-inner > div:first-child {
+    font-size: clamp(0.52rem, 2.4vw, 0.62rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    white-space: nowrap;
+  }
   .nav { display: none; }
   .nav-toggle { display: flex; }
   body.nav-open .mobile-nav { display: flex; }
