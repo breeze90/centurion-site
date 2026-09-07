@@ -1299,17 +1299,9 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 /* ===== Мобильная версия ===== */
 @media (max-width: 760px) {
   .footer-inner > div:first-child {
-    font-size: clamp(0.56rem, 2.6vw, 0.68rem);
+    font-size: clamp(0.58rem, 2.8vw, 0.72rem);
     line-height: 1.2;
-    letter-spacing: -0.025em;
-    white-space: nowrap;
-  }
-  .contacts-quick {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
-  .contacts-quick .contact-big {
-    font-size: clamp(0.9rem, 4vw, 1.05rem);
+    letter-spacing: -0.04em;
     white-space: nowrap;
   }
   .nav { display: none; }
