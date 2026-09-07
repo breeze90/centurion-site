@@ -1293,7 +1293,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 20px;
   }
   .hero-actions .btn {
     display: block;
@@ -1308,6 +1308,10 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .fact-num {
     font-size: clamp(0.65rem, 2.7vw, 0.8rem);
     line-height: 1.2;
+  }
+  .fact-cap {
+    font-size: clamp(0.58rem, 2.3vw, 0.7rem);
+    line-height: 1.3;
   }
   .fact::before {
     height: calc(100% - 4px);
