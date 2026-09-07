@@ -782,8 +782,36 @@ a:focus-visible {
   grid-template-columns: 1fr;
   gap: 0;
   margin-top: 40px;
-  padding-left: 70px;
+  padding: 0 70px;
 }
+.trust-decor {
+  position: absolute;
+  right: -30px;
+  width: 50px;
+  height: 50px;
+  border-right: 1px solid var(--brass);
+  pointer-events: none;
+}
+.trust-decor-top {
+  top: -13px;
+  border-top: 1px solid var(--brass);
+}
+.trust-decor-bottom {
+  bottom: 7px;
+  border-bottom: 1px solid var(--brass);
+}
+.trust-decor::after {
+  position: absolute;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--brass);
+  border-radius: 50%;
+  background: var(--paper);
+  content: "";
+}
+.trust-decor-top::after { top: -6px; }
+.trust-decor-bottom::after { bottom: -6px; }
 .trust-card {
   position: relative;
   padding: 12px 0 32px;
@@ -854,7 +882,10 @@ a:focus-visible {
 @media (max-width: 640px) {
   .trust-grid {
     padding-left: 34px;
+    padding-right: 34px;
   }
+  .trust-decor-top { top: -9px; }
+  .trust-decor-bottom { bottom: -1px; }
   .trust-card:first-child::before {
     top: -9px;
   }
