@@ -2,9 +2,27 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      if (sessionStorage.getItem('entrySource') !== null) return;
+      var pageParams = new URLSearchParams(location.search);
+      var hasRealTracking = pageParams.has('utm_source') || pageParams.has('yclid') || pageParams.has('gclid');
+      var engine = '';
+      if (!hasRealTracking) {
+        try {
+          var refHost = new URL(document.referrer).hostname;
+          if (/(^|\.)yandex\.|(^|\.)ya\.ru$/i.test(refHost)) engine = 'yandex';
+          else if (/(^|\.)google\./i.test(refHost)) engine = 'google';
+        } catch (e) {}
+      }
+      sessionStorage.setItem('entrySource', engine);
+      sessionStorage.setItem('entryPage', location.hostname + location.pathname);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="noindex, nofollow">
-  <title>Тест — версии карты географии практики</title>
+  <title>Тест — варианты мобильного блока преимуществ</title>
   <link rel="icon" href="../assets/img/favicon-light.svg?v=20260721-theme" type="image/svg+xml">
   <link rel="icon" href="../assets/img/favicon-light.svg?v=20260721-theme" media="(prefers-color-scheme: light)" type="image/svg+xml">
   <link rel="icon" href="../assets/img/favicon-dark.svg?v=20260721-theme" media="(prefers-color-scheme: dark)" type="image/svg+xml">
@@ -12,114 +30,219 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260907-mobile-hero-facts-region-v2">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260907-mobile-hero-facts-region">
   <style>
-    .practice-test-page {
-      background: var(--paper);
-    }
-    .practice-test-caption {
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 30px 20px 0;
-      color: var(--brass);
-      font-size: 1.17rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      line-height: 1.4;
-      text-transform: uppercase;
-    }
-    .practice-test-caption + .practice {
-      padding-top: 24px;
-    }
+    .test-header.is-menu-open .mobile-nav { display: flex; }
+    .test-mobile-menu { display: none; }
+
     @media (max-width: 760px) {
-      .practice-test-caption {
-        padding-top: 22px;
+      .test-mobile-menu { display: flex; }
+    }
+
+    /* Вариант 4: только мобильная версия, без уголков, точек и боковых линий. */
+    @media (max-width: 760px) {
+      .test-hero-editorial .hero-facts {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 22px;
+        padding: 0 22px;
+      }
+
+      .test-hero-editorial .hero-facts .fact,
+      .test-hero-editorial .hero-facts .fact:first-child,
+      .test-hero-editorial .hero-facts .fact:last-child {
+        min-height: 0;
+        padding: 17px 0 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        border-bottom: 0;
+      }
+
+      .test-hero-editorial .hero-facts .fact:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .test-hero-editorial .hero-facts .fact::before {
+        display: none;
+      }
+
+      .test-hero-editorial .hero-facts .fact-num {
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .test-hero-editorial .hero-facts .fact-cap {
+        margin-top: 5px;
+        font-size: 0.82rem;
+        line-height: 1.45;
       }
     }
   </style>
 </head>
-<body class="practice-test-page">
-  <main>
-    <p class="practice-test-caption">Актуальная версия на сайте</p>
-    <section class="section practice" id="practice-current">
-      <div class="container">
-        <div class="practice-heading">
-          <div>
-            <span class="section-label">География практики</span>
-            <h2>Судебные дела по всей России</h2>
-            <p class="lead">Отметили регионы, в которых уже завершали судебные процессы. По запросу
-              подберём дело из практики, похожее на вашу ситуацию.</p>
-          </div>
-          <dl class="practice-stats">
-            <div>
-              <dt>41 регион</dt>
-              <dd>отметили на карте</dd>
-            </div>
-            <div>
-              <dt>Более 300</dt>
-              <dd>успешных дел</dd>
-            </div>
-          </dl>
-        </div>
-        <figure class="practice-map" aria-label="Карта регионов судебной практики Центурион-Групп">
-          <img src="../assets/img/russia-practice-map-web.svg?v=20260904-marker-shadow-v3" alt="Карта регионов успешных дел" width="3600" height="2100" loading="lazy" decoding="async">
-        </figure>
-      </div>
-    </section>
+<body class="homepage">
 
-    <p class="practice-test-caption">Новая версия с уменьшенными точками</p>
-    <section class="section practice" id="practice-reduced">
-      <div class="container">
-        <div class="practice-heading">
-          <div>
-            <span class="section-label">География практики</span>
-            <h2>Судебные дела по всей России</h2>
-            <p class="lead">Отметили регионы, в которых уже завершали судебные процессы. По запросу
-              подберём дело из практики, похожее на вашу ситуацию.</p>
+  <!-- Первый вариант: текущая версия -->
+  <nav class="mobile-nav test-mobile-menu" aria-label="Меню первого тестового варианта">
+    <a href="../uslugi/">Услуги</a>
+    <a href="../stati/">Статьи</a>
+    <a href="../o-kompanii/">О компании</a>
+    <a href="../kontakty/">Контакты</a>
+    <a class="btn btn-brass" href="../#lead-form">Консультация</a>
+  </nav>
+  <header class="header test-header">
+    <div class="container header-inner">
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-current">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="../">
+        <img class="logo-mark" src="../assets/img/logo-ink.svg" alt="Центурион-Групп" width="42" height="42">
+        Центурион-Групп
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <div class="nav-item">
+          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-current" data-href="../uslugi/">Услуги</button>
+          <div class="nav-dropdown" id="services-menu-current">
+            <a href="../uslugi/ozdorovlenie-biznesa/">Оздоровление бизнеса</a>
+            <a href="../uslugi/restrukturizaciya-dolgov/">Судебная реструктуризация долгов</a>
+            <a href="../uslugi/bankrotstvo/">Банкротство физических и юридических лиц</a>
+            <a href="../uslugi/vzyskanie-deneg-i-imushchestva/">Взыскание денег и имущества</a>
+            <a href="../uslugi/arbitrazhnye-spory/">Арбитражные споры</a>
+            <a href="../uslugi/intellektualnaya-sobstvennost/">Защита интеллектуальных прав</a>
           </div>
-          <dl class="practice-stats">
-            <div>
-              <dt>41 регион</dt>
-              <dd>отметили на карте</dd>
-            </div>
-            <div>
-              <dt>Более 300</dt>
-              <dd>успешных дел</dd>
-            </div>
-          </dl>
         </div>
-        <figure class="practice-map" aria-label="Карта регионов судебной практики Центурион-Групп">
-          <img src="../assets/img/russia-practice-map-reduced-points.svg?v=20260904-marker-shadow-v3" alt="Карта регионов успешных дел с уменьшенными точками" width="3600" height="2100" loading="lazy" decoding="async">
-        </figure>
-      </div>
-    </section>
+        <a href="../stati/">Статьи</a><a href="../o-kompanii/">О компании</a><a href="../kontakty/">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+74951250550">+7 (495) 125-05-50</a>
+      <a class="btn btn-brass" href="../#lead-form">Консультация</a>
+    </div>
+    <div class="mobile-nav" id="mobile-nav-current"></div>
+  </header>
 
-    <p class="practice-test-caption">Новая версия с уменьшенными точками по вашему запросу</p>
-    <section class="section practice" id="practice-reduced-request">
-      <div class="container">
-        <div class="practice-heading">
-          <div>
-            <span class="section-label">География практики</span>
-            <h2>Судебные дела по всей России</h2>
-            <p class="lead">Отметили регионы, в которых уже завершали судебные процессы. По запросу
-              подберём дело из практики, похожее на вашу ситуацию.</p>
-          </div>
-          <dl class="practice-stats">
-            <div>
-              <dt>41 регион</dt>
-              <dd>отметили на карте</dd>
-            </div>
-            <div>
-              <dt>Более 300</dt>
-              <dd>успешных дел</dd>
-            </div>
-          </dl>
+  <section class="hero test-hero-current">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <h1>Центурион-групп</h1>
+        <p class="hero-subtitle">Независимая юридическая компания</p>
+        <p class="lead"><span class="hero-lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brass" href="../#lead-form">Бесплатная консультация</a>
+          <a class="btn btn-outline" href="../uslugi/">Все услуги</a>
         </div>
-        <figure class="practice-map" aria-label="Карта регионов судебной практики Центурион-Групп">
-          <img src="../assets/img/russia-practice-map-reduced-points-request.svg?v=20260904-marker-shadow-v3" alt="Карта регионов успешных дел с ещё более уменьшенными точками" width="3600" height="2100" loading="lazy" decoding="async">
-        </figure>
       </div>
-    </section>
-  </main>
+      <figure class="hero-media" aria-hidden="true"><img class="hero-watermark" src="../assets/img/logo-brass.svg?v=20260812-dark-section-gold" alt="" width="380" height="380"></figure>
+      <div class="hero-facts">
+        <div class="fact"><div class="fact-num">11 лет непрерывной практики</div><div class="fact-cap">С марта 2015 года</div></div>
+        <div class="fact"><div class="fact-num">Работаем по всей России</div><div class="fact-cap">Офис в Москве – успешные дела в <span class="fact-cap-region">41 регионе</span></div></div>
+        <div class="fact"><div class="fact-num">Опыт с обеих сторон спора</div><div class="fact-cap">Большая база возможных доводов и рисков сторон</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Второй вариант: мобильная версия варианта 4 -->
+  <nav class="mobile-nav test-mobile-menu" aria-label="Меню второго тестового варианта">
+    <a href="../uslugi/">Услуги</a>
+    <a href="../stati/">Статьи</a>
+    <a href="../o-kompanii/">О компании</a>
+    <a href="../kontakty/">Контакты</a>
+    <a class="btn btn-brass" href="../#lead-form">Консультация</a>
+  </nav>
+  <header class="header test-header">
+    <div class="container header-inner">
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav-editorial">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="../">
+        <img class="logo-mark" src="../assets/img/logo-ink.svg" alt="Центурион-Групп" width="42" height="42">
+        Центурион-Групп
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <div class="nav-item">
+          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-menu-editorial" data-href="../uslugi/">Услуги</button>
+          <div class="nav-dropdown" id="services-menu-editorial">
+            <a href="../uslugi/ozdorovlenie-biznesa/">Оздоровление бизнеса</a>
+            <a href="../uslugi/restrukturizaciya-dolgov/">Судебная реструктуризация долгов</a>
+            <a href="../uslugi/bankrotstvo/">Банкротство физических и юридических лиц</a>
+            <a href="../uslugi/vzyskanie-deneg-i-imushchestva/">Взыскание денег и имущества</a>
+            <a href="../uslugi/arbitrazhnye-spory/">Арбитражные споры</a>
+            <a href="../uslugi/intellektualnaya-sobstvennost/">Защита интеллектуальных прав</a>
+          </div>
+        </div>
+        <a href="../stati/">Статьи</a><a href="../o-kompanii/">О компании</a><a href="../kontakty/">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+74951250550">+7 (495) 125-05-50</a>
+      <a class="btn btn-brass" href="../#lead-form">Консультация</a>
+    </div>
+    <div class="mobile-nav" id="mobile-nav-editorial"></div>
+  </header>
+
+  <section class="hero test-hero-editorial">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <h1>Центурион-групп</h1>
+        <p class="hero-subtitle">Независимая юридическая компания</p>
+        <p class="lead"><span class="hero-lead-highlight">Защита должников и активов</span>, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brass" href="../#lead-form">Бесплатная консультация</a>
+          <a class="btn btn-outline" href="../uslugi/">Все услуги</a>
+        </div>
+      </div>
+      <figure class="hero-media" aria-hidden="true"><img class="hero-watermark" src="../assets/img/logo-brass.svg?v=20260812-dark-section-gold" alt="" width="380" height="380"></figure>
+      <div class="hero-facts">
+        <div class="fact"><div class="fact-num">11 лет непрерывной практики</div><div class="fact-cap">С марта 2015 года</div></div>
+        <div class="fact"><div class="fact-num">Работаем по всей России</div><div class="fact-cap">Офис в Москве – успешные дела в <span class="fact-cap-region">41 регионе</span></div></div>
+        <div class="fact"><div class="fact-num">Опыт с обеих сторон спора</div><div class="fact-cap">Большая база возможных доводов и рисков сторон</div></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      document.querySelectorAll('.test-header').forEach(function (header) {
+        var toggle = header.querySelector('.nav-toggle');
+        var panel = header.querySelector('.mobile-nav');
+        var nav = header.querySelector('.nav');
+        var cta = header.querySelector('.btn-brass');
+        if (!toggle || !panel || !nav) return;
+
+        panel.innerHTML = '';
+        Array.prototype.forEach.call(nav.children, function (item) {
+          if (item.classList.contains('nav-item')) {
+            var trigger = item.querySelector('.nav-trigger');
+            var link = document.createElement('a');
+            link.href = trigger.dataset.href;
+            link.textContent = trigger.textContent.trim();
+            panel.appendChild(link);
+          } else if (item.tagName === 'A') {
+            panel.appendChild(item.cloneNode(true));
+          }
+        });
+        if (cta) panel.appendChild(cta.cloneNode(true));
+
+        toggle.addEventListener('click', function () {
+          var open = header.classList.toggle('is-menu-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+
+        panel.addEventListener('click', function (event) {
+          if (event.target.tagName === 'A') {
+            header.classList.remove('is-menu-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        header.querySelectorAll('.nav-trigger').forEach(function (trigger) {
+          trigger.addEventListener('click', function () {
+            var item = trigger.closest('.nav-item');
+            var open = !item.classList.contains('is-open');
+            header.querySelectorAll('.nav-item').forEach(function (other) {
+              other.classList.remove('is-open');
+              other.querySelector('.nav-trigger').setAttribute('aria-expanded', 'false');
+            });
+            item.classList.toggle('is-open', open);
+            trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
