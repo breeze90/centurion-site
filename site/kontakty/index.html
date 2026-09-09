@@ -27,10 +27,13 @@
   <link rel="icon" href="../assets/img/favicon-light.svg?v=20260721-theme" media="(prefers-color-scheme: light)" type="image/svg+xml">
   <link rel="icon" href="../assets/img/favicon-dark.svg?v=20260721-theme" media="(prefers-color-scheme: dark)" type="image/svg+xml">
   <link rel="shortcut icon" href="../favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Manrope:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260907-mobile-hero-facts-region-v2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://31f130418eb552015102c26492c44c93.mtmba.ru">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260909-contacts-page-v1">
 </head>
-<body>
+<body class="contact-page">
   <header class="header">
     <div class="container header-inner">
       <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav">
@@ -45,41 +48,174 @@
         <a href="./" aria-current="page">Контакты</a>
       </nav>
       <a class="header-phone" href="tel:+74951250550">+7 (495) 125-05-50</a>
-      <a class="btn btn-brass" href="../#lead-form" data-open-modal="lead-modal">Консультация</a>
+      <a class="btn btn-brass" href="#lead-form">Консультация</a>
     </div>
     <div class="mobile-nav" id="mobile-nav"></div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <span class="section-label">Контакты</span>
-      <h1>Приходите или звоните</h1>
-      <div class="contacts-grid">
-        <div class="contact-item">
-          <h3>Телефон</h3>
-          <p><a class="contact-big" href="tel:+74951250550">+7 (495) 125-05-50</a></p>
-        </div>
-        <div class="contact-item">
-          <h3>Почта</h3>
-          <p><a href="mailto:info@cent-group.ru">info@cent-group.ru</a></p>
-        </div>
-        <div class="contact-item">
-          <h3>Офис</h3>
-          <p>Москва, ул. Кузнецкий Мост, д. 21/5, подъезд 3, этаж 3, офис 3033<br>
-            м. Лубянка / Кузнецкий Мост</p>
-          <div class="map-links" aria-label="Открыть компанию в картах">
-            <a href="https://yandex.ru/maps/-/CTVSBHNF" target="_blank" rel="noopener" aria-label="Открыть компанию в Яндекс Картах">Яндекс Карты</a>
-            <a href="https://2gis.ru/moscow/firm/70000001049989753" target="_blank" rel="noopener" aria-label="Открыть компанию в 2ГИС">2ГИС</a>
-            <a href="https://maps.app.goo.gl/qhzcAWS59hRrLCBT9" target="_blank" rel="noopener" aria-label="Открыть компанию в Google Картах">Google Карты</a>
+  <main>
+    <!-- Контакты и маршруты -->
+    <section class="section contacts-page-main">
+      <div class="container">
+        <div class="contacts-page-grid">
+          <div class="contacts-page-intro">
+            <span class="section-label">Контакты</span>
+            <h1 class="contacts-page-title">Ждём вас в гости</h1>
+            <p class="lead">Приглашаем вас в уютный офис в центре Москвы. Встречу необходимо согласовать заранее:
+              в здании действует пропускной режим. Первичная консультация бесплатна.</p>
+          </div>
+
+          <div class="contacts-page-quick">
+            <div class="contact-item">
+              <h3>Телефон</h3>
+              <p><a class="contact-big" href="tel:+74951250550">+7 (495) 125-05-50</a></p>
+            </div>
+            <div class="contact-item">
+              <h3>Почта</h3>
+              <p><a class="contact-email" href="mailto:info@cent-group.ru">info@cent-group.ru</a></p>
+            </div>
+          </div>
+
+          <div class="contacts-page-details">
+            <div class="contact-item">
+              <h3>Офис</h3>
+              <p>Москва, ул. Кузнецкий Мост, д. 21/5, подъезд 3, этаж 3, офис 3033<br>
+                м. Лубянка / Кузнецкий Мост</p>
+              <div class="map-links" aria-label="Открыть компанию в картах">
+                <a href="https://yandex.ru/maps/-/CTVSBHNF" target="_blank" rel="noopener" aria-label="Открыть компанию в Яндекс Картах">Яндекс Карты</a>
+                <a href="https://2gis.ru/moscow/firm/70000001049989753" target="_blank" rel="noopener" aria-label="Открыть компанию в 2ГИС">2ГИС</a>
+                <a href="https://maps.app.goo.gl/qhzcAWS59hRrLCBT9" target="_blank" rel="noopener" aria-label="Открыть компанию в Google Картах">Google Карты</a>
+              </div>
+            </div>
+            <div class="contact-item contact-hours">
+              <h3>Часы работы</h3>
+              <p>Пн–пт: 11:00–19:00<br>Сб: 11:00–17:00</p>
+            </div>
           </div>
         </div>
-        <div class="contact-item">
-          <h3>Часы работы</h3>
-          <p>Пн–пт: 11:00–19:00<br>Сб: 11:00–17:00</p>
+
+        <div class="directions-list">
+          <article class="direction-route">
+            <div class="direction-copy">
+              <h2>От метро Лубянка</h2>
+              <p>Выйдите через выход № 2 – к Большой Лубянке и Лубянской площади. Идите прямо по зданию ОГПУ – НКВД - КГБ. На перекрестке поверните направо и идите до угла здания. Пройдите по пешеходному переходу и двигайтесь к следующему пешеходному переходу, ориентируясь на вывеску ресторана Гриль Хаус. Пройдите переход и идите прямо вдоль здания 21/5 до угла, а потом сверните налево во двор. Подъезд № 3 находится во внутреннем дворе здания.</p>
+            </div>
+            <a class="direction-map-link" href="../assets/img/directions-lubyanka.png" data-lightbox-image="../assets/img/directions-lubyanka.png" data-lightbox-alt="Маршрут от метро Лубянка до офиса Центурион-групп" aria-label="Открыть карту маршрута от метро Лубянка в полном размере">
+              <img src="../assets/img/directions-lubyanka.png" alt="Маршрут от метро Лубянка до офиса Центурион-групп" width="1219" height="793" loading="lazy" decoding="async">
+            </a>
+          </article>
+
+          <div class="direction-divider" aria-hidden="true"></div>
+
+          <article class="direction-route">
+            <div class="direction-copy">
+              <h2>От метро Кузнецкий мост</h2>
+              <p>Выйдите через выход № 1 – к улицам Рождественка и Кузнецкий Мост. Поверните направо и пройдите через арку на улицу Рождественка. Поверните направо и идите до пешеходного перехода. Далее двигайтесь по улице Кузнецкий Мост в сторону Большой Лубянки до угла дома 21/5 (ориентир – вывеска ресторана Гриль Хаус). Сверните налево и идите во двор. Подъезд № 3 находится во внутреннем дворе здания.</p>
+            </div>
+            <a class="direction-map-link" href="../assets/img/directions-kuznetsky-most.png" data-lightbox-image="../assets/img/directions-kuznetsky-most.png" data-lightbox-alt="Маршрут от метро Кузнецкий мост до офиса Центурион-групп" aria-label="Открыть карту маршрута от метро Кузнецкий мост в полном размере">
+              <img src="../assets/img/directions-kuznetsky-most.png" alt="Маршрут от метро Кузнецкий мост до офиса Центурион-групп" width="880" height="880" loading="lazy" decoding="async">
+            </a>
+          </article>
         </div>
       </div>
+    </section>
+
+    <!-- Консультация -->
+    <section class="section lead-form" id="lead-form">
+      <div class="container lead-form-layout">
+        <div class="lead-form-copy">
+          <span class="section-label">Консультация</span>
+          <h2>Разберём ситуацию и предложим варианты</h2>
+          <p class="lead">Оставьте имя и телефон — юрист свяжется с вами в рабочее время.</p>
+          <div class="lead-form-contact">
+            <span>Или позвоните</span>
+            <a href="tel:+74951250550">+7 (495) 125-05-50</a>
+          </div>
+        </div>
+        <div class="matomba-form" aria-label="Форма заявки">
+          <iframe
+            class="matomba-frame"
+            data-src="https://31f130418eb552015102c26492c44c93.mtmba.ru"
+            title="Оставить заявку на консультацию"
+          ></iframe>
+        </div>
+      </div>
+      <script>
+        requestAnimationFrame(() => {
+          const formFrame = document.querySelector('.lead-form .matomba-frame');
+          const formUrl = new URL(formFrame.dataset.src);
+          const engine = sessionStorage.getItem('entrySource');
+          if (engine) {
+            const entryPage = sessionStorage.getItem('entryPage') || (location.hostname + location.pathname);
+            formUrl.searchParams.set('utm_source', engine);
+            formUrl.searchParams.set('utm_medium', 'organic');
+            formUrl.searchParams.set('utm_campaign', engine + '_seo');
+            formUrl.searchParams.set('utm_content', 'source:' + entryPage);
+            formUrl.searchParams.set('utm_term', 'seo');
+          }
+          formFrame.src = formUrl.toString();
+        });
+      </script>
+    </section>
+
+    <!-- Реквизиты -->
+    <section class="section requisites-section" id="requisites">
+      <div class="container">
+        <span class="section-label">Реквизиты</span>
+        <h2>Банковские реквизиты для оплаты услуг</h2>
+        <dl class="requisites-table">
+          <div class="requisites-row">
+            <dt>Название организации</dt>
+            <dd>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ЦЕНТУРИОН ГРУПП»</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>Юридический адрес организации</dt>
+            <dd>107996, ГОРОД МОСКВА, УЛ. КУЗНЕЦКИЙ МОСТ, Д. 21/5, ЭТ 6 ПОМ II КОМ 29</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>ИНН</dt>
+            <dd>7725264363</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>ОГРН</dt>
+            <dd>1157746168194</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>Расчётный счёт</dt>
+            <dd>40702810300000015299</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>Банк</dt>
+            <dd>АКЦИОНЕРНОЕ ОБЩЕСТВО «РАЙФФАЙЗЕНБАНК»</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>ИНН банка</dt>
+            <dd>7744000302</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>БИК банка</dt>
+            <dd>044525700</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>Корреспондентский счёт банка</dt>
+            <dd>30101810200000000700</dd>
+          </div>
+          <div class="requisites-row">
+            <dt>Юридический адрес банка</dt>
+            <dd>119002, Г. МОСКВА, СМОЛЕНСКАЯ-СЕННАЯ ПЛОЩАДЬ, Д. 28</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <div class="image-lightbox" id="map-lightbox" aria-hidden="true">
+    <div class="image-lightbox-overlay" data-lightbox-close></div>
+    <div class="image-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Карта маршрута в полном размере">
+      <button class="image-lightbox-close" type="button" aria-label="Закрыть карту" data-lightbox-close>&times;</button>
+      <img class="image-lightbox-image" src="" alt="">
     </div>
-  </section>
+  </div>
 
   <footer class="footer">
     <div class="container footer-inner">
@@ -87,17 +223,43 @@
       <div><a href="../policy/">Политика конфиденциальности</a></div>
     </div>
   </footer>
-  <div class="modal" id="lead-modal" aria-hidden="true">
-    <div class="modal-overlay" data-modal-close></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-label="Заявка на консультацию">
-      <button class="modal-close" type="button" aria-label="Закрыть" data-modal-close>&times;</button>
-      <div class="matomba-form" aria-label="Форма заявки">
-        <iframe class="matomba-frame" data-src="https://31f130418eb552015102c26492c44c93.mtmba.ru" title="Оставить заявку на консультацию"></iframe>
-      </div>
-    </div>
-  </div>
 
+  <script>
+    (function () {
+      var lightbox = document.getElementById('map-lightbox');
+      var lightboxImage = lightbox.querySelector('.image-lightbox-image');
+      var mapLinks = document.querySelectorAll('[data-lightbox-image]');
+      var lastFocused = null;
 
+      function openLightbox(event) {
+        event.preventDefault();
+        var link = event.currentTarget;
+        lastFocused = document.activeElement;
+        lightboxImage.src = link.dataset.lightboxImage;
+        lightboxImage.alt = link.dataset.lightboxAlt || '';
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+        lightbox.querySelector('.image-lightbox-close').focus();
+      }
+
+      function closeLightbox() {
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-open');
+        lightboxImage.src = '';
+        if (lastFocused && lastFocused.focus) lastFocused.focus();
+      }
+
+      [].forEach.call(mapLinks, function (link) {
+        link.addEventListener('click', openLightbox);
+      });
+      [].forEach.call(lightbox.querySelectorAll('[data-lightbox-close]'), function (element) {
+        element.addEventListener('click', closeLightbox);
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && lightbox.getAttribute('aria-hidden') === 'false') closeLightbox();
+      });
+    })();
+  </script>
   <script src="../assets/js/nav.js?v=20260721-nav11" defer></script>
 </body>
 </html>
