@@ -1888,7 +1888,11 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   column-gap: 72px;
   row-gap: 32px;
 }
-.contacts-page-intro { grid-column: 1; grid-row: 1; }
+.contacts-page-intro {
+  grid-column: 1;
+  grid-row: 1;
+  scroll-margin-top: 20px;
+}
 .contacts-page-title {
   font-size: clamp(1.5rem, 2.8vw, 2.1rem);
 }
