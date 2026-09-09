@@ -1865,7 +1865,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 /* ===== Страница контактов ===== */
 .contacts-page-main { background: var(--paper); }
 .contacts-page-subnav {
-  padding-top: 20px;
+  padding-top: 40px;
   background: var(--paper);
 }
 .contacts-page-subnav-list {
