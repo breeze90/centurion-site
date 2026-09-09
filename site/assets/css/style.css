@@ -1899,6 +1899,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .contacts-page-title,
 .direction-route,
 .requisites-section { scroll-margin-top: 24px; }
+.requisites-section .section-label { scroll-margin-top: 20px; }
 .contacts-page-intro .lead { max-width: 58ch; }
 .contacts-page-quick {
   display: grid;
