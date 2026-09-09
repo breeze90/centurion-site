@@ -102,7 +102,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: 28px;
-  padding: 16px 0;
+  padding-block: 16px;
 }
 .logo {
   display: flex;
@@ -943,7 +943,7 @@ a:focus-visible {
 .practice-map img { display: block; width: 100%; height: auto; }
 .lead-form-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 480px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
   gap: 72px;
   align-items: center;
 }
@@ -978,8 +978,9 @@ a:focus-visible {
 }
 .matomba-form {
   width: 100%;
-  max-width: 480px;
-  margin-left: auto;
+  max-width: none;
+  margin-left: 0;
+  justify-self: stretch;
   background: var(--ink-soft);
 }
 .matomba-frame {
@@ -988,6 +989,12 @@ a:focus-visible {
   height: 440px;
   border: 0;
   background: var(--ink-soft);
+}
+
+@media (min-width: 901px) {
+  .lead-form .matomba-form {
+    width: calc(100% + 16px);
+  }
 }
 
 @media (max-width: 900px) {
@@ -1375,16 +1382,12 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .practice-stats { gap: 14px; }
   .practice-stats dt { font-size: 1.05rem; }
   .matomba-frame { height: 460px; }
-  .header .container {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
   .header-inner {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 8px;
     flex-wrap: nowrap;
-    padding: 12px 0;
+    padding-block: 12px;
   }
   .nav-toggle {
     width: 32px;
@@ -1908,44 +1911,21 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   font-size: 0.95rem;
   line-height: 1.55;
 }
-.direction-map-link {
+.direction-map {
   position: relative;
   display: block;
   aspect-ratio: 1219 / 793;
   overflow: hidden;
+  margin: 0;
   background: #f1f2f4;
-  cursor: zoom-in;
 }
-.direction-map-link::after {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  padding: 5px 9px;
-  border-radius: 3px;
-  background: rgba(15, 24, 34, 0.82);
-  color: #fff;
-  content: "Увеличить";
-  font-size: 0.72rem;
-  line-height: 1.2;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-.direction-map-link:hover::after,
-.direction-map-link:focus-visible::after { opacity: 1; }
-.direction-map-link:focus-visible {
-  outline: 2px solid var(--brass);
-  outline-offset: 3px;
-}
-.direction-map-link img {
+.direction-map img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: transform 0.2s ease;
 }
-.direction-map-link:hover img,
-.direction-map-link:focus-visible img { transform: scale(1.02); }
 .direction-divider {
   height: 1px;
   margin: 32px 0;
@@ -1971,57 +1951,6 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 }
 .requisites-row dt { color: var(--muted); }
 .requisites-row dd { color: var(--text); }
-.image-lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  display: none;
-  place-items: center;
-  padding: 28px;
-}
-.image-lightbox[aria-hidden="false"] { display: grid; }
-.image-lightbox-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 10, 16, 0.88);
-  cursor: zoom-out;
-}
-.image-lightbox-dialog {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  width: min(94vw, 1400px);
-  height: min(92vh, 1000px);
-}
-.image-lightbox-image {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
-}
-.image-lightbox-close {
-  position: absolute;
-  z-index: 2;
-  top: -12px;
-  right: -12px;
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50%;
-  background: var(--ink);
-  color: #fff;
-  font-size: 1.6rem;
-  line-height: 1;
-  cursor: pointer;
-}
-.image-lightbox-close:hover { background: var(--brass); }
-body.lightbox-open { overflow: hidden; }
-
 @media (max-width: 800px) {
   .contacts-page-grid,
   .direction-route { grid-template-columns: 1fr; gap: 30px; }
@@ -2029,7 +1958,7 @@ body.lightbox-open { overflow: hidden; }
   .contacts-page-quick,
   .contacts-page-details,
   .direction-copy,
-  .direction-map-link {
+  .direction-map {
     grid-column: auto;
     grid-row: auto;
   }
@@ -2047,7 +1976,4 @@ body.lightbox-open { overflow: hidden; }
     padding: 15px 0;
   }
   .requisites-row dd { font-size: 0.9rem; }
-  .image-lightbox { padding: 18px; }
-  .image-lightbox-dialog { width: 100%; height: 88vh; }
-  .image-lightbox-close { top: -10px; right: -4px; }
 }

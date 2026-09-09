@@ -100,9 +100,9 @@
               <h2>От метро Лубянка</h2>
               <p>Выйдите через выход № 2 – к Большой Лубянке и Лубянской площади. Идите прямо по зданию ОГПУ – НКВД - КГБ. На перекрестке поверните направо и идите до угла здания. Пройдите по пешеходному переходу и двигайтесь к следующему пешеходному переходу, ориентируясь на вывеску ресторана Гриль Хаус. Пройдите переход и идите прямо вдоль здания 21/5 до угла, а потом сверните налево во двор. Подъезд № 3 находится во внутреннем дворе здания.</p>
             </div>
-            <a class="direction-map-link" href="../assets/img/directions-lubyanka.png" data-lightbox-image="../assets/img/directions-lubyanka.png" data-lightbox-alt="Маршрут от метро Лубянка до офиса Центурион-групп" aria-label="Открыть карту маршрута от метро Лубянка в полном размере">
-              <img src="../assets/img/directions-lubyanka.png" alt="Маршрут от метро Лубянка до офиса Центурион-групп" width="1219" height="793" loading="lazy" decoding="async">
-            </a>
+            <figure class="direction-map">
+              <img src="../assets/img/directions-lubyanka.png" alt="Маршрут от метро Лубянка до офиса Центурион-групп" width="943" height="613" loading="lazy" decoding="async">
+            </figure>
           </article>
 
           <div class="direction-divider" aria-hidden="true"></div>
@@ -112,9 +112,9 @@
               <h2>От метро Кузнецкий мост</h2>
               <p>Выйдите через выход № 1 – к улицам Рождественка и Кузнецкий Мост. Поверните направо и пройдите через арку на улицу Рождественка. Поверните направо и идите до пешеходного перехода. Далее двигайтесь по улице Кузнецкий Мост в сторону Большой Лубянки до угла дома 21/5 (ориентир – вывеска ресторана Гриль Хаус). Сверните налево и идите во двор. Подъезд № 3 находится во внутреннем дворе здания.</p>
             </div>
-            <a class="direction-map-link" href="../assets/img/directions-kuznetsky-most.png" data-lightbox-image="../assets/img/directions-kuznetsky-most.png" data-lightbox-alt="Маршрут от метро Кузнецкий мост до офиса Центурион-групп" aria-label="Открыть карту маршрута от метро Кузнецкий мост в полном размере">
+            <figure class="direction-map">
               <img src="../assets/img/directions-kuznetsky-most.png" alt="Маршрут от метро Кузнецкий мост до офиса Центурион-групп" width="880" height="880" loading="lazy" decoding="async">
-            </a>
+            </figure>
           </article>
         </div>
       </div>
@@ -209,14 +209,6 @@
     </section>
   </main>
 
-  <div class="image-lightbox" id="map-lightbox" aria-hidden="true">
-    <div class="image-lightbox-overlay" data-lightbox-close></div>
-    <div class="image-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Карта маршрута в полном размере">
-      <button class="image-lightbox-close" type="button" aria-label="Закрыть карту" data-lightbox-close>&times;</button>
-      <img class="image-lightbox-image" src="" alt="">
-    </div>
-  </div>
-
   <footer class="footer">
     <div class="container footer-inner">
       <div>ООО «Центурион-Групп» · ИНН 7725264363 · ОГРН 1157746168194</div>
@@ -224,42 +216,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var lightbox = document.getElementById('map-lightbox');
-      var lightboxImage = lightbox.querySelector('.image-lightbox-image');
-      var mapLinks = document.querySelectorAll('[data-lightbox-image]');
-      var lastFocused = null;
-
-      function openLightbox(event) {
-        event.preventDefault();
-        var link = event.currentTarget;
-        lastFocused = document.activeElement;
-        lightboxImage.src = link.dataset.lightboxImage;
-        lightboxImage.alt = link.dataset.lightboxAlt || '';
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('lightbox-open');
-        lightbox.querySelector('.image-lightbox-close').focus();
-      }
-
-      function closeLightbox() {
-        lightbox.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('lightbox-open');
-        lightboxImage.src = '';
-        if (lastFocused && lastFocused.focus) lastFocused.focus();
-      }
-
-      [].forEach.call(mapLinks, function (link) {
-        link.addEventListener('click', openLightbox);
-      });
-      [].forEach.call(lightbox.querySelectorAll('[data-lightbox-close]'), function (element) {
-        element.addEventListener('click', closeLightbox);
-      });
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' && lightbox.getAttribute('aria-hidden') === 'false') closeLightbox();
-      });
-    })();
-  </script>
   <script src="../assets/js/nav.js?v=20260721-nav11" defer></script>
 </body>
 </html>
