@@ -1864,6 +1864,24 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 
 /* ===== Страница контактов ===== */
 .contacts-page-main { background: var(--paper); }
+.contacts-page-subnav {
+  padding-top: 20px;
+  background: var(--paper);
+}
+.contacts-page-subnav-list {
+  display: grid;
+  gap: 8px;
+}
+.contacts-page-subnav-list a {
+  width: fit-content;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
+  text-decoration: none;
+}
+.contacts-page-subnav-list a:hover,
+.contacts-page-subnav-list a:focus-visible { color: var(--text); }
 .contacts-page-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(310px, 0.9fr);
@@ -1874,6 +1892,9 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .contacts-page-title {
   font-size: clamp(1.5rem, 2.8vw, 2.1rem);
 }
+.contacts-page-title,
+.direction-route,
+.requisites-section { scroll-margin-top: 24px; }
 .contacts-page-intro .lead { max-width: 58ch; }
 .contacts-page-quick {
   display: grid;

@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://31f130418eb552015102c26492c44c93.mtmba.ru">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260909-contacts-page-v1">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260909-contacts-nav-v1">
 </head>
 <body class="contact-page">
   <header class="header">
@@ -54,13 +54,23 @@
   </header>
 
   <main>
+    <div class="contacts-page-subnav">
+      <div class="container">
+        <nav class="contacts-page-subnav-list" aria-label="Навигация по странице контактов">
+          <a href="#contacts-welcome">Контакты</a>
+          <a href="#route-lubyanka">Как пройти от метро Лубянка</a>
+          <a href="#route-kuznetsky-most">Как пройти от метро Кузнецкий мост</a>
+          <a href="#requisites">Реквизиты для оплаты</a>
+        </nav>
+      </div>
+    </div>
     <!-- Контакты и маршруты -->
     <section class="section contacts-page-main">
       <div class="container">
         <div class="contacts-page-grid">
           <div class="contacts-page-intro">
             <span class="section-label">Контакты</span>
-            <h1 class="contacts-page-title">Ждём вас в гости</h1>
+            <h1 class="contacts-page-title" id="contacts-welcome">Ждём вас в гости</h1>
             <p class="lead">Приглашаем вас в уютный офис в центре Москвы. Встречу необходимо согласовать заранее:
               в здании действует пропускной режим. Первичная консультация бесплатна.</p>
           </div>
@@ -95,7 +105,7 @@
         </div>
 
         <div class="directions-list">
-          <article class="direction-route">
+          <article class="direction-route" id="route-lubyanka">
             <div class="direction-copy">
               <h2>От метро Лубянка</h2>
               <p>Выйдите через выход № 2 – к Большой Лубянке и Лубянской площади. Идите прямо по зданию ОГПУ – НКВД - КГБ. На перекрестке поверните направо и идите до угла здания. Пройдите по пешеходному переходу и двигайтесь к следующему пешеходному переходу, ориентируясь на вывеску ресторана Гриль Хаус. Пройдите переход и идите прямо вдоль здания 21/5 до угла, а потом сверните налево во двор. Подъезд № 3 находится во внутреннем дворе здания.</p>
@@ -107,7 +117,7 @@
 
           <div class="direction-divider" aria-hidden="true"></div>
 
-          <article class="direction-route">
+          <article class="direction-route" id="route-kuznetsky-most">
             <div class="direction-copy">
               <h2>От метро Кузнецкий мост</h2>
               <p>Выйдите через выход № 1 – к улицам Рождественка и Кузнецкий Мост. Поверните направо и пройдите через арку на улицу Рождественка. Поверните направо и идите до пешеходного перехода. Далее двигайтесь по улице Кузнецкий Мост в сторону Большой Лубянки до угла дома 21/5 (ориентир – вывеска ресторана Гриль Хаус). Сверните налево и идите во двор. Подъезд № 3 находится во внутреннем дворе здания.</p>
