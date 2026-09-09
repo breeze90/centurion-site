@@ -1868,6 +1868,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   padding-top: 40px;
   background: var(--paper);
 }
+.contacts-page-subnav-label { margin-bottom: 16px; }
 .contacts-page-subnav-list {
   display: grid;
   gap: 8px;
