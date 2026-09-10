@@ -2154,9 +2154,15 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 /* Тело статьи и FAQ идут в узкой колонке (74ch) — форма заявки была на полной
    ширине .container (1120px) и рядом с ними выглядела разъезжающейся. */
 .article-page #lead-form .container {
-  max-width: 860px;
+  max-width: 74ch;
 }
 .article-page #lead-form .lead-form-layout {
-  gap: 48px;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
+  grid-template-columns: 1fr;
+  gap: 34px;
+}
+.article-page #lead-form .lead-form-copy {
+  padding: 0;
+}
+.article-page #lead-form .matomba-form {
+  max-width: 480px;
 }
