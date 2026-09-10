@@ -311,6 +311,7 @@ a:focus-visible {
   margin: 28px 0 0;
   padding: 0;
 }
+.hero-facts-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 420px; }
 .hero-media {
   position: relative;
   grid-column: 2;
