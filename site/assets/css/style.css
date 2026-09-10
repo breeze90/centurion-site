@@ -2004,3 +2004,130 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   }
   .requisites-row dd { font-size: 0.9rem; }
 }
+
+/* ===== Статьи: хаб и страница статьи ===== */
+.article-featured {
+  display: block;
+  border-radius: var(--radius);
+  padding: 36px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: inherit;
+  text-decoration: none;
+}
+.article-featured:hover { border-color: var(--brass); }
+.article-featured-tag {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--brass);
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.article-featured h2 { margin-bottom: 10px; }
+.article-featured p { margin: 0 0 14px; color: var(--muted); max-width: 62ch; }
+.article-featured-meta {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.article-page article {
+  max-width: 74ch;
+  margin: 0 auto;
+}
+.article-page .article-meta {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.article-page article h2 {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+.article-page article h3 {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.02rem;
+}
+.article-page article p {
+  margin: 0 0 18px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.article-page article ol,
+.article-page article ul {
+  margin: 0 0 18px;
+  padding-left: 22px;
+  line-height: 1.65;
+}
+.article-toc {
+  margin: 32px auto 48px;
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  max-width: 74ch;
+}
+.article-toc h2 { margin: 0 0 12px; font-size: 1.05rem; }
+.article-toc ol { margin: 0; padding-left: 20px; }
+.article-toc li { margin-bottom: 6px; }
+.article-toc a { color: var(--text); }
+.article-toc a:hover { color: var(--brass-dark); }
+
+.article-faq { margin-top: 8px; }
+.article-faq-item { border-bottom: 1px solid var(--line); }
+.article-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+.article-faq-item summary::-webkit-details-marker { display: none; }
+.article-faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--brass-dark);
+}
+.article-faq-item[open] summary::after { content: "\2013"; }
+.article-faq-item p { padding: 0 0 18px; margin: 0; color: var(--muted); }
+
+@media (max-width: 640px) {
+  .article-featured { padding: 24px; }
+  .article-toc { padding: 20px; }
+}
+
+/* .hero h1 в базовых стилях расcчитан на короткий заголовок-вордмарк
+   («Центурион-групп») и принудительно ставит nowrap + vw-масштабирование.
+   На страницах статей заголовок — обычный длинный H1, ему это ломает вёрстку. */
+.article-page .hero h1 {
+  white-space: normal;
+  max-width: none;
+}
+@media (max-width: 760px) {
+  .article-page .hero h1 {
+    white-space: normal;
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+  }
+}
+@media (min-width: 1200px) {
+  .article-page .hero h1 {
+    white-space: normal;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+  }
+}
