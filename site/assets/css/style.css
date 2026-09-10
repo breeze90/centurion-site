@@ -2153,6 +2153,14 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 
 /* Тело статьи и FAQ идут в узкой колонке (74ch) — форма заявки была на полной
    ширине .container (1120px) и рядом с ними выглядела разъезжающейся. */
+.article-page .header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+.article-page [id] {
+  scroll-margin-top: 80px;
+}
 .article-page #lead-form .container {
   max-width: 74ch;
 }
