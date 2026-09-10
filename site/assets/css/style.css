@@ -2156,10 +2156,9 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .article-page #lead-form .container {
   max-width: 74ch;
 }
-.article-page #lead-form .lead-form-layout {
-  grid-template-columns: 1fr;
-  gap: 34px;
-}
-.article-page #lead-form .lead-form-copy {
-  padding: 0;
+@media (min-width: 761px) {
+  .article-page #lead-form .lead-form-layout {
+    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  }
 }
