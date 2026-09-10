@@ -142,7 +142,7 @@ a:focus-visible {
 .nav-trigger {
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.9825rem; /* 0.92rem + 1px */
   font-weight: 600;
 }
 .nav a:hover,
@@ -265,13 +265,16 @@ a:focus-visible {
 }
 .hero h1 {
   color: #fff;
-  max-width: 21ch;
   /* Оптически выравниваем левый край заголовка с подписью: у Lora есть небольшой левый вынос. */
   margin-inline-start: -0.04em;
   margin-bottom: 18px;
   font-size: clamp(2.1rem, 4.8vw, 3.5rem);
   line-height: 1.18;
 }
+/* max-width:21ch и white-space:nowrap ниже рассчитаны на короткий заголовок-вордмарк
+   главной страницы («Центурион-групп»). На остальных страницах с .hero (услуги, статьи)
+   заголовок — обычное предложение, и nowrap там ломает вёрстку переполнением. */
+.homepage .hero h1 { max-width: 21ch; }
 .hero-subtitle {
   margin: 0 0 30px;
   color: var(--brass);
@@ -361,8 +364,8 @@ a:focus-visible {
     max-width: none;
     font-size: clamp(2.1rem, 4.8vw, 3.8rem);
     line-height: 1.14;
-    white-space: nowrap;
   }
+  .homepage .hero h1 { white-space: nowrap; }
 }
 .fact-num {
   font-family: var(--font-body);
@@ -1320,10 +1323,10 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .hero-layout { grid-template-columns: 1fr; gap: 18px; }
   .hero h1 {
     max-width: none;
-    white-space: nowrap;
     font-size: clamp(2.2rem, 9.5vw, 3rem);
     line-height: 1.1;
   }
+  .homepage .hero h1 { white-space: nowrap; }
   .hero-subtitle {
     margin-bottom: 24px;
     font-size: clamp(0.68rem, 3.4vw, 0.9rem);
