@@ -2162,42 +2162,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   scroll-margin-top: 80px;
 }
 
-/* Статья: широкий вступительный блок, узкая колонка для чтения и широкий CTA. */
-.article-page .article-hero {
-  padding: 80px 0 60px;
-}
-.article-page .article-hero .hero-layout {
-  display: block;
-}
-.article-page .article-hero .hero-copy {
-  max-width: 880px;
-  padding-bottom: 0;
-}
-.article-page .article-hero h1 {
-  max-width: 880px;
-  font-size: 3.45rem;
-}
-.article-page .article-hero .lead {
-  max-width: 760px;
-  font-size: 1.15rem;
-}
-.article-page .article-dates {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 18px;
-  max-width: 760px;
-  margin-top: 30px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  color: var(--on-ink-muted);
-  font-family: var(--font-body);
-  font-size: 0.86rem;
-}
-.article-page .article-dates span + span::before {
-  content: "·";
-  margin-right: 18px;
-  color: var(--brass);
-}
+/* Статья: узкая колонка для чтения и широкий CTA. */
 .article-page article {
   padding-top: 56px;
 }
@@ -2214,32 +2179,11 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   scroll-margin-top: 100px;
 }
 @media (min-width: 641px) and (max-width: 900px) {
-  .article-page .article-hero h1 {
-    font-size: 2.9rem;
-  }
   .article-page [id] {
     scroll-margin-top: 140px;
   }
 }
 @media (max-width: 760px) {
-  .article-page .article-hero {
-    padding: 48px 0 40px;
-  }
-  .article-page .article-hero h1 {
-    font-size: 2.2rem;
-  }
-  .article-page .article-hero .lead {
-    font-size: 1rem;
-  }
-  .article-page .article-dates {
-    display: grid;
-    gap: 8px;
-    margin-top: 26px;
-    padding-top: 16px;
-  }
-  .article-page .article-dates span + span::before {
-    display: none;
-  }
   .article-page article {
     padding-top: 40px;
   }
