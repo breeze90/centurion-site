@@ -3,6 +3,7 @@
   --ink: #0f1822;        /* имперский глубокий синий инк */
   --ink-soft: #121b26;   /* фон формы */
   --paper: #ffffff;      /* чистый белый фон сайта */
+  --paper-soft: #f6f7f8; /* нейтральный фон для смысловых врезок */
   --card: #ffffff;
   --text: #202224;       /* темный графитовый текст */
   --muted: #62676b;      /* вторичный текст */
@@ -2253,9 +2254,85 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   margin-top: 28px;
   padding-block: 18px;
   padding-right: 22px;
-  background: var(--paper);
+  background: var(--paper-soft);
 }
 .article-page .article-callout-important .article-callout-label { color: var(--brass-dark); }
+.article-page .article-checklist {
+  margin: 28px 0 32px;
+  padding: 26px 28px 28px;
+  background: var(--paper-soft);
+  border-left: 3px solid var(--brass);
+}
+.article-page .article-checklist-title,
+.article-page .article-steps-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.article-page .article-checklist ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 32px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.article-page .article-checklist li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text);
+}
+.article-page .article-checklist li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 7px;
+  height: 2px;
+  background: var(--brass);
+}
+.article-page .article-steps {
+  margin: 32px 0 40px;
+  padding: 0 0 2px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.article-page .article-steps > .article-block-label { margin-top: 22px; }
+.article-page .article-steps ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.article-page .article-steps li {
+  min-width: 0;
+  padding: 0 24px 24px;
+}
+.article-page .article-steps li:first-child { padding-left: 0; }
+.article-page .article-steps li + li { border-left: 1px solid var(--line); }
+.article-page .article-step-number {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--brass-dark);
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.article-page .article-steps h4 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.article-page .article-steps p { margin: 0; font-size: 0.92rem; }
 .article-page .article-intro {
   font-size: 1.04rem;
 }
@@ -2320,6 +2397,32 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
     padding-left: 18px;
   }
   .article-page .article-callout-important { padding-block: 16px; }
+  .article-page .article-checklist {
+    margin: 24px 0 28px;
+    padding: 22px 20px 24px;
+  }
+  .article-page .article-checklist-title,
+  .article-page .article-steps-title { font-size: 1.28rem; }
+  .article-page .article-checklist ul {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .article-page .article-steps { margin: 28px 0 32px; }
+  .article-page .article-steps > .article-block-label { margin-top: 20px; }
+  .article-page .article-steps ol {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 18px;
+  }
+  .article-page .article-steps li,
+  .article-page .article-steps li:first-child {
+    padding: 18px 0;
+  }
+  .article-page .article-steps li + li {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+  .article-page .article-step-number { margin-bottom: 12px; }
   .article-page [id] {
     scroll-margin-top: 80px;
   }
