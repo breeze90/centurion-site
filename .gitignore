@@ -1,8 +1,11 @@
 *
-!/site/
-!/site/**
 !.gitignore
 !/.github/
 !/.github/workflows/
 !/.github/workflows/pages.yml
+!/.eleventy.js
+!/package.json
+!/package-lock.json
+!/src/
+!/src/**
 .DS_Store
