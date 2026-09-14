@@ -46,7 +46,7 @@
         <a href="../kontakty/">Контакты</a>
       </nav>
       <a class="header-phone" href="tel:+74951250550">+7 (495) 125-05-50</a>
-      <a class="btn btn-brass" href="../#lead-form" data-open-modal="lead-modal">Консультация</a>
+      <a class="btn btn-brass" href="#lead-form">Консультация</a>
     </div>
     <div class="mobile-nav" id="mobile-nav"></div>
   </header>
@@ -90,6 +90,82 @@
         </a>
       </div>
     </section>
+
+    <section class="section lead-form" id="lead-form">
+      <div class="container lead-form-layout">
+        <div class="lead-form-copy">
+          <span class="section-label">Консультация</span>
+          <h2>Разберём ситуацию и предложим варианты</h2>
+          <p class="lead">Оставьте имя и телефон — юрист свяжется с вами в рабочее время.</p>
+          <div class="lead-form-contact">
+            <span>Или позвоните</span>
+            <a href="tel:+74951250550">+7 (495) 125-05-50</a>
+          </div>
+        </div>
+        <div class="matomba-form" aria-label="Форма заявки">
+          <iframe
+            class="matomba-frame"
+            data-src="https://31f130418eb552015102c26492c44c93.mtmba.ru"
+            title="Оставить заявку на консультацию"
+          ></iframe>
+        </div>
+      </div>
+      <script>
+        requestAnimationFrame(() => {
+          const formFrame = document.querySelector('#lead-form .matomba-frame');
+          const formUrl = new URL(formFrame.dataset.src);
+          const engine = sessionStorage.getItem('entrySource');
+          if (engine) {
+            const entryPage = sessionStorage.getItem('entryPage') || (location.hostname + location.pathname);
+            formUrl.searchParams.set('utm_source', engine);
+            formUrl.searchParams.set('utm_medium', 'organic');
+            formUrl.searchParams.set('utm_campaign', engine + '_seo');
+            formUrl.searchParams.set('utm_content', 'source:' + entryPage);
+            formUrl.searchParams.set('utm_term', 'seo');
+          }
+          formFrame.src = formUrl.toString();
+        });
+      </script>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="contacts-grid">
+          <div class="contacts-intro">
+            <span class="section-label">Контакты</span>
+            <h2>Ждём вас в гости</h2>
+            <p class="lead">Приглашаем вас в уютный офис в центре Москвы. Встречу необходимо согласовать заранее:
+              в здании действует пропускной режим. Первичная консультация бесплатна.</p>
+          </div>
+          <div class="contacts-quick">
+            <div class="contact-item">
+              <h3>Телефон</h3>
+              <p><a class="contact-big" href="tel:+74951250550">+7 (495) 125-05-50</a></p>
+            </div>
+            <div class="contact-item">
+              <h3>Почта</h3>
+              <p><a class="contact-email" href="mailto:info@cent-group.ru">info@cent-group.ru</a></p>
+            </div>
+          </div>
+          <div class="contacts-details">
+            <div class="contact-item">
+              <h3>Офис</h3>
+              <p>Москва, ул. Кузнецкий Мост, д. 21/5, подъезд 3, этаж 3, офис 3033<br>
+                м. Лубянка / Кузнецкий Мост</p>
+              <div class="map-links" aria-label="Открыть компанию в картах">
+                <a href="https://yandex.ru/maps/-/CTVSBHNF" target="_blank" rel="noopener" aria-label="Открыть компанию в Яндекс Картах">Яндекс Карты</a>
+                <a href="https://2gis.ru/moscow/firm/70000001049989753" target="_blank" rel="noopener" aria-label="Открыть компанию в 2ГИС">2ГИС</a>
+                <a href="https://maps.app.goo.gl/qhzcAWS59hRrLCBT9" target="_blank" rel="noopener" aria-label="Открыть компанию в Google Картах">Google Карты</a>
+              </div>
+            </div>
+            <div class="contact-item contact-hours">
+              <h3>Часы работы</h3>
+              <p>Пн–пт: 11:00–19:00<br>Сб: 11:00–17:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -98,16 +174,6 @@
       <div><a href="../policy/">Политика конфиденциальности</a></div>
     </div>
   </footer>
-  <div class="modal" id="lead-modal" aria-hidden="true">
-    <div class="modal-overlay" data-modal-close></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-label="Заявка на консультацию">
-      <button class="modal-close" type="button" aria-label="Закрыть" data-modal-close>&times;</button>
-      <div class="matomba-form" aria-label="Форма заявки">
-        <iframe class="matomba-frame" data-src="https://31f130418eb552015102c26492c44c93.mtmba.ru" title="Оставить заявку на консультацию"></iframe>
-      </div>
-    </div>
-  </div>
-
   <script src="../assets/js/nav.js?v=20260721-nav11" defer></script>
 </body>
 </html>
