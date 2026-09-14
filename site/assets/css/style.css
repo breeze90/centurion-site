@@ -2173,11 +2173,10 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   margin: 0 0 12px;
 }
 .article-page .article-prelude p {
-  max-width: 48ch;
   margin: 0;
   color: var(--text);
-  font-size: 1.15rem;
-  line-height: 1.55;
+  font-size: inherit;
+  line-height: 1.65;
 }
 .article-page .article-prelude + .article-toc {
   margin-top: 36px;
@@ -2199,9 +2198,6 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   }
   .article-page .article-toc {
     margin-bottom: 44px;
-  }
-  .article-page .article-prelude p {
-    font-size: 1.04rem;
   }
   .article-page [id] {
     scroll-margin-top: 80px;
