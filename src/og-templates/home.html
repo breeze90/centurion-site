@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f1822;
+      --brass: #c99a54;
+      --paper: #ffffff;
+      --muted: #d9dde1;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 1200px;
+      height: 630px;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: "Manrope", Arial, sans-serif;
+    }
+
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      padding: 70px 72px;
+      overflow: hidden;
+      background: var(--ink);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 660px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Lora", Georgia, serif;
+      font-size: 68px;
+      font-weight: 600;
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    .eyebrow {
+      margin: 24px 0 0;
+      color: var(--brass);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.25;
+    }
+
+    .description {
+      max-width: 640px;
+      margin: 64px 0 0;
+      color: var(--muted);
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 1.42;
+    }
+
+    .mark {
+      position: absolute;
+      top: 124px;
+      right: 96px;
+      width: 360px;
+      height: 360px;
+    }
+
+    .rule {
+      position: absolute;
+      right: 72px;
+      bottom: 69px;
+      left: 72px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .brand {
+      position: absolute;
+      bottom: 30px;
+      left: 72px;
+      color: var(--paper);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="content">
+      <h1>Центурион-Групп</h1>
+      <p class="eyebrow">НЕЗАВИСИМАЯ ЮРИДИЧЕСКАЯ КОМПАНИЯ</p>
+      <p class="description">Защита должников и активов, арбитраж и банкротство, взыскание долгов. Стратегические решения.</p>
+    </div>
+    <img class="mark" src="../static/assets/img/logo-brass.svg" alt="">
+    <div class="rule"></div>
+    <div class="brand">ЦЕНТУРИОН-ГРУПП</div>
+  </main>
+</body>
+</html>
