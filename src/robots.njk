@@ -1,0 +1,14 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{% if company.isIndexable %}User-agent: Yandex
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&utm_id&yclid&ysclid&gclid&fbclid
+
+User-agent: *
+Allow: /
+
+Sitemap: {{ company.siteUrl }}/sitemap.xml
+{% else %}User-agent: *
+Disallow: /
+{% endif %}

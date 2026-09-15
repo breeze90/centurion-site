@@ -1,0 +1,20 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% if company.isIndexable %}  <url>
+    <loc>{{ company.siteUrl }}/</loc>
+  </url>
+  <url>
+    <loc>{{ company.siteUrl }}/stati/</loc>
+  </url>
+  <url>
+    <loc>{{ company.siteUrl }}/kontakty/</loc>
+  </url>
+{% for item in collections.all %}{% if item.data.sitemap %}  <url>
+    <loc>{{ company.siteUrl }}{{ item.url }}</loc>
+{% if item.data.updatedAtIso %}    <lastmod>{{ item.data.updatedAtIso }}</lastmod>
+{% endif %}  </url>
+{% endif %}{% endfor %}{% endif %}</urlset>

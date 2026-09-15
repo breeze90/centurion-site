@@ -5,6 +5,7 @@
   "phoneHref": "+74951250550",
   "email": "info@cent-group.ru",
   "siteUrl": "https://breeze90.github.io/centurion-site",
+  "isIndexable": false,
   "defaultSocialImage": "/assets/img/og/home.png",
   "defaultSocialImageAlt": "Центурион-Групп — независимая юридическая компания. Защита должников и активов, арбитраж, банкротство и взыскание долгов.",
   "robots": "noindex, nofollow"
