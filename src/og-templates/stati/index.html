@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f1822;
+      --brass: #c99a54;
+      --paper: #ffffff;
+      --muted: #d9dde1;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 1200px;
+      height: 630px;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: "Manrope", Arial, sans-serif;
+    }
+
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      padding: 66px 72px;
+      overflow: hidden;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 690px;
+    }
+
+    .category {
+      margin: 0 0 30px;
+      color: var(--brass);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Lora", Georgia, serif;
+      font-size: 52px;
+      font-weight: 600;
+      line-height: 1.13;
+      letter-spacing: 0;
+    }
+
+    .description {
+      max-width: 650px;
+      margin: 34px 0 0;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.42;
+    }
+
+    .mark {
+      position: absolute;
+      top: 134px;
+      right: 92px;
+      width: 355px;
+      height: 355px;
+    }
+
+    .rule {
+      position: absolute;
+      right: 72px;
+      bottom: 68px;
+      left: 72px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .brand {
+      position: absolute;
+      bottom: 29px;
+      left: 72px;
+      color: var(--paper);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="content">
+      <p class="category">ПРАКТИЧЕСКИЕ РАЗБОРЫ</p>
+      <h1>Статьи</h1>
+      <p class="description">Материалы о долгах, защите бизнеса, судебных процедурах и личной ответственности руководителей.</p>
+    </div>
+    <img class="mark" src="../../static/assets/img/logo-brass.svg" alt="">
+    <div class="rule"></div>
+    <div class="brand">ЦЕНТУРИОН-ГРУПП</div>
+  </main>
+</body>
+</html>
