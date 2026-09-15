@@ -24,6 +24,23 @@
   <meta name="robots" content="{{ robots or company.robots }}">
   <title>{{ title }} | {{ company.lowerName }}</title>
   <meta name="description" content="{{ description }}">
+  {% set imagePath = socialImage or company.defaultSocialImage %}
+  {% set imageAlt = socialImageAlt or company.defaultSocialImageAlt %}
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="{{ company.name }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ company.siteUrl }}{{ page.url }}">
+  <meta property="og:image" content="{{ company.siteUrl }}{{ imagePath }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ imageAlt }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ company.siteUrl }}{{ imagePath }}">
+  <meta name="twitter:image:alt" content="{{ imageAlt }}">
   <link rel="icon" href="../../assets/img/favicon-light.svg?v=20260721-theme" type="image/svg+xml">
   <link rel="icon" href="../../assets/img/favicon-light.svg?v=20260721-theme" media="(prefers-color-scheme: light)" type="image/svg+xml">
   <link rel="icon" href="../../assets/img/favicon-dark.svg?v=20260721-theme" media="(prefers-color-scheme: dark)" type="image/svg+xml">
